@@ -1,0 +1,35 @@
+## Modules: myRPanel.sys
+## By rasat
+# This is a modified Fvwm-RightPanel.sys
+
+SetEnv CORE_DIR $[HOME]/.fvwm/coreEXT/
+SetEnv EXTRA_DIR $[HOME]/.fvwm/extraEXT/
+
+KillModule FvwmButtons TaskButtonsCurve
+KillModule FvwmButtons TaskButtonsFlux
+
+SetEnv logo-icon $[EXTRA_DIR]/MODULES/MyRightPanel/icons
+
+Module FvwmButtons MyRightPanel
+
+DestroyModuleConfig MyRightPanel:*
+*MyRightPanel: Geometry 91x$[vp.height]-0+178
+*MyRightPanel: Colorset 10
+*MyRightPanel: Rows $[vp.height]
+#*MyRightPanel: Columns 1
+*MyRightPanel: Frame 0
+# *MyRightPanel: Font "xft:Sans:Bold:size=10:antialias=True"
+*MyRightPanel: (91x40, Icon "$[logo-icon]/fvwm-logo-small.png", Frame 0)
+*MyRightPanel: (91x10, ActiveColorset 12, Frame 0)
+
+Test (x stalonetray) *MyRightPanel: (91x20, Swallow(NoClose,UseOld) \
+    stalonetray 'Exec exec stalonetray --config \
+    "$[FVWM_DATADIR]/default-config/.stalonetrayrc"', Frame 0)
+
+PipeRead 'echo "*MyRightPanel: (91x$(($[vp.height]-325)), \
+    Top, Swallow FvwmIconMan \'Module FvwmIconMan\', Frame 0)"'
+
+*MyRightPanel: (91x10, Frame 0)
+*MyRightPanel: (91x10, Frame 0)
+
+Style MyRightPanel !Borders, !Title, WindowListSkip, Sticky, StaysOnTop

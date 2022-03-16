@@ -1,0 +1,57 @@
+## Modules: taskBCurve.sys
+## By rasat
+
+SetEnv CORE_DIR $[HOME]/.fvwm/coreEXT/
+SetEnv EXTRA_DIR $[HOME]/.fvwm/extraEXT/
+SetEnv HOME_DIR $[HOME]/.fvwm
+
+## Colorset check coreEXT/2-3Styles/MyColorsets/my-Colorsets.sys
+
+DestroyMenu MenuStart
+AddToMenu MenuStart
+Test (x xfce4-appfinder) + "Apps " Exec exec xfce4-appfinder
+Test (x featherpad) + "Install " Exec exec featherpad $[HOME_DIR]/setup/install.txt
+Test (x mousepad) + "Install " Exec exec mousepad $[HOME_DIR]/setup/install.txt
+Test (x featherpad) + "Help " Exec exec featherpad $[HOME_DIR]/setup/help.txt
+Test (x mousepad) + "Help " Exec exec mousepad $[HOME_DIR]/setup/help.txt
++ "-" Nop
++ "Refresh " Restart
++ "Logout " Module FvwmScript FvwmScript-ConfirmQuit
+
+## Generate XDGMenu
+# PipeRead "fvwm-menu-desktop -e"
+
+## Taskbar
+
+## Remove RightPanel+Calendar and Flux.
+KillModule FvwmButtons *RightPanel
+KillModule FvwmButtons TaskButtonsFlux
+
+SetEnv tpc-image $[EXTRA_DIR]/MODULES/TaskButtonsCurve/icons
+
+Module FvwmButtons TaskButtonsCurve
+
+DestroyModuleConfig TaskButtonsCurve: *
+*TaskButtonsCurve: Geometry 730x36+0+3
+*TaskButtonsCurve: Colorset 111
+*TaskButtonsCurve: Frame 0
+*TaskButtonsCurve: Rows 1
+*TaskButtonsCurve: Padding 0 0
+
+*TaskButtonsCurve: (60x1, Icon $[tpc-image]/Fvwm-58x20.png, Colorset 272,  ActionOnPress, Action(Mouse 1) Menu MenuStart Rectangle +$left+28 0 12m)
+
+*TaskButtonsCurve: (341x1, Swallow FvwmIconMan 'Module FvwmIconMan', Frame 2)
+
+Test (x stalonetray) *TaskButtonsCurve: (120x1, Colorset 111, Swallow(NoClose,UseOld) \
+    stalonetray 'Exec exec stalonetray --config \
+    "$[FVWM_DATADIR]/default-config/.stalonetrayrc"', Frame 0)
+    
+*TaskButtonsCurve: (5x1, Colorset 111)
+*TaskButtonsCurve: (37x1, Icon $[tpc-image]/curve2.png, Colorset 266)
+#*TaskButtonsCurve: (5x1, Back #6da2e3)
+
+## Style setting
+Style TaskButtonsCurve !Borders, !Title, WindowListSkip, Sticky
+
+## Change Over View position (if loaded).
+*FvwmOverView: Geometry 77x36+0+45
