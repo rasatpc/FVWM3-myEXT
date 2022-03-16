@@ -1,0 +1,38 @@
+## Modules: taskBFlux.sys
+## By rasat
+
+SetEnv CORE_DIR $[HOME]/.fvwm/coreEXT
+SetEnv EXTRA_DIR $[HOME]/.fvwm/extraEXT
+
+## Remove RightPanel+Calendar and Curve.
+KillModule FvwmButtons *RightPanel
+KillModule FvwmButtons TaskButtonsCurve
+
+DestroyMenu MenuStart
+AddToMenu MenuStart
+Test (x xfce4-appfinder) + "Apps " Exec exec xfce4-appfinder
++ "Ext-Install  " Exec ~/.fvwm/extraEXT/scripts/InstallExt/ExtInstaller.sh
++ "Help " Exec exec display -size 960x540 $[HOME]/.fvwm/setup/images/fvwm3-myext-2.2-help.png
++ "-" Nop
+# + "Close OV" KillModule FvwmPager HPager
++ "Restart " Restart
++ "Quit " Module FvwmScript FvwmScript-ConfirmQuit
+
+## Taskbar
+
+Module FvwmButtons TaskButtonsFlux
+
+DestroyModuleConfig TaskButtonsFlux: *
+*TaskButtonsFlux: Geometry 1020x36-450-18
+*TaskButtonsFlux: Colorset 111
+*TaskButtonsFlux: PressColorset 4
+*TaskButtonsFlux: Frame 0
+*TaskButtonsFlux: Rows 1
+*TaskButtonsFlux: Font "xft:Sans:size=10:antialias=True"
+*TaskButtonsFlux: Padding 0 0
+
+## Check action/fluxNorth.conf
+## Check action/fluxSouth.conf
+
+## Style setting
+Style TaskButtonsFlux !Borders, !Title, WindowListSkip, StaysOnTop, Sticky
