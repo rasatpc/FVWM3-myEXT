@@ -1,0 +1,44 @@
+## Modules: controlPg.sys
+## By rasat
+# Manpage: http://manpages.ubuntu.com/manpages/xenial/man1/FvwmButtons.1.html
+#
+
+SetEnv CORE_DIR $[HOME]/.fvwm/coreEXT/
+SetEnv EXTRA_DIR $[HOME]/.fvwm/extraEXT/
+SetEnv HOME_DIR $[HOME]/.fvwm
+
+# Load Control Panel Buttons
+Read $[CORE_DIR]/MODULES/ControlPanelB/controlPanel.sys
+
+# Change geometry
+*ControlPanelB: Geometry 278x38-180+3
+
+# Change color
+#*ControlPanelB: Back #666c62
+
+## Pager
+
+# Virtual Desktop
+DesktopSize "2x2"
+
+Module FvwmButtons ControlPagerB
+
+DestroyModuleConfig ControlPagerB: *
+*ControlPagerB: Fore #ffffff
+*ControlPagerB: Back #2b4e5e
+*ControlPagerB: Geometry 130x115-0+0
+*ControlPagerB: Frame 0
+*ControlPagerB: Rows 1
+*ControlPagerB: BoxSize smart
+*ControlPagerB: Font -*-helvetica-medium-r-*-*-12-*
+*ControlPagerB: Padding 2 2
+
+*ControlPagerB: (4x1, Swallow "FvwmPager" `FvwmPager *`, Frame 0)
+
+# Style Setting
+Style ControlPagerB Borders, BorderWidth 3, BorderColorset 10, NoTitle, WindowListSkip, Sticky, !Handles, StaysOnTop, !Iconifiable, FixedSize
+
+## Change pre-settings of controlPanelB
+KillModule FvwmButtons ControlPanelB
+Read $[CORE_DIR]/MODULES/ControlPanelB/controlPanel.sys
+*ControlPanelB: Geometry 360x39-135+3
