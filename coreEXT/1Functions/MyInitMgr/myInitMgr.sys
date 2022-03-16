@@ -1,0 +1,21 @@
+## Functions: myInitMgr.sys
+##
+
+SetEnv CORE_DIR $[HOME]/.fvwm/coreEXT/
+SetEnv HOME_DIR $[HOME]/.fvwm
+
+## Init Manager
+DestroyFunc InitFunction
+AddToFunc InitFunction
++ I Test (Init) Exec nm-applet # (wifi)
++ I Test (Init) Exec xfce4-power-manager # (screen & battery)
++ I Test (Init) Exec volumeicon # (sound)
++ I Test (Init) Exec /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 & # (policykit authenticator)
+
+## Center MODULES/RestartShutdown postion as per screen resolution.
+## Needs xdpyinfo installed.
+Test (x xdpyinfo) Exec $[CORE_DIR]/1Functions/MyInitMgr/scripts/ButtonScreenPosition.sh
+
+## Clears all bindings.
+Clear-Default-Bindings
+
