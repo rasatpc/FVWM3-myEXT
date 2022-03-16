@@ -1,0 +1,2 @@
+wmEXT contains configs for other WMs and DEs.
+

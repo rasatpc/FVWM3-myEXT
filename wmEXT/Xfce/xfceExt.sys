@@ -1,0 +1,22 @@
+## xfceExt.sys
+
+##################################
+#### XFCE
+#################################
+
+SetEnv WM_DIR $[HOME]/.fvwm/wmEXT
+SetEnv HOME_DIR $[HOME]/.fvwm
+
+## No title
+Style *Whisker* NoTitle
+Style *xfce4-panel* NoTitle
+
+KillModule FvwmButtons TaskButtonsFlux
+
+KillModule FvwmButtons DashToDock
+Read $[EXTRA_DIR]/MODULES/DashToDock/action/north.conf
+*hideBar: Geometry 533x6-546+15
+*DashToDock: Geometry 525x48-550+17
+
+*FvwmOverView: Geometry 78x36+42+27
+*ControlPanelB: Geometry 360x39-91+27
