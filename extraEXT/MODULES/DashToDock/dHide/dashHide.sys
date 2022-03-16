@@ -1,0 +1,15 @@
+## Functions: dashHide.sys
+
+## DashToDock hide by moving.
+
+DestroyFunc hideEast
+AddToFunc hideEast
+ + I + I autohide DashToDock 2000 E
+
+DestroyFunc hideNorth
+AddToFunc hideNorth
+ + I + I autohide DashToDock 2000 N
+
+DestroyFunc hideWest
+AddToFunc hideWest
+ + I + I autohide DashToDock 2000 W
