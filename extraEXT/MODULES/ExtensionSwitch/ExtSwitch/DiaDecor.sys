@@ -1,0 +1,21 @@
+## Modules: ExtSwitch/DiaDecor.sys
+# Switch to Decors/DiaryDecor.
+#
+
+SetEnv CORE_DIR $[HOME]/.fvwm/coreEXT/
+SetEnv EXTRA_DIR $[HOME]/.fvwm/extraEXT/
+
+## Load Styles
+Read $[EXTRA_DIR]/Styles/DiaryThumbnails/diaryThumbPlace.sys
+Read $[EXTRA_DIR]/Styles/FvwmThumbnails/fvwmThumbnail.sys
+Read $[EXTRA_DIR]/Styles/DiaryBorderStyle/dBorderStyle.sys
+
+## Load 5.Bindings
+Read $[EXTRA_DIR]/Bindings/DiaryMouseBinding/diaryMBindings.sys
+
+## Load Decorations
+Read $[EXTRA_DIR]/Decors/DiaryDecor/dDecor.sys
+
+## Change preloaded settings
+## Mouse click behaviour
+Style * ClickToFocus

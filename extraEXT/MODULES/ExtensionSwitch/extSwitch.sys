@@ -1,0 +1,33 @@
+## Modules: extSwitch.sys
+## By rasat 24 Jan 2020
+
+SetEnv CORE_DIR $[HOME]/.fvwm/coreEXT
+SetEnv EXTRA_DIR $[HOME]/.fvwm/extraEXT
+
+Module FvwmButtons ExtensionSwitch
+
+DestroyModuleConfig ExtensionSwitch: *
+*ExtensionSwitch: Fore #2b4e5e
+*ExtensionSwitch: Back #88b2b1
+*ExtensionSwitch: Geometry 210x80-160+70
+*ExtensionSwitch: PressColorset 4
+*ExtensionSwitch: Frame 1
+*ExtensionSwitch: Rows 2
+*ExtensionSwitch: BoxSize smart
+*ExtensionSwitch: Font -*-helvetica-medium-r-*-*-14-*
+*ExtensionSwitch: Padding 2 2
+  
+*ExtensionSwitch: (1x1, Title RPanel, Action(Mouse 1) `Read $[EXTRA_DIR]/MODULES/ExtensionSwitch/ExtSwitch/RPanel.sys`)
+
+*ExtensionSwitch: (1x1, Title VPager, Action(Mouse 1) `Read $[EXTRA_DIR]/MODULES/ExtensionSwitch/ExtSwitch/VPager.sys`)
+
+*ExtensionSwitch: (1x1, Title TBar, Action(Mouse 1) `Read $[EXTRA_DIR]/MODULES/ExtensionSwitch/ExtSwitch/TBar.sys`)
+
+*ExtensionSwitch: (1x1, Title DiaDecor, Action(Mouse 1) `Read $[EXTRA_DIR]/MODULES/ExtensionSwitch/ExtSwitch/DiaDecor.sys`)
+
+*ExtensionSwitch: (2x1,Container(Rows 1,Frame 0))
+
+*ExtensionSwitch: (Title Reset, Back #faa46e, Fore #000000, Action(Mouse 1) Restart)
+
+# Style Setting
+Style ExtensionSwitch !Borders, !Title, WindowListSkip, Sticky

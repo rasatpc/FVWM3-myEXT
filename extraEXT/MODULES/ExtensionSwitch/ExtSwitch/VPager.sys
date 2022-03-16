@@ -1,0 +1,26 @@
+## Modules: ExtSwitch/VPager.sys
+#
+
+SetEnv CORE_DIR $[HOME]/.fvwm/coreEXT/
+SetEnv EXTRA_DIR $[HOME]/.fvwm/extraEXT/
+SetEnv HOME_DIR $[HOME]/.fvwm
+
+## Close all Buttons and Pagers.
+KillModule FvwmButtons *
+KillModule FvwmPager V1x5Pager
+KillModule FvwmPager V2x4Pager
+
+Read $[EXTRA_DIR]/MODULES/ExtensionSwitch/extSwitch.sys
+
+## Load Buttons and VerticalPager.
+Read $[EXTRA_DIR]/MODULES/TaskButtonsFlux/taskBFlux.sys
+Read $[EXTRA_DIR]/MODULES/TimeDayButton/timeDayB.sys
+Read $[CORE_DIR]/MODULES/ControlPanelB/controlPanel.sys
+Read $[CORE_DIR]/MODULES/WinListSwitch/winLSwitch.sys
+Read $[EXTRA_DIR]/MODULES/DeskSwitch/deskSwitch.sys
+Read $[EXTRA_DIR]/MODULES/V2x4Pager/vPager4.sys
+
+## Change SimpleButton geometry
+KillModule FvwmButtons SimpleButton
+Read $[CORE_DIR]/MODULES/SimpleButton/simpleB.sys
+*SimpleButton: Geometry 350x39-450+3

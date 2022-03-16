@@ -1,0 +1,21 @@
+## Modules: ExtSwitch/RPanel.sys
+#
+
+SetEnv CORE_DIR $[HOME]/.fvwm/coreEXT/
+SetEnv EXTRA_DIR $[HOME]/.fvwm/extraEXT/
+SetEnv HOME_DIR $[HOME]/.fvwm
+
+KillModule FvwmButtons *
+KillModule FvwmPager V1x5Pager
+KillModule FvwmPager V2x4Pager
+
+Read $[EXTRA_DIR]/MODULES/ExtensionSwitch/extSwitch.sys
+
+## Load ControlPager, myRightPanel, and controlPanelB
+Read $[EXTRA_DIR]/MODULES/MyRightPanel/myRPanel.sys
+Read $[EXTRA_DIR]/MODULES/ControlPagerB/controlPg.sys
+Read $[CORE_DIR]/MODULES/ControlPanelB/controlPanel.sys
+*ControlPanelB: Geometry 315x39-150+3
+
+KillModule FvwmButtons CQuitButton
+KillModule FvwmButtons CFrameButtons
