@@ -1,0 +1,43 @@
+## Modules: simpleB.sys
+# https://www.fvwm.org/Wiki/Panels/SimpleButtons/
+#
+# [Width]x[Height]+[XFromRight]-[YFromBottom]
+# 600x60+780-50 (-buttom, +top)
+
+SetEnv CORE_DIR $[HOME]/.fvwm/coreEXT
+SetEnv HOME_DIR $[HOME]/.fvwm
+
+## Set The Apps Icon Folder (32x32)
+SetEnv sbicons $[CORE_DIR]/MODULES/SimpleButton/icons/icon32x32
+
+KillModule FvwmButtons DashToDock
+
+Module FvwmButtons SimpleButton
+DestroyModuleConfig SimpleButton: *
+*SimpleButton: Geometry 390x40-530+3
+*SimpleButton: Colorset 10
+*SimpleButton: PressColorset 4
+*SimpleButton: Frame 0
+*SimpleButton: Rows 1
+
+*SimpleButton: (1x1, Icon $[sbicons]/thunar.png, \
+              Action(Mouse 1) "Exec exec thunar")
+*SimpleButton: (1x1, Icon $[sbicons]/firefox.png, \
+              Action(Mouse 1) "Exec exec firefox")
+*SimpleButton: (1x1, Icon $[sbicons]/libreoffice-main.png, \
+              Action(Mouse 1) "Exec exec libreoffice")
+*SimpleButton: (1x1, Icon $[sbicons]/featherpad.png, \
+              Action(Mouse 1) "Exec exec featherpad")
+*SimpleButton: (1x1, Icon $[sbicons]/multimedia-volume-control.svg, \
+              Action(Mouse 1) "Exec exec pavucontrol ")
+*SimpleButton: (1x1, Icon $[sbicons]/ext-switch.png, \
+              Action(Mouse 1) `Read $[EXTRA_DIR]/MODULES/ExtensionSwitch/extSwitch.sys`)
+*SimpleButton: (1x1, Icon $[sbicons]/ext-installer.png, \
+              Action(Mouse 1) "Exec ~/.fvwm/extraEXT/scripts/InstallExt/ExtInstaller.sh")
+*SimpleButton: (1x1, Icon $[sbicons]/gparted.png, \
+              Action(Mouse 1) "Exec exec /usr/bin/gparted ")
+*SimpleButton: (1x1, Icon $[sbicons]/screenshooter.png, \
+              Action(Mouse 1) "Exec exec xfce4-screenshooter")
+
+#Colorset 10 fg #ffffff, bg #003c3c
+Style SimpleButton !Borders, !Title, WindowListSkip, StaysOnTop, Sticky
