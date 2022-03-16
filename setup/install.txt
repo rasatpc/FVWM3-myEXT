@@ -1,0 +1,119 @@
+## HOW TO INSTALL FVWM3 myExtensions on MX Linux and Arch Linux.
+#
+
+MX FVWM3 live CD (terminal)
+minstall-pkexec
+OR
+click "Installer" icon in home folder.
+
+Arch FVWM3 live CD (terminal)
+sudo archinstall (for advance users)
+
+Below install and settings are included in the live CD
+
+######################### 
+
+1. Install FVWM3:
+MX Linux:
+sudo apt install fvwm3
+Arch Linux:
+yay -S fvwm3
+
+2. Logout, select "fvwm" and login (creates /.fvwm in your home folder.
+3. Unzip FVWM-myExt-v3.0.5.zip
+5. Copy all sub-folders to .fvwm/
+6. Menu <Refresh>
+
+LOOK & FEEL
+Replace .config/gtk-3.0/settings.ini with .fvwm/setup/settings.ini
+
+OR
+Change with lxappearance.
+sudo apt install lxappearance
+sudo pacman -Syu lxappearance
+
+Logout/login
+
+----
+# Screen brightness (add icon in system tray)
+sudo apt install xfce4-power-manager
+sudo pacman -Syu xfce4-power-manager
+
+1. Edit xfce4-power-manager.xml in .config/xfce4/xfconf/xfce-perchannel-xml/
+Check that this line is there...
+<property name="show-tray-icon" type="bool" value="true"/>
+2. Menu <Quit> (logout and login)
+
+----
+# Volume Icon (add icon in system tray)
+sudo apt install volumeicon-alsa
+sudo pacman -Syu volumeicon
+
+----
+# Required by Thumbnails:
+sudo apt install imagemagick-common
+sudo pacman -Syu imagemagick
+
+# Required by Calendar:
+sudo apt install yad
+sudo pacman -Syu yad
+
+# Required by different FvwmButton configs (to adjust as per screen resolution)
+sudo apt install x11-utils
+sudo pacman -Syu xorg-xdpyinfo
+
+# Network wifi
+sudo apt-get install stalonetray
+sudo pacman -Syu stalonetray
+
+Restart
+
+----
+ADDITIONAL SETUP
+
+# Install a search application app.
+sudo apt install rofi rofi-calc
+Copy .fvwm/setup/rofi to .config/
+
+or
+# Application finder for the Xfce4 desktop environment
+sudo apt install xfce4-appfinder
+sudo pacman -Syu xfce4-appfinder
+
+----
+# File manager authentication agent for PolicyKit
+sudo apt install policykit-1-gnome
+sudo pacman -Syu polkit
+
+----
+# Turn off touchpad (for USB mouse)
+sudo apt install xserver-xorg-input-synaptics
+sudo pacman -Syu xf86-input-synaptics
+
+# Add the below line in .fvwm/config:
+Test (x synclient) Exec synclient TouchpadOff=1
+
+-------------
+# BACKGROUND
+-------------
+
+FVWM myExtension is based on default FVWM3. The config is split into folders and runs in the same sequence as the default.
+
+.fvwm/coreEXT (essential configs)
+1. 1Functions/
+2. 2-3Styles/ (includes syles and colorsets)
+3. 4Menus/
+4. 5Bindings/
+5. 6Decor/
+6. MODULES/
+
+AND
+
+.fvwm/extraEXT (additional configs)
+1. Each extra config is tagged as per above structure.
+2. MODULES/ all extra module configs.
+
+This structure helps to maintain, debug, create new functions, decors, and modules.
+
+By rasat (8 Dec 2020)
+Last update: 15 Mar 2022
