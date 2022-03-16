@@ -1,0 +1,35 @@
+## Modules: infoPanel.sys
+## By rasat 29 Feb 2022
+
+SetEnv CORE_DIR $[HOME]/.fvwm/coreEXT/
+SetEnv HOME_DIR $[HOME]/.fvwm
+
+SetEnv logo-image $[CORE_DIR]/MODULES/InfoPanel/images
+
+Module FvwmButtons InfoPanel
+
+DestroyModuleConfig InfoPanel: *
+*InfoPanel: Geometry 380x200+150-350
+*InfoPanel: PressColorset 5
+*InfoPanel: Fore #2b4e5e
+*InfoPanel: Back #88b2b1
+*InfoPanel: Frame 0
+*InfoPanel: Rows 2
+*InfoPanel: BoxSize smart
+*InfoPanel: Font "xft:Sans:size=14:antialias=True"
+*InfoPanel: Padding 2 2
+
+*InfoPanel: (Icon "$[logo-image]/fvwm-logo-small.png", Colorset 0)
+*InfoPanel: (3x1, Title "FVWM myExt 3", Colorset 0, Font "xft:Sans:size=24:antialias=True")
+
+*InfoPanel: (4x1,Container(Rows 3,Frame 1))
+*InfoPanel: (Title CORE, Action(Mouse 1) `Read $[CORE_DIR]/MODULES/InfoPanel/action/infoCore.conf`)
+*InfoPanel: (Title EXTRA, Action(Mouse 1) `Read $[CORE_DIR]/MODULES/InfoPanel/action/infoExtra.conf`)
+*InfoPanel: (Title "Fvwm (default)", Action(Mouse 1) `Read $[CORE_DIR]/MODULES/InfoPanel/action/default.conf`)
+*InfoPanel: (Title Help, Action(Mouse 1) `Read $[CORE_DIR]/MODULES/InfoPanel/action/help.sys`)
+
+*InfoPanel: (2x1,Container(Rows 0,Frame 0))
+*InfoPanel: (Title Exit, Action(Mouse 1) `Read $[CORE_DIR]/MODULES/InfoPanel/action/exit.sys`)
+
+# Style Setting
+Style InfoPanel !Borders, !Title, WindowListSkip, StaysOnTop, Sticky
