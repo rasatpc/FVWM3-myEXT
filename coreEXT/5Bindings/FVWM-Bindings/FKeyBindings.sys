@@ -1,0 +1,22 @@
+# Bindings: FKeyBindings.sys
+
+#
+# Format: Key <X>  <Context> <Modifier> <Action>
+#
+####################
+
+# Alt-F1 or Menu to load the root menu and Alt-Tab for a WindowList.
+# Ctrl-F1/F2/F3/F4 will switch between the Virtual Desktops.
+# Super_R (windows key) will launch a terminal.
+# Alt-Space to launch dmenu (Note: dmenu must be present in the system)
+#
+# Silent supresses any errors (such as keyboards with no Menu key).
+Silent Key F1 A M Menu MenuFvwmRoot
+Silent Key Menu A A Menu MenuFvwmRoot
+Silent Key Tab A M WindowList Root c c NoDeskSort, SelectOnRelease Meta_L
+Silent Key F1 A C GotoDesk 0 0
+Silent Key F2 A C GotoDesk 0 1
+Silent Key F3 A C GotoDesk 0 2
+Silent Key F4 A C GotoDesk 0 3
+Silent Key Super_R A A Exec exec $[infostore.terminal]
+Silent Key Space A M Exec exec $[infostore.runcmd]
