@@ -1,0 +1,41 @@
+## Bindings: diaryMBindings.sys
+#
+
+## KEY-MOUSE BINDINGS
+
+#Silent Key z A M Move # alt-z (letter)
+#Silent Key r A M Resize # alt-r
+#Silent Key Space A M Thumbnail # alt-space
+#Silent Key m A M Maximize 97 90 # alt-m
+#Silent Key x A M Destroy # alt-x
+
+## MOUSEBINDS
+
+## Double Click Delay
+ClickTime 250
+MoveThreshold 3
+
+## SloppyFocus Instead of ClickToFocus
+Style * SloppyFocus, MouseFocusClickRaises
+
+## Titlebar Buttons
+Mouse 1 1 A Menu
+Mouse 1 3 A Close
+Mouse 1 5 A Thumbnail
+Mouse 1 7 A Maximize
+
+## Titlebar Itself
+Mouse 1 T A RaiseMoveX Move Maximize
+Mouse 1 FS A RaiseMove Resize
+Mouse 4 T A WindowShade True
+Mouse 5 T A WindowShade False
+Mouse 3 T A Menu MenuWindowOps
+
+## Rootmenu on The Desktop
+Mouse 1 R A Menu MenuFvwmRoot
+Mouse 2 R A WindowList
+Mouse 3 R A Menu MenuWindowOpsLong
+
+## On minimized windows
+Mouse 1 I A Iconify off
+Mouse 3 I A Menu MenuIconOps
