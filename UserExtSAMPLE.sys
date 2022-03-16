@@ -1,0 +1,113 @@
+## .fvwm/UserExt.sys
+
+## If not yet exist, copy and rename UserExtSAMPLE.sys to UserExt.sys, and
+## left-click select Restart.
+##
+## This file is for you to edit/remove Core and Extra configs, and add your own.
+## UserExt.sys is now the startup setup of myExt config system.
+##
+## Here below make your changes (tag and untag) and add your own.
+## NOTE: ver.3.1 has one graphical Extension Installer:
+## Left-click, select System, and click Ext-Install.
+
+SetEnv CORE_DIR $[HOME]/.fvwm/coreEXT
+SetEnv EXTRA_DIR $[HOME]/.fvwm/extraEXT
+SetEnv USER_DIR $[HOME]/.fvwm/userEXT
+SetEnv HOME_DIR $[HOME]/.fvwm
+
+#### STARTUP of Core and Extra extensions, and WM replace.
+
+## CORE (essential configs)
+
+KillModule FvwmButtons *
+KillModule FvwmPager*
+DesktopSize "2x2"
+Read $[HOME_DIR]/CoreExt.sys
+
+## EXTRA (additional configs)
+
+DestroyFunc StartFunction #(close for NsCDE)
+Read $[HOME_DIR]/ExtraExt.sys
+
+## WM (NsCDE)
+
+# Read $[HOME_DIR]/wmEXT/NsCDE/nscdeExt.sys #(open for NsCDE)
+## Window Placement
+# Style * TileCascadePlacement #(close for NsCDE)
+
+##################################
+#### USER (user changes and addon).
+#################################
+
+#### Add/remove CORE and EXTRA modules.
+KillModule FvwmButtons InfoPanel
+
+# Read $[EXTRA_DIR]/MODULES/V2x4Pager/vPager4.sys
+
+#### Change preloaded CORE and EXTRA settings.
+
+## Permanent wallpaper
+# SetBG cloth-grey-1920x1080.png
+
+## or last selected
+Exec exec fvwm-root $[HOME_DIR]/.BGdefault
+# Read $[EXTRA_DIR]/Menus/MyMenu/BgPanel/bluePanel.conf
+
+-----
+
+#### Keyboard TouchPad on/off
+# Test (x synclient) Exec synclient TouchpadOff=1
+
+## Load Yad script postions.
+Read $[CORE_DIR]/1Functions/YadPosition/yadPos.sys
+
+#### EwmhBaseStruts [left] [right] [top] [bottom]
+## Reserves space along the edge(s) of the Screen that will not
+## be covered when maximizing or placing windows.
+EwmhBaseStruts 70 150 60 100
+
+#### Change default font.
+# DefaultFont "xft:Noto Sans:size=10"
+
+## Change Time/Day panel color
+*FvwmScript: DefaultColorset 10
+
+-----
+
+### Function: Auto Move Windows.
+### To install this extension copy folder extraEXT/Functions/AutoMoveWin/ to userEXT/.
+### Untag the below line in ExtraExt.sys or this line.
+
+# Read $[USER_DIR]/AutoMoveWin/autoMoveW.sys
+
+### In userEXT/AutoMoveWin/autoMoveW.sys untag and add your own below this line.
+##		APPS		COMMAND			PAGE	LOCATION		DESKTOPSIZE
+## --------------------------------------------------------------------
+
+-----
+
+## DashToDock hide by moving.
+# Read $[EXTRA_DIR]/MODULES/DashToDock/dHide/dashHide.sys
+
+## Load general Auto Hide List function.
+To install this extension copy folder extraEXT/Functions/AutoHideList/ to userEXT/.
+### Untag the below line in ExtraExt.sys or this line.
+
+# Read $[USER_DIR]/AutoHideList/autoHideL.sys
+
+### In userEXT/AutoHideList/autoHideL.sys untag and add your own below this line.
+# Add buttons and pagers to autohide.
+
+#              ^            ^   ^
+#              |            |   |___  Shade direction (N, S, E, W, NW, NE, SW or SE)
+#              |            |_______  Hide delay (milli-seconds)
+#              |____________________  Unique window name/resource
+
+-----
+
+## WM (configs and replacements)
+## Below WM replacements, run in terminal or autostart: "Fvwm3 --replace"
+
+# Read $[HOME_DIR]/wmEXT/Xfce/xfceExt.sys #(open for Xfce)
+
+#### Add more or make changes here below.
