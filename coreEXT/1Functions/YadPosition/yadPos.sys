@@ -14,3 +14,5 @@ AddToFunc   MoveYad
 + I ThisWindow ("*Installer") Move -5 -20
 + I ThisWindow ("Confirm*") Move -15 -30
 + I ThisWindow ("Alert*") Move -15 -30
++ I ThisWindow ("*Update*") Move -15 -30
++ I ThisWindow ("*myExt*") Move -15 -30
