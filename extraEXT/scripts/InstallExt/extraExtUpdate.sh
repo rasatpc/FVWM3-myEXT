@@ -1,6 +1,7 @@
 #!/bin/bash
 # By Jose Stack Overflow 9 Mar 2022
 # By rasat 10 March 2020
+# Updates ExtInstaller.sh and ExtraExt.sys as per checklist.
 
 # Tag all Read lines.
 sed -i 's/Read/# Read/g' ~/.fvwm/ExtraExt.sys

@@ -9,6 +9,7 @@ else
   echo Reset done!
   cp -f default/ExtInstaller.sh ~/.fvwm/extraEXT/scripts/InstallExt/ExtInstaller.sh
   cp default/ExtraExt.sys ~/.fvwm/ExtraExt.sys
+  rm install.tmp output.tmp
   yad --form --width=360 --height=40 --title="Alert" --text-align=center \
   --text="<b>Close Extension Installer, and Restart myExt.</b>" --button=OK:0
 fi
