@@ -2,6 +2,11 @@
 # By Misko - Yad Command Google Forum 10 Mar 2022
 # By rasat 15 Mar 2022
 ## IMPORTANT: No space between the lines.
+if ! [ -x "$(command -v awk)" ]; then
+   yad --form --width=360 --height=40 --title="Alert" --text-align=center \
+  --text="<b>Requires gawk to run Ext Installer.</b>" --button=OK:0
+  exit
+fi
 cd ~/.fvwm/extraEXT/scripts/InstallExt/
 split_arg () {
  echo -e "\f"

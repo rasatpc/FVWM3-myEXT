@@ -3,14 +3,13 @@
 
 MX FVWM3 live CD (terminal)
 minstall-pkexec
-OR
 click "Installer" icon in home folder.
 
 Arch FVWM3 live CD (terminal)
 sudo archinstall (for advance users)
 
-Below install and settings are included in the live CD
-
+######
+Manually
 ######################### 
 
 1. Install FVWM3:
@@ -49,7 +48,10 @@ Check that this line is there...
 sudo apt install volumeicon-alsa
 sudo pacman -Syu volumeicon
 
-----
+# Required by Extention Installer
+sudo apt install gawk
+sudo pacman -Syu gawk
+
 # Required by Thumbnails:
 sudo apt install imagemagick-common
 sudo pacman -Syu imagemagick
@@ -76,7 +78,7 @@ sudo apt install rofi rofi-calc
 Copy .fvwm/setup/rofi to .config/
 
 or
-# Application finder for the Xfce4 desktop environment
+# Application finder.
 sudo apt install xfce4-appfinder
 sudo pacman -Syu xfce4-appfinder
 
@@ -116,4 +118,4 @@ AND
 This structure helps to maintain, debug, create new functions, decors, and modules.
 
 By rasat (8 Dec 2020)
-Last update: 15 Mar 2022
+Last update: 21 Mar 2022

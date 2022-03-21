@@ -1,6 +1,10 @@
 #!/bin/bash
 ## Downloads latest myExt package.
 
+## Backup ExtraExtT.sys
+cp ~/.fvwm/ExtraExt.sys ~/.fvwm/extraEXT/scripts/InstallExt/backup/ExtraExt.bak
+
+## Download
 cd ~/.fvwm/extraEXT/scripts/InstallExt/download/
 
 download(){
