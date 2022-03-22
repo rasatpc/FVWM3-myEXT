@@ -29,7 +29,7 @@ download(){
 	# rm ~/.fvwm/extraEXT/scripts/InstallExt/*.tmp
   
   yad --form --width=370 --height=40 --title="Update" --text-align=center \
-  --text="<b>Press INSTALL, then close Extension Installer and and restart myExt.</b>" --INSTALL=OK:0
+  --text="<b>Press UPGRADE, then close Extension Installer and and restart myExt.</b>" --button=UPGRADE:0
 
 # Update ExtInstaller.sh and ExtraExt.sys
   awk '{print $1 " " $NF}' output.tmp > install.tmp
