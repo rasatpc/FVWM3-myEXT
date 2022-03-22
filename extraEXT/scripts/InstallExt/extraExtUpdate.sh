@@ -21,6 +21,7 @@ $(NF-1) in a {$1 = a[$(NF-1)]}
 1' install.tmp ExtInstaller.sh > tmp.sh
 cp tmp.sh ExtInstaller.sh
 rm tmp.sh
+rm ~/.fvwm/extraEXT/scripts/InstallExt/*.tmp
 
 yad --width=300 --height=30 --title="Alert" --text-align=center \
   --text="<b>   Left-click and Restart myExt.   </b>" --button=OK:0

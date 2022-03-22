@@ -26,8 +26,18 @@ download(){
     unzip main.zip
     cp -a ~/.fvwm/extraEXT/scripts/InstallExt/download/FVWM3-myEXT-main/. ~/.fvwm/
 	rm -r ~/.fvwm/extraEXT/scripts/InstallExt/download/*
-	rm ~/.fvwm/extraEXT/scripts/InstallExt/*.tmp
+	# rm ~/.fvwm/extraEXT/scripts/InstallExt/*.tmp
   
   yad --form --width=370 --height=40 --title="Update" --text-align=center \
-  --text="<b>Close Extension Installer, and Restart myExt.</b>" --button=OK:0
+  --text="<b>Press INSTALL, then close Extension Installer and and restart myExt.</b>" --INSTALL=OK:0
+
+# Update ExtInstaller.sh and ExtraExt.sys
+  awk '{print $1 " " $NF}' output.tmp > install.tmp
+if [ -s install.tmp ]
+	then
+sed -i 's/TRUE/false/g' ExtInstaller.sh #CODE
+		./extraExtUpdate.sh
+	else
+		exit
+fi
 exec 3>&-
