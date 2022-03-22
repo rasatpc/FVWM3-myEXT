@@ -50,7 +50,7 @@ false Modules "<b>Vertical Pager 2x4</b>" "Miniature view of desktops (2x4)." "i
 	>output.tmp &
 yad --plug=$key --tabnum=2 --list --no-headers --listen --cycle-read --column=":IMG" <&3  &
 yad --paned --key=$key --title="Extension Installer" \
-    --button=Close:1 --button='Reset:bash -c "./reset.sh"' --button='Update myExt:bash -c "./checkLine-Update.sh"' --button=Install:0 --center --orient=Horizontal --splitter=620 --width=800 --height=630
+    --button=Close:1 --button='Reset:bash -c "./reset.sh"' --button='Upgrade myExt:bash -c "./checkLine-Update.sh"' --button=Install:0 --center --orient=Horizontal --splitter=620 --width=800 --height=630
 exec 3>&-
 # Change all extension to false.
 awk '{print $1 " " $NF}' output.tmp > install.tmp
