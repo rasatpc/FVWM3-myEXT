@@ -4,6 +4,10 @@
 ## Backup ExtraExtT.sys
 cp ~/.fvwm/ExtraExt.sys ~/.fvwm/extraEXT/scripts/InstallExt/backup/ExtraExt.bak
 
+## Create output.tmp
+cd ~/.fvwm/extraEXT/scripts/InstallExt/
+grep '^TRUE' ExtInstaller.sh > output.tmp
+
 ## Download
 cd ~/.fvwm/extraEXT/scripts/InstallExt/download/
 
@@ -16,7 +20,7 @@ download(){
          echo "#Upgrade COMPLETED"
       else
          echo "#Download ERROR"
-         rm install.tmp output.tmp
+         #rm install.tmp output.tmp
          exit
     fi
   }
@@ -33,7 +37,7 @@ download(){
 
 # Update ExtInstaller.sh and ExtraExt.sys
 cd ~/.fvwm/extraEXT/scripts/InstallExt/
-  awk '{print $1 " " $NF}' output.tmp > install.tmp
+  awk '{print $1 " " $(NF-1)}' output.tmp > install.tmp
 if [ -s install.tmp ]
 	then
 sed -i 's/TRUE/false/g' ExtInstaller.sh #CODE
