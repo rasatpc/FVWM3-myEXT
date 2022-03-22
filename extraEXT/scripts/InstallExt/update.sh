@@ -32,6 +32,7 @@ download(){
   --text="<b>Press UPGRADE, then close Extension Installer and and restart myExt.</b>" --button=UPGRADE:0
 
 # Update ExtInstaller.sh and ExtraExt.sys
+cd ~/.fvwm/extraEXT/scripts/InstallExt/
   awk '{print $1 " " $NF}' output.tmp > install.tmp
 if [ -s install.tmp ]
 	then
