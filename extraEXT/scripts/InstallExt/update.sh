@@ -20,7 +20,7 @@ download(){
          echo "#Upgrade COMPLETED"
       else
          echo "#Download ERROR"
-         #rm install.tmp output.tmp
+         rm install.tmp output.tmp
          exit
     fi
   }
@@ -30,7 +30,6 @@ download(){
     unzip main.zip
     cp -a ~/.fvwm/extraEXT/scripts/InstallExt/download/FVWM3-myEXT-main/. ~/.fvwm/
 	rm -r ~/.fvwm/extraEXT/scripts/InstallExt/download/*
-	# rm ~/.fvwm/extraEXT/scripts/InstallExt/*.tmp
   
   yad --form --width=370 --height=40 --title="Update" --text-align=center \
   --text="<b>Press UPGRADE, then close Extension Installer and and restart myExt.</b>" --button=UPGRADE:0
@@ -38,6 +37,7 @@ download(){
 # Update ExtInstaller.sh and ExtraExt.sys
 cd ~/.fvwm/extraEXT/scripts/InstallExt/
   awk '{print $1 " " $(NF-1)}' output.tmp > install.tmp
+
 if [ -s install.tmp ]
 	then
 sed -i 's/TRUE/false/g' ExtInstaller.sh #CODE

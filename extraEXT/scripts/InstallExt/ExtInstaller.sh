@@ -43,14 +43,14 @@ false Modules "<b>Extension Switch</b>" "Preview of different extension setup." 
 TRUE Modules "<b>Fvwm Over View</b>" "View of running windows on current page." "images/over-view.png" 605 \
 false Modules "<b>MyRight Panel</b>" "Modified Fvwm Right Panel." "images/my-right-panel.png" 606 \
 false Modules "<b>Task Buttons Curve</b>" "Task bar based on Somatic theme." "images/task-curve.png" 607 \
-TRUE Modules "<b>Task Buttons Flux</b>" "Fluxbox style of task bar." "images/task-flux.png" 608 \
-TRUE Modules "<b>Time/Day Button</b>" "Date, time, and calendar panel." "images/time-day.png" 609 \
-TRUE Modules "<b>Vertical Pager 1x5</b>" "Miniature view of desktops (1x5)." "images/pager1x5.png" 610 \
-false Modules "<b>Vertical Pager 2x4</b>" "Miniature view of desktops (2x4)." "images/pager2x4.png" 611 \
+false Modules "<b>Task Buttons Flux</b>" "Fluxbox style of task bar." "images/task-flux.png" 608 \
+false Modules "<b>Time/Day Button</b>" "Date, time, and calendar panel." "images/time-day.png" 609 \
+false Modules "<b>Vertical Pager 1x5</b>" "Miniature view of desktops (1x5)." "images/pager1x5.png" 610 \
+TRUE Modules "<b>Vertical Pager 2x4</b>" "Miniature view of desktops (2x4)." "images/pager2x4.png" 611 \
 	>output.tmp &
 yad --plug=$key --tabnum=2 --list --no-headers --listen --cycle-read --column=":IMG" <&3  &
 yad --paned --key=$key --title="Extension Installer" \
-    --button=Close:1 --button='Reset:bash -c "./reset.sh"' --button='Update myExt:bash -c "./checkLine-Update.sh"' --button=Install:0 --center --orient=Horizontal --splitter=620 --width=800 --height=630
+    --button=Close:1 --button='Reset:bash -c "./reset.sh"' --button='Upgrade myExt:bash -c "./checkLine-Update.sh"' --button=Install:0 --center --orient=Horizontal --splitter=620 --width=800 --height=630
 exec 3>&-
 # Change all extension to false.
 awk '{print $1 " " $NF}' output.tmp > install.tmp
