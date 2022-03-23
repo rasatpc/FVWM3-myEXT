@@ -63,8 +63,8 @@ Network wifi:
 * sudo pacman -Syu stalonetray
 
 Search app:
-* sudo apt install rofi
-* sudo pacman -Syu rofi
+* sudo apt install rofi rofi-calc
+* sudo pacman -Syu rofi rofi-calc
 
 Copy .fvwm/setup/rofi to .config/
 

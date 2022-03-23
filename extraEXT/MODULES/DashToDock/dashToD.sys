@@ -28,7 +28,7 @@ DestroyModuleConfig DashToDock: *
 *DashToDock: (1x1, Colorset 268, Icon $[dTDicons]/ext-installer.png, \
               Action(Mouse 1) "Exec ~/.fvwm/extraEXT/scripts/InstallExt/ExtInstaller.sh")
 *DashToDock: (1x1, Colorset 268, Icon $[dTDicons]/gparted.png, \
-              Action(Mouse 1) "Exec exec /usr/bin/gparted ")
+              Action(Mouse 1) "Exec exec /usr/sbin/gparted ")
 *DashToDock: (1x1, Colorset 268, Icon $[dTDicons]/software-properties.png, \
               Action(Mouse 1) "Exec exec su-to-root -X -c /usr/sbin/synaptic")         
 *DashToDock: (1x1, Colorset 268, Icon $[dTDicons]/screenshooter.png, \
