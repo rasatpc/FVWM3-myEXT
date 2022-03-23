@@ -61,11 +61,6 @@ Exec exec fvwm-root $[HOME_DIR]/.BGdefault
 ## Load Yad script postions.
 Read $[CORE_DIR]/1Functions/YadPosition/yadPos.sys
 
-#### EwmhBaseStruts [left] [right] [top] [bottom]
-## Reserves space along the edge(s) of the Screen that will not
-## be covered when maximizing or placing windows.
-EwmhBaseStruts 70 150 60 100
-
 #### Change default font.
 # DefaultFont "xft:Noto Sans:size=10"
 

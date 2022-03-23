@@ -10,4 +10,4 @@ Test (x featherpad) Exec exec featherpad $[HOME_DIR]/UserExt.sys
 Test (x mousepad) Exec exec mousepad $[HOME_DIR]/UserExt.sys
 
 ## Restart with UserExt.sys
-Restart
+Exec $[CORE_DIR]/MODULES/InfoPanel/script/quit-restart.sh
