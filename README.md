@@ -7,27 +7,36 @@ coreEXT  (coreEXT.sys)	- essential myExt configs.
 extraEXT (extraEXT.sys) - additional configs.
 userEXT  (userEXT.sys)  - user configs, does changes to core and extra config settings.
 
-HOW TO INSTALL
-(This is an one time install and then updtated by the Extension Installer.)
+# HOW TO INSTALL
+One time install and then updgraded by the Extension Installer.
 
-## Download:
+* Download:
 https://github.com/rasatpc/FVWM3-myEXT/archive/refs/heads/main.zip
 
 Extract and copy the subfolders to ~/.fvwm
 
--------
-## FVWM3 myExt requirement.
+# FVWM3 myExt requirement.
 
-INSTALL Fvwm3
+* INSTALL Fvwm3
+
 Debian based Linux:
 sudo apt install fvwm3
+
 Arch Linux:
 yay -S fvwm3
 
-Installing From Git FVWM3:
-git clone https://github.com/
+* Installing From Git FVWM3:
+git clone https://github.com/fvwmorg/fvwm3.git
+cd fvwm3
 
-## Dependencies:
+Read dev-docs/INSTALL.md
+
+./autogen.sh
+./configure --enable-mandoc
+make
+sudo make install
+
+# myExt Dependencies:
 
 Volume Icon (add icon in system tray)
 sudo apt install volumeicon-alsa
@@ -53,12 +62,10 @@ Network wifi
 sudo apt-get install stalonetray
 sudo pacman -Syu stalonetray
 
-## Optional (recommended):
+* Optional (recommended):
 
-# Search application app.
 sudo apt install rofi rofi-calc
 Copy .fvwm/setup/rofi to .config/
 
-# Application finder.
 sudo apt install xfce4-appfinder
 sudo pacman -Syu xfce4-appfinder
