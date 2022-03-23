@@ -3,12 +3,12 @@ FVWM3 myExt is the default setting of core and extra extensions for public downl
 
 This is a user-oriented model for you to use, modify or create your own extensions. The default FVWM config is the base, directly in ~/.fvwm folder. The extensions are divided into three main folders (core, extra, and user) and system files that run in the same sequence as the original Fvwm config. The additional extensions are simply added in associated folders. A graphical Extension Installer is also included making it user-friendly for those who prefer a quick setup of extensions of their choice.
 
-coreEXT  (coreEXT.sys)	- essential myExt configs.
-extraEXT (extraEXT.sys) - additional configs.
-userEXT  (userEXT.sys)  - user configs, does changes to core and extra config settings.
+* coreEXT  (coreEXT.sys)	- essential myExt configs.
+* extraEXT (extraEXT.sys) - additional configs.
+* userEXT  (userEXT.sys)  - user configs, does changes to core and extra config settings.
 
 # HOW TO INSTALL
-One time install and then updgraded by the Extension Installer.
+One time install and then updgraded with Extension Installer.
 
 * Download:
 https://github.com/rasatpc/FVWM3-myEXT/archive/refs/heads/main.zip
@@ -17,12 +17,12 @@ Extract and copy the subfolders to ~/.fvwm
 
 # FVWM3 myExt requirement.
 
-* INSTALL Fvwm3
+INSTALL Fvwm3
 
-Debian based Linux:
+* Debian based Linux:
 sudo apt install fvwm3
 
-Arch Linux:
+* Arch Linux:
 yay -S fvwm3
 
 * Installing From Git FVWM3:
