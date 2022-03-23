@@ -19,53 +19,54 @@ Extract and copy the subfolders to ~/.fvwm
 
 INSTALL Fvwm3
 
-* Debian based Linux:
-sudo apt install fvwm3
+Debian based Linux:
+* sudo apt install fvwm3
 
-* Arch Linux:
-yay -S fvwm3
+Arch Linux:
+* yay -S fvwm3
 
-* Installing From Git FVWM3:
-git clone https://github.com/fvwmorg/fvwm3.git
-cd fvwm3
+Installing From Git FVWM3:
+* git clone https://github.com/fvwmorg/fvwm3.git
+* cd fvwm3
 
 Read dev-docs/INSTALL.md
 
-./autogen.sh
-./configure --enable-mandoc
-make
-sudo make install
+* ./autogen.sh
+* ./configure --enable-mandoc
+* make
+* sudo make install
 
 # myExt Dependencies:
 
 Volume Icon (add icon in system tray)
-sudo apt install volumeicon-alsa
-sudo pacman -Syu volumeicon
+* sudo apt install volumeicon-alsa
+* sudo pacman -Syu volumeicon
 
 Required by Extention Installer
-sudo apt install gawk
-sudo pacman -Syu gawk
+* sudo apt install yad
+* sudo apt install gawk
+
+* sudo pacman -Syu yad
+* sudo pacman -Syu gawk
 
 Required by Thumbnails:
-sudo apt install imagemagick-common
-sudo pacman -Syu imagemagick
+* sudo apt install imagemagick-common
+* sudo pacman -Syu imagemagick
 
-Required by Calendar:
-sudo apt install yad
-sudo pacman -Syu yad
-
-Required by different FvwmButton configs (to adjust as per screen resolution)
-sudo apt install x11-utils
-sudo pacman -Syu xorg-xdpyinfo
+FvwmButton configs to adjust as per screen resolution.
+* sudo apt install x11-utils
+* sudo pacman -Syu xorg-xdpyinfo
 
 Network wifi
-sudo apt-get install stalonetray
-sudo pacman -Syu stalonetray
+* sudo apt-get install stalonetray
+* sudo pacman -Syu stalonetray
 
-* Optional (recommended):
+# Optional (recommended):
 
-sudo apt install rofi rofi-calc
+* sudo apt install rofi rofi-calc
 Copy .fvwm/setup/rofi to .config/
 
-sudo apt install xfce4-appfinder
-sudo pacman -Syu xfce4-appfinder
+* sudo apt install xfce4-appfinder
+* sudo pacman -Syu xfce4-appfinder
+
+Read more in .fvwm/setup/install.txt
