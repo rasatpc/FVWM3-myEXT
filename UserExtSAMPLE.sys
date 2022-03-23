@@ -71,32 +71,22 @@ Read $[CORE_DIR]/1Functions/YadPosition/yadPos.sys
 
 ### Function: Auto Move Windows.
 ### To install this extension copy folder extraEXT/Functions/AutoMoveWin/ to userEXT/.
+### Edit AutoMoveWin/autoMoveW.sys as per the choise of windows to move.
 ### Untag the below line in ExtraExt.sys or this line.
 
 # Read $[USER_DIR]/AutoMoveWin/autoMoveW.sys
 
-### In userEXT/AutoMoveWin/autoMoveW.sys untag and add your own below this line.
-##		APPS		COMMAND			PAGE	LOCATION		DESKTOPSIZE
-## --------------------------------------------------------------------
-
 -----
 
-## DashToDock hide by moving.
+### DashToDock hide by moving.
 # Read $[EXTRA_DIR]/MODULES/DashToDock/dHide/dashHide.sys
 
-## Load general Auto Hide List function.
-To install this extension copy folder extraEXT/Functions/AutoHideList/ to userEXT/.
+### Load general Auto Hide List function.
+### To install this extension copy folder extraEXT/Functions/AutoHideList/ to userEXT/.
+### Edit AutoHideList/autoHideL.sys as per the choise of windows to hide.
 ### Untag the below line in ExtraExt.sys or this line.
 
 # Read $[USER_DIR]/AutoHideList/autoHideL.sys
-
-### In userEXT/AutoHideList/autoHideL.sys untag and add your own below this line.
-# Add buttons and pagers to autohide.
-
-#              ^            ^   ^
-#              |            |   |___  Shade direction (N, S, E, W, NW, NE, SW or SE)
-#              |            |_______  Hide delay (milli-seconds)
-#              |____________________  Unique window name/resource
 
 -----
 

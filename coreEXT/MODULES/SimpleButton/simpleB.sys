@@ -14,7 +14,7 @@ KillModule FvwmButtons DashToDock
 
 Module FvwmButtons SimpleButton
 DestroyModuleConfig SimpleButton: *
-*SimpleButton: Geometry 390x40-530+3
+*SimpleButton: Geometry 350x40-530+3
 *SimpleButton: Colorset 10
 *SimpleButton: PressColorset 4
 *SimpleButton: Frame 0
@@ -28,8 +28,6 @@ DestroyModuleConfig SimpleButton: *
               Action(Mouse 1) "Exec exec libreoffice")
 *SimpleButton: (1x1, Icon $[sbicons]/featherpad.png, \
               Action(Mouse 1) "Exec exec featherpad")
-*SimpleButton: (1x1, Icon $[sbicons]/multimedia-volume-control.svg, \
-              Action(Mouse 1) "Exec exec pavucontrol ")
 *SimpleButton: (1x1, Icon $[sbicons]/ext-switch.png, \
               Action(Mouse 1) `Read $[EXTRA_DIR]/MODULES/ExtensionSwitch/extSwitch.sys`)
 *SimpleButton: (1x1, Icon $[sbicons]/ext-installer.png, \
