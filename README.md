@@ -15,7 +15,7 @@ Download:
 
 Extract and copy subfolders to ~/.fvwm
 
-# FVWM3 myExt requirement.
+# FVWM3 myExt requirement
 
 INSTALL Fvwm3
 
@@ -36,13 +36,13 @@ Read dev-docs/INSTALL.md
 * make
 * sudo make install
 
-# myExt dependencies:
+# myExt dependencies
 
-Volume Icon (add icon in system tray)
+Volume Icon (add icon in system tray):
 * sudo apt install volumeicon-alsa
 * sudo pacman -Syu volumeicon
 
-Required by Extention Installer
+Required by Extention Installer:
 * sudo apt install yad
 * sudo apt install gawk
 
@@ -53,15 +53,15 @@ Required by Thumbnails:
 * sudo apt install imagemagick-common
 * sudo pacman -Syu imagemagick
 
-FvwmButton configs to adjust as per screen resolution.
+FvwmButton configs to adjust as per screen resolution:
 * sudo apt install x11-utils
 * sudo pacman -Syu xorg-xdpyinfo
 
-Network wifi
+Network wifi:
 * sudo apt-get install stalonetray
 * sudo pacman -Syu stalonetray
 
-# Optional (recommended):
+# Optional (recommended)
 
 * sudo apt install rofi
 
