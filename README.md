@@ -10,10 +10,10 @@ This is a user-oriented model for you to use, modify or create your own extensio
 # HOW TO INSTALL
 One time install and then updgraded with Extension Installer.
 
-* Download:
-https://github.com/rasatpc/FVWM3-myEXT/archive/refs/heads/main.zip
+Download:
+* https://github.com/rasatpc/FVWM3-myEXT/archive/refs/heads/main.zip
 
-Extract and copy the subfolders to ~/.fvwm
+Extract and copy subfolders to ~/.fvwm
 
 # FVWM3 myExt requirement.
 
@@ -25,7 +25,7 @@ Debian based Linux:
 Arch Linux:
 * yay -S fvwm3
 
-Installing From Git FVWM3:
+Installing from Git FVWM3:
 * git clone https://github.com/fvwmorg/fvwm3.git
 * cd fvwm3
 
@@ -36,7 +36,7 @@ Read dev-docs/INSTALL.md
 * make
 * sudo make install
 
-# myExt Dependencies:
+# myExt dependencies:
 
 Volume Icon (add icon in system tray)
 * sudo apt install volumeicon-alsa
@@ -63,10 +63,11 @@ Network wifi
 
 # Optional (recommended):
 
-* sudo apt install rofi rofi-calc
+* sudo apt install rofi
+
 Copy .fvwm/setup/rofi to .config/
 
 * sudo apt install xfce4-appfinder
 * sudo pacman -Syu xfce4-appfinder
 
-Read more in .fvwm/setup/install.txt
+# Read more in .fvwm/setup/install.txt
