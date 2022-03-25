@@ -18,11 +18,12 @@ Arch Linux:
 
 Installing from Git FVWM3:
 
-Dependencies
-* sudo apt-get install libfontconfig-dev asciidoctor libfreetype6-dev libfribidi-dev libncurses5-dev libpng-dev libreadline-dev libsm-dev libxcursor-dev libxext-dev libxft-dev libxi-dev libxpm-dev sharutils
+Dependencies:
+* sudo apt-get install libevent-dev libx11-dev libxrandr-dev libxrender-dev libxt-dev libfontconfig-dev asciidoctor libfreetype6-dev libfribidi-dev libncurses5-dev libpng-dev libreadline-dev libsm-dev libxcursor-dev libxext-dev libxft-dev libxi-dev libxpm-dev sharutils
+
 * sudo pacman -Syu <same packages>
 
-Additional dependencies
+Install dependencies:
 * sudo apt-get install automake autoreconf autogen
 * sudo pacman -Syu automake autoreconf autogen
 
