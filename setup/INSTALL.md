@@ -24,7 +24,7 @@ Dependencies:
 * sudo pacman -Syu <same packages>
 
 Install dependencies:
-* sudo apt-get install automake autoreconf autogen
+* sudo apt-get install automake dh-autoreconf autogen
 * sudo pacman -Syu automake autoreconf autogen
 
 Read dev-docs/INSTALL.md
