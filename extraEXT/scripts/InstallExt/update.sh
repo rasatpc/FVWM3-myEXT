@@ -29,8 +29,9 @@ download(){
     --pulsate --width=300 --height=40 --title="Downloading myExt..."
     unzip main.zip
     cp -a ~/.fvwm/extraEXT/scripts/InstallExt/download/FVWM3-myEXT-main/. ~/.fvwm/
-	rm -r ~/.fvwm/extraEXT/scripts/InstallExt/download/*
-  
+	rm -r ~/.fvwm/extraEXT/scripts/InstallExt/download/FVWM3-myEXT-main
+    rm -r ~/.fvwm/extraEXT/scripts/InstallExt/download/*zip version.txt
+    
   yad --form --width=370 --height=40 --title="Update" --text-align=center \
   --text="<b>Press UPGRADE, then close Extension Installer and and restart myExt.</b>" --button=UPGRADE:0
 
