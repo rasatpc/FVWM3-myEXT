@@ -2,20 +2,21 @@
 
 ## If not yet exist, copy and rename UserExtSAMPLE.sys to UserExt.sys, and
 ## left-click select Restart.
-##
+
 ## This file is for you to edit/remove Core and Extra configs, and add your own.
 ## UserExt.sys is now the startup setup of myExt config system.
-##
+
 ## Here below make your changes (tag and untag) and add your own.
-## NOTE: ver.3.1 has one graphical Extension Installer:
-## Left-click, select System, and click Ext-Install.
+
+## NOTE: There is also one user-friendly graphical Extension Installer to add and remove extensions.
+## Left-click, selcet <System><Ext-Install>
 
 SetEnv CORE_DIR $[HOME]/.fvwm/coreEXT
 SetEnv EXTRA_DIR $[HOME]/.fvwm/extraEXT
 SetEnv USER_DIR $[HOME]/.fvwm/userEXT
 SetEnv HOME_DIR $[HOME]/.fvwm
 
-#### STARTUP of Core and Extra extensions, and WM replace.
+### STARTUP of Core and Extra extensions, and WM replace.
 
 ## CORE (essential configs)
 
@@ -30,21 +31,20 @@ DestroyFunc StartFunction #(close for NsCDE)
 Read $[HOME_DIR]/ExtraExt.sys
 
 ## WM (NsCDE)
-
 # Read $[HOME_DIR]/wmEXT/NsCDE/nscdeExt.sys #(open for NsCDE)
+
 ## Window Placement
 # Style * TileCascadePlacement #(close for NsCDE)
 
 ##################################
-#### USER (user changes and addon).
+## USER (user changes and addon).
 #################################
 
-#### Add/remove CORE and EXTRA modules.
+## Add/remove CORE and EXTRA modules.
+
 KillModule FvwmButtons InfoPanel
 
-# Read $[EXTRA_DIR]/MODULES/V2x4Pager/vPager4.sys
-
-#### Change preloaded CORE and EXTRA settings.
+## Change preloaded CORE and EXTRA settings.
 
 ## Permanent wallpaper
 # SetBG cloth-grey-1920x1080.png
@@ -55,13 +55,13 @@ Exec exec fvwm-root $[HOME_DIR]/.BGdefault
 
 -----
 
-#### Keyboard TouchPad on/off
+## Keyboard TouchPad on/off
 # Test (x synclient) Exec synclient TouchpadOff=1
 
 ## Load Yad script postions.
 Read $[CORE_DIR]/1Functions/YadPosition/yadPos.sys
 
-#### Change default font.
+## Change default font.
 # DefaultFont "xft:Noto Sans:size=10"
 
 ## Change Time/Day panel color
@@ -69,22 +69,22 @@ Read $[CORE_DIR]/1Functions/YadPosition/yadPos.sys
 
 -----
 
-### Function: Auto Move Windows.
-### To install this extension copy folder extraEXT/Functions/AutoMoveWin/ to userEXT/.
-### Edit AutoMoveWin/autoMoveW.sys as per the choise of windows to move.
-### Untag the below line in ExtraExt.sys or this line.
+## Function: Auto Move Windows.
+## To install this extension copy folder extraEXT/Functions/AutoMoveWin/ to userEXT/.
+## Edit AutoMoveWin/autoMoveW.sys as per choise of windows to move.
+## Untag the below line in ExtraExt.sys or this line.
 
 # Read $[USER_DIR]/AutoMoveWin/autoMoveW.sys
 
 -----
 
-### DashToDock hide by moving.
+## DashToDock hide by moving.
 # Read $[EXTRA_DIR]/MODULES/DashToDock/dHide/dashHide.sys
 
-### Load general Auto Hide List function.
-### To install this extension copy folder extraEXT/Functions/AutoHideList/ to userEXT/.
-### Edit AutoHideList/autoHideL.sys as per the choise of windows to hide.
-### Untag the below line in ExtraExt.sys or this line.
+## Load general Auto Hide List function.
+## To install this extension copy folder extraEXT/Functions/AutoHideList/ to userEXT/.
+## Edit AutoHideList/autoHideL.sys as per the choise of windows to hide.
+## Untag the below line in ExtraExt.sys or this line.
 
 # Read $[USER_DIR]/AutoHideList/autoHideL.sys
 
@@ -95,4 +95,6 @@ Read $[CORE_DIR]/1Functions/YadPosition/yadPos.sys
 
 # Read $[HOME_DIR]/wmEXT/Xfce/xfceExt.sys #(open for Xfce)
 
-#### Add more or make changes here below.
+#######
+## Add more or make changes here below.
+##########
