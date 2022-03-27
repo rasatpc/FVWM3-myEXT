@@ -11,7 +11,7 @@ sudo archinstall (for advance users)
 Manually
 #########################
 
-Read setup/INSTALL.md
+Read .fvwm/setup/INSTALL.md
 
 LOOK & FEEL
 Replace .config/gtk-3.0/settings.ini with .fvwm/setup/settings.ini
