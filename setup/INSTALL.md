@@ -45,11 +45,9 @@ Volume Icon (add icon in system tray):
 * sudo pacman -Syu volumeicon
 
 Required by Extention Installer:
-* sudo apt install yad
-* sudo apt install gawk
+* sudo apt install yad gawk sed wget
 
-* sudo pacman -Syu yad
-* sudo pacman -Syu gawk
+* sudo pacman -Syu yad gawk sed wget
 
 Required by Thumbnails:
 * sudo apt install imagemagick-common
@@ -78,6 +76,6 @@ Look & Feel:
 
 Touchpad:
 * sudo apt install xserver-xorg-input-synaptics
-* sudo pacman -Syu xserver-xorg-input-synaptics
+* sudo pacman -Syu xf86-input-synaptics
 
 # Read more in .fvwm/setup/install.txt
