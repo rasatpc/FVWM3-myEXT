@@ -6,7 +6,7 @@ cp ~/.fvwm/ExtraExt.sys ~/.fvwm/extraEXT/scripts/InstallExt/backup/ExtraExt.bak
 
 ## Create output.tmp
 cd ~/.fvwm/extraEXT/scripts/InstallExt/
-grep '^TRUE' ExtInstaller.sh > output.tmp
+grep '^TRUE' ExtInstaller.sh > outputUpg.tmp
 
 ## Download
 cd ~/.fvwm/extraEXT/scripts/InstallExt/download/
@@ -37,7 +37,7 @@ download(){
 
 # Update ExtInstaller.sh and ExtraExt.sys
 cd ~/.fvwm/extraEXT/scripts/InstallExt/
-  awk '{print $1 " " $(NF-1)}' output.tmp > install.tmp
+  awk '{print $1 " " $(NF-1)}' outputUpg.tmp > install.tmp
 
 if [ -s install.tmp ]
 	then
