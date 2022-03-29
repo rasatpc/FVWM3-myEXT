@@ -32,8 +32,8 @@ download(){
 	rm -r ~/.fvwm/extraEXT/scripts/InstallExt/download/FVWM3-myEXT-main
     rm -r ~/.fvwm/extraEXT/scripts/InstallExt/download/*zip version.txt
     
-  yad --form --width=370 --height=40 --title="Update" --text-align=center \
-  --text="<b>Press UPGRADE, then close Extension Installer and and restart myExt.</b>" --button=UPGRADE:0
+  yad --form --width=300 --height=30 --title="Update" --text-align=center \
+  --text="<b> Press UPGRADE to update myExt. </b>" --button=UPGRADE:0
 
 # Update ExtInstaller.sh and ExtraExt.sys
 cd ~/.fvwm/extraEXT/scripts/InstallExt/
