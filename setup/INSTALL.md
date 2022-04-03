@@ -1,4 +1,6 @@
-# HOW TO INSTALL
+# HOW TO INSTALL myEXT and FVWM3
+
+myEXT:
 One time install and then updgrade with the Extension Installer.
 
 Download:
@@ -6,9 +8,9 @@ Download:
 
 Extract and copy subfolders to ~/.fvwm
 
-# FVWM3 myExt requirement
+# FVWM3 INSTALL & DEPENDENCIES 
 
-INSTALL Fvwm3
+Install Fvwm3 package (if available)
 
 Debian based Linux:
 * sudo apt install fvwm3
@@ -19,14 +21,16 @@ Arch Linux:
 Fedora:
 * sudo dfn install fvwm3
 
-Installing from Git FVWM3:
+# Installing from Git FVWM3:
 
 Important dependencies for installation and usage:
+Debian:
 * sudo apt-get install libevent-dev libx11-dev libxrandr-dev libxrender-dev libxt-dev
 * sudo apt-get install asciidoctor libfontconfig-dev libfreetype6-dev libfribidi-dev libncurses5-dev libpng-dev libreadline-dev libsm-dev libxcursor-dev libxext-dev libxft-dev libxi-dev libxpm-dev sharutils
 
+Arch Linux:
 * sudo pacman -Syu <same 19x packages>
-
+Fedora:
 * sudo dnf install libevent-devel libX11-devel libXrandr-devel libXt-devel
 * sudo dnf install rubygem-asciidoctor fontconfig-devel freetype-devel fribidi-devel ncurses-devel libpng-devel readline-devel librsvg2-devel libSM-devel libXcursor-devel libXext-devel libXft-devel libXi-devel libXpm-devel sharutils 
 
@@ -47,12 +51,34 @@ Read dev-docs/INSTALL.md
 # For login manager
 * COPY ~/.fvwm/setup/fvwm.desktop to /usr/share/xsessions/
 
-# myExt dependencies
+OR create fvwm.desktop with this content.
+
+---------
+
+## usr/share/xsessions/fvwm.desktop ##
+
+[Desktop Entry]
+Name=Fvwm3
+Keywords=Fvwm Window Manager
+Comment=F? Virtual Window Manager
+Exec=fvwm3
+Terminal=False
+TryExec=fvwm3
+Type=Application
+
+[Window Manager]
+SessionManaged=true
+
+##
+
+-------
+
+# myEXT DEPENDENCIES
 
 Volume Icon (add icon in system tray):
 * sudo apt install volumeicon-alsa
 * sudo pacman -Syu volumeicon
-* sudo pacman -Syu volumeicon
+* sudo dnf install volumeicon
 
 Required by Extention Installer:
 * sudo apt install yad gawk sed wget
