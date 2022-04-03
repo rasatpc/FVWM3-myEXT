@@ -36,7 +36,7 @@ Fedora:
 * sudo dnf install libevent-devel libX11-devel libXrandr-devel libXt-devel
 * sudo dnf install rubygem-asciidoctor fontconfig-devel freetype-devel fribidi-devel ncurses-devel libpng-devel readline-devel librsvg2-devel libSM-devel libXcursor-devel libXext-devel libXft-devel libXi-devel libXpm-devel sharutils 
 
-Make/install dependencies:
+Make & install command dependencies:
 * sudo apt-get install automake dh-autoreconf autogen
 * sudo pacman -Syu automake autoreconf autogen
 * sudo dnf install automake dh-autoreconf autogen
