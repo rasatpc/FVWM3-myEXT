@@ -43,6 +43,8 @@ Make/install dependencies:
 
 Read dev-docs/INSTALL.md
 
+Install FVWM3
+
 * git clone https://github.com/fvwmorg/fvwm3.git
 * cd fvwm3
 * ./autogen.sh
@@ -57,17 +59,25 @@ OR create fvwm.desktop with this content.
 
 ---------
 
- [Desktop Entry]
- Name=Fvwm3
- Keywords=Fvwm Window Manager
- Comment=F? Virtual Window Manager
- Exec=fvwm3
- Terminal=False
- TryExec=fvwm3
- Type=Application
+[Desktop Entry]
 
- [Window Manager]
- SessionManaged=true
+Name=Fvwm3
+
+Keywords=Fvwm Window Manager
+
+Comment=F? Virtual Window Manager
+
+Exec=fvwm3
+
+Terminal=False
+
+TryExec=fvwm3
+
+Type=Application
+
+[Window Manager]
+
+SessionManaged=true
 
 -------
 
