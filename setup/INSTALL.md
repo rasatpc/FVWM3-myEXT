@@ -23,13 +23,15 @@ Fedora:
 
 # Installing from Git FVWM3:
 
-Important dependencies for installation and usage:
+Important dependencies for installation and usage.
+
 Debian:
 * sudo apt-get install libevent-dev libx11-dev libxrandr-dev libxrender-dev libxt-dev
 * sudo apt-get install asciidoctor libfontconfig-dev libfreetype6-dev libfribidi-dev libncurses5-dev libpng-dev libreadline-dev libsm-dev libxcursor-dev libxext-dev libxft-dev libxi-dev libxpm-dev sharutils
 
 Arch Linux:
 * sudo pacman -Syu <same 19x packages>
+
 Fedora:
 * sudo dnf install libevent-devel libX11-devel libXrandr-devel libXt-devel
 * sudo dnf install rubygem-asciidoctor fontconfig-devel freetype-devel fribidi-devel ncurses-devel libpng-devel readline-devel librsvg2-devel libSM-devel libXcursor-devel libXext-devel libXft-devel libXi-devel libXpm-devel sharutils 
@@ -55,21 +57,17 @@ OR create fvwm.desktop with this content.
 
 ---------
 
-## usr/share/xsessions/fvwm.desktop ##
+ [Desktop Entry]
+ Name=Fvwm3
+ Keywords=Fvwm Window Manager
+ Comment=F? Virtual Window Manager
+ Exec=fvwm3
+ Terminal=False
+ TryExec=fvwm3
+ Type=Application
 
-[Desktop Entry]
-Name=Fvwm3
-Keywords=Fvwm Window Manager
-Comment=F? Virtual Window Manager
-Exec=fvwm3
-Terminal=False
-TryExec=fvwm3
-Type=Application
-
-[Window Manager]
-SessionManaged=true
-
-##
+ [Window Manager]
+ SessionManaged=true
 
 -------
 
