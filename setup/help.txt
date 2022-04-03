@@ -4,11 +4,11 @@ If you are new to FVWM and wondering what it is all about. The first thing to be
 
 FVWM is a Window Manager (WM). What sets it apart from other WMs, it is also a *Virtual* window manager. Among the powerful Fvwm features is the virtual desktop, which allows you to place windows on an area much larger than the actual size of the visible display.
 
-FVWM3 (ver. 1.0.4-122)
+FVWM3 (ver. 1.0.4-123)
 
 It comes with a minimal startup configure. It gives the user the choice of expression. Details such as the appearance of windows, function of panels, pagers, programs that will be used, mouse/key control, etc., are created and defined by the user.
 
-FVWM myExtensions (ver. 3.1.5)
+FVWM myExtensions (ver. 3.1.6)
 
 Is a collection of ready-made configs. It is inspired by the Gnome Extensions that make Gnome multifunctional. This gave the name "FVWM myExtensions". The new FVWM3, started as an experiment and became a fully functional base that makes "my" daily computer workflow simpler and more efficient.
 

@@ -37,11 +37,6 @@ ADDITIONAL SETUP
 Copy .fvwm/setup/rofi to .config/
 
 ----
-# File manager authentication agent for PolicyKit
-sudo apt install policykit-1-gnome
-sudo pacman -Syu polkit
-
-----
 # Turn off touchpad (for USB mouse)
 # Add the below line in .fvwm/config:
 Test (x synclient) Exec synclient TouchpadOff=1
@@ -73,4 +68,4 @@ AND
 This structure helps to maintain, debug, create new functions, decors, and modules.
 
 By rasat (8 Dec 2020)
-Last update: 29 Mar 2022
+Last update: 3 Apr 2022

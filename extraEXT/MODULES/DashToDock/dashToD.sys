@@ -27,12 +27,12 @@ DestroyModuleConfig DashToDock: *
               Action(Mouse 1) "Exec exec gimp")
 *DashToDock: (1x1, Colorset 268, Icon $[dTDicons]/ext-installer.png, \
               Action(Mouse 1) "Exec ~/.fvwm/extraEXT/scripts/InstallExt/ExtInstaller.sh")
-*DashToDock: (1x1, Colorset 268, Icon $[dTDicons]/gparted.png, \
-              Action(Mouse 1) "Exec exec /usr/sbin/gparted ")
-*DashToDock: (1x1, Colorset 268, Icon $[dTDicons]/software-properties.png, \
-              Action(Mouse 1) "Exec exec su-to-root -X -c /usr/sbin/synaptic")         
+*DashToDock: (1x1, Colorset 268, Icon $[dTDicons]/desktop-color.png, \
+              Action(Mouse 1) "Exec exec lxappearance")         
 *DashToDock: (1x1, Colorset 268, Icon $[dTDicons]/screenshooter.png, \
               Action(Mouse 1) "Exec exec xfce4-screenshooter")
+*DashToDock: (1x1, Colorset 268, Icon $[dTDicons]/gparted.png, \
+              Action(Mouse 1) "Exec exec /usr/sbin/gparted ")
               
 ## [EDIT end] (number of buttons edit Rows in action/west.conf, east.conf and north.conf)
 
