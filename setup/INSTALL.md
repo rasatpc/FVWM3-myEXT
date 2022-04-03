@@ -83,11 +83,6 @@ SessionManaged=true
 
 # myEXT DEPENDENCIES
 
-Volume Icon (add icon in system tray):
-* sudo apt install volumeicon-alsa
-* sudo pacman -Syu volumeicon
-* sudo dnf install volumeicon
-
 Required by Extention Installer:
 * sudo apt install yad gawk sed wget
 * sudo pacman -Syu yad gawk sed wget
@@ -107,6 +102,13 @@ Network wifi:
 * sudo apt-get install stalonetray
 * sudo pacman -Syu stalonetray
 * sudo dnf install stalonetray
+
+# myEXT OPTIONAL
+
+Volume Icon (add icon in system tray):
+* sudo apt install volumeicon-alsa
+* sudo pacman -Syu volumeicon
+* sudo dnf install volumeicon
 
 Search app:
 * sudo apt install rofi
@@ -129,4 +131,4 @@ Touchpad:
 * sudo pacman -Syu xf86-input-synaptics
 * sudo dnf install xorg-x11-drv-synaptics
 
-# Read more in .fvwm/setup/install.txt
+Read more in .fvwm/setup/install.txt
