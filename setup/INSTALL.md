@@ -26,15 +26,15 @@ Fedora:
 Important dependencies for installation and usage.
 
 Debian:
-* sudo apt-get install libevent-dev libx11-dev libxrandr-dev libxrender-dev libxt-dev
-* sudo apt-get install asciidoctor libfontconfig-dev libfreetype6-dev libfribidi-dev libncurses5-dev libpng-dev libreadline-dev libsm-dev libxcursor-dev libxext-dev libxft-dev libxi-dev libxpm-dev sharutils
+* sudo apt-get install libevent-dev libx11-dev libxrandr-dev libxrender-dev libxt-dev libxft-dev
+* sudo apt-get install asciidoctor libfribidi-dev libncurses5-dev libpng-dev libreadline-dev librsvg-dev libxcursor-dev libxpm-dev sharutils
 
 Arch Linux:
-* sudo pacman -Syu <same 19x packages>
+* sudo pacman -Syu <same 15x packages>
 
 Fedora:
-* sudo dnf install libevent-devel libX11-devel libXrandr-devel libXt-devel
-* sudo dnf install rubygem-asciidoctor fontconfig-devel freetype-devel fribidi-devel ncurses-devel libpng-devel readline-devel librsvg2-devel libSM-devel libXcursor-devel libXext-devel libXft-devel libXi-devel libXpm-devel sharutils 
+* sudo dnf install libevent-devel libX11-devel libXrandr-devel libXt-devel libXft-devel
+* sudo dnf install rubygem-asciidoctor fribidi-devel ncurses-devel libpng-devel readline-devel librsvg2-devel libXcursor-devel libXpm-devel sharutils 
 
 Make & install command dependencies:
 * sudo apt-get install automake dh-autoreconf autogen
