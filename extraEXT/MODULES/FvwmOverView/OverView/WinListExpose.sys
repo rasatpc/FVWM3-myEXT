@@ -17,7 +17,7 @@ Current InfoStoreAdd CURRENTWINDOW $[w.id]
 AddToMenu FvwmExposeMenu " W I N D O W  L I S T  $[page.nx] - $[page.ny]"  Title
 DynamicPopDownAction DestroyMenu FvwmExposeMenu
 
-All (!Fvwm*, !Bru*, !Tool*, CurrentPage, !Shaded, AcceptsFocus)\
+All (!Fvwm*, !Bru*, !Tool*, !Xfce*, CurrentPage, !Shaded, AcceptsFocus)\
     PipeRead "echo Raise; echo Focus; \
         xwd -silent -id $[w.id] | convert -scale 340 -frame 2x2 -mattecolor black -quality 1 xwd:- \
         png:$[cacheov]/icon.exp.$[w.id].png \
