@@ -11,7 +11,7 @@ Extract and copy subfolders to ~/.fvwm
 
 # FVWM3 INSTALL & DEPENDENCIES 
 
-Install Fvwm3 package (if available)
+Install Fvwm3 package `(if available)`
 
 Debian based Linux:
 * sudo apt install fvwm3
