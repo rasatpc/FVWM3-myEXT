@@ -61,9 +61,8 @@ Make & install command dependencies:
 * sudo pacman -Syu automake autoreconf autogen
 * sudo dnf install automake dh-autoreconf autogen
 
-Read dev-docs/INSTALL.md
-
 Install FVWM3
+=============
 
 * git clone https://github.com/fvwmorg/fvwm3.git
 * cd fvwm3
@@ -71,6 +70,8 @@ Install FVWM3
 * ./configure --enable-mandoc
 * make
 * sudo make install
+
+Read dev-docs/INSTALL.md
 
 # For login manager
 * COPY ~/.fvwm/setup/fvwm.desktop to /usr/share/xsessions/
