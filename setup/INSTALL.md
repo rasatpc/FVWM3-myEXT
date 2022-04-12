@@ -30,12 +30,14 @@ CORE
 
 Debian:
 * sudo apt-get install libevent-dev libx11-dev libxrandr-dev libxrender-dev libxt-dev libxft-dev
+
 Arch Linux:
 * sudo pacman -Syu libevent-dev libx11-dev libxrandr-dev libxrender-dev libxt-dev libxft-dev
+
 Fedora:
 * sudo dnf install libevent-devel libX11-devel libXrandr-devel libXt-devel libXft-devel
 
-To generate/view `fvwm3`'s documentation, XDG menu, and Network:
+To generate/view fvwm3's documentation, XDG menu, and Network:
 ===============================================================
 * sudo apt-get install asciidoctor xterm python3-xdg stalonetray
 * sudo pacman -Syu asciidoctor xterm python3-xdg stalonetray
@@ -46,8 +48,10 @@ OPTIONAL
 
 Debian:
 * sudo apt-get install libfribidi-dev libncurses5-dev libpng-dev libreadline-dev libxcursor-dev libxpm-dev sharutils
+
 Arch Linux:
 * sudo pacman -Syu libfribidi-dev libncurses5-dev libpng-dev libreadline-dev libxcursor-dev libxpm-dev sharutils
+
 Fedora:
 * sudo dnf install fribidi-devel ncurses-devel libpng-devel readline-devel libXcursor-devel libXpm-devel sharutils 
 
