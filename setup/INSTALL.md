@@ -25,18 +25,34 @@ Fedora:
 
 Important dependencies for installation and usage.
 
+CORE
+====
+
 Debian:
 * sudo apt-get install libevent-dev libx11-dev libxrandr-dev libxrender-dev libxt-dev libxft-dev
-* sudo apt-get install asciidoctor libfribidi-dev libncurses5-dev libpng-dev libreadline-dev librsvg-dev libxcursor-dev libxpm-dev sharutils
-
 Arch Linux:
-* sudo pacman -Syu <same 15x packages>
-
+* sudo pacman -Syu libevent-dev libx11-dev libxrandr-dev libxrender-dev libxt-dev libxft-dev
 Fedora:
 * sudo dnf install libevent-devel libX11-devel libXrandr-devel libXt-devel libXft-devel
-* sudo dnf install rubygem-asciidoctor fribidi-devel ncurses-devel libpng-devel readline-devel librsvg2-devel libXcursor-devel libXpm-devel sharutils 
+
+To generate/view `fvwm3`'s documentation, XDG menu, and Network:
+===============================================================
+* sudo apt-get install asciidoctor xterm python3-xdg stalonetray
+* sudo pacman -Syu asciidoctor xterm python3-xdg stalonetray
+* sudo dnf install rubygem-asciidoctor xterm xdg-utils stalonetray
+
+OPTIONAL
+========
+
+Debian:
+* sudo apt-get install libfribidi-dev libncurses5-dev libpng-dev libreadline-dev libxcursor-dev libxpm-dev sharutils
+Arch Linux:
+* sudo pacman -Syu libfribidi-dev libncurses5-dev libpng-dev libreadline-dev libxcursor-dev libxpm-dev sharutils
+Fedora:
+* sudo dnf install fribidi-devel ncurses-devel libpng-devel readline-devel libXcursor-devel libXpm-devel sharutils 
 
 Make & install command dependencies:
+====================================
 * sudo apt-get install automake dh-autoreconf autogen
 * sudo pacman -Syu automake autoreconf autogen
 * sudo dnf install automake dh-autoreconf autogen
@@ -55,7 +71,7 @@ Install FVWM3
 # For login manager
 * COPY ~/.fvwm/setup/fvwm.desktop to /usr/share/xsessions/
 
-OR create fvwm.desktop with this content.
+OR create fvwm.desktop with below content.
 
 ---------
 
@@ -97,11 +113,6 @@ FvwmButton configs to adjust as per screen resolution:
 * sudo apt install x11-utils
 * sudo pacman -Syu xorg-xdpyinfo
 * sudo dnf install xdpyinfo
-
-Network wifi:
-* sudo apt-get install stalonetray
-* sudo pacman -Syu stalonetray
-* sudo dnf install stalonetray
 
 # myEXT OPTIONAL
 

@@ -68,4 +68,4 @@ AND
 This structure helps to maintain, debug, create new functions, decors, and modules.
 
 By rasat (8 Dec 2020)
-Last update: 11 Apr 2022
+Last update: 12 Apr 2022
