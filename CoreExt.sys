@@ -12,13 +12,13 @@ SetEnv EXTRA_DIR $[HOME]/.fvwm/extraEXT
 SetEnv HOME_DIR $[HOME]/.fvwm
 
 ## Load 1.Functions
-# Read $[CORE_DIR]/1Functions/FVWM-Default/fvwmStartFunction.sys #(loaded by default)
-# Read $[CORE_DIR]/1Functions/MyInitMgr/myInitMgr.sys #(check local.conf)
+# Read $[CORE_DIR]/1Functions/FVWM-Default/fvwmStartFunction.sys #(loaded by default Fvwm3)
+# Read $[CORE_DIR]/1Functions/MyInitMgr/myInitMgr.sys #(check local.config or config)
 # Read $[CORE_DIR]/1Functions/YadPosition/yadPos.sys #(check extensions with yad script.)
 Read $[CORE_DIR]/1Functions/InitCheck/initC.sys
 
 ## Load 2-3.Styles
-# Read $[CORE_DIR]/2-3Styles/FVWM-Page/fvwmPage.sys #(loaded by default)
+# Read $[CORE_DIR]/2-3Styles/FVWM-Page/fvwmPage.sys #(loaded by default Fvwm3)
 Read $[CORE_DIR]/2-3Styles/FVWM-Colorsets/fvwmColorsets.sys
 Read $[CORE_DIR]/2-3Styles/MyColorsets/myColorsets.sys
 
