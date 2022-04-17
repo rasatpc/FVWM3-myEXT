@@ -1,5 +1,5 @@
 17 April 2022
-# HOW TO INSTALL myEXT and FVWM3
+# HOW TO INSTALL myEXT and FVWM3 (or Fvwm2)
 
 myEXT:
 One time install and then updgrade with the Extension Installer.
@@ -49,13 +49,13 @@ OPTIONAL
 ========
 
 Debian:
-* sudo apt-get install libfribidi-dev libncurses5-dev libpng-dev libreadline-dev libxcursor-dev libxpm-dev sharutils golang
+* sudo apt-get install libfribidi-dev libncurses5-dev libpng-dev libreadline-dev libxcursor-dev libxpm-dev sharutils
 
 Arch Linux:
-* sudo pacman -Syu libfribidi-dev libncurses5-dev libpng-dev libreadline-dev libxcursor-dev libxpm-dev sharutils golang
+* sudo pacman -Syu libfribidi-dev libncurses5-dev libpng-dev libreadline-dev libxcursor-dev libxpm-dev sharutils
 
 Fedora:
-* sudo dnf install fribidi-devel ncurses-devel libpng-devel readline-devel libXcursor-devel libXpm-devel sharutils golang
+* sudo dnf install fribidi-devel ncurses-devel libpng-devel readline-devel libXcursor-devel libXpm-devel sharutils
 
 Make & install command dependencies:
 ====================================
