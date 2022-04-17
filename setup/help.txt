@@ -8,11 +8,9 @@ FVWM3 (ver. 1.0.4-123)
 
 It comes with a minimal startup configure. It gives the user the choice of expression. Details such as the appearance of windows, function of panels, pagers, programs that will be used, mouse/key control, etc., are created and defined by the user.
 
-FVWM myExtensions (ver. 3.1.9)
+FVWM myExtensions (ver. 3.2)
 
-Is a collection of ready-made configs. It is inspired by the Gnome Extensions that make Gnome multifunctional. This gave the name "FVWM myExtensions". The new FVWM3, started as an experiment and became a fully functional base that makes "my" daily computer workflow simpler and more efficient.
-
-This is a model for you to use, modify or create your own extensions. The default FVWM config is the base, directly in ~/.fvwm. The config is split into folders and runs in the same sequence as the original. The additional extension configs are simply added in associated folders.
+Is a collection of ready-made configs. A model for you to use, modify or create your own extensions. The default FVWM config is the base, directly in ~/.fvwm. The config is split into folders and runs in the same sequence as the original. The additional extension configs are simply added in associated folders.
 
 Previous myExt configs are not compatible with 3.x. This new version is user-oriented, to add and make changes in the preset configs and to create own without getting overwritten by new updates. It includes three new folders and system files:
 

@@ -1,4 +1,4 @@
-12 April 2022
+17 April 2022
 # HOW TO INSTALL myEXT and FVWM3
 
 myEXT:
@@ -11,7 +11,7 @@ Extract and copy subfolders to ~/.fvwm
 
 # FVWM3 INSTALL & DEPENDENCIES 
 
-Install Fvwm3 package `(if available)`
+Install Fvwm3 package `(if available)` or Fvwm2
 
 Debian based Linux:
 * sudo apt install fvwm3
@@ -37,6 +37,7 @@ Arch Linux:
 
 Fedora:
 * sudo dnf install libevent-devel libX11-devel libXrandr-devel libXt-devel libXft-devel
+
 
 To generate/view fvwm3's documentation, XDG menu, and Network:
 ===============================================================

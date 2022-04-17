@@ -6,7 +6,7 @@ Original download: https://drive.google.com/file/d/1gLhWQBP7cr61az6qWwZeLNXeF6KT
 To install or edit .fvwm/ExtraEXT.sys
 
 Add the below line below "Decorations".
-Read $[EXTRA_DIR]/MyDecor/myDec.sys
+Read $[EXTRA_DIR]/Decors/MyDecor/myDec.sys
 
 Install dependency packages.
 
