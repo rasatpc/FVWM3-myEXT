@@ -1,6 +1,6 @@
-## local.config
+## config
+# This config runs on Fvwm2
 
-## NOTE:
 ## Don't add or edit this file but .fvwm/userExt.sys
 
 SetEnv CORE_DIR $[HOME]/.fvwm/coreEXT
@@ -8,9 +8,10 @@ SetEnv EXTRA_DIR $[HOME]/.fvwm/extraEXT
 SetEnv USER_DIR $[HOME]/.fvwm/userEXT
 SetEnv HOME_DIR $[HOME]/.fvwm
 
-## Load stalonetray (wifi, screen brightness & battery, and sound volume).
-Read $[CORE_DIR]/2-3Styles/FVWM-Page/fvwmPage.sys
+## Load functions, style and stalonetray (wifi, screen brightness & battery, and sound volume).
+Read $[CORE_DIR]/1Functions/FVWM-Default/fvwmStartFunction.sys
 Read $[CORE_DIR]/1Functions/MyInitMgr/myInitMgr.sys
+Read $[CORE_DIR]/2-3Styles/FVWM-Page/fvwmPage.sys
 
 ## Start InfoPanel
 Read $[CORE_DIR]/MODULES/InfoPanel/infoPanel.sys
