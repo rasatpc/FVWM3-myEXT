@@ -5,6 +5,6 @@ Moves applications to a specific workspace (page) when they create windows. Insp
 To install copy folder AutoMoveWin/ to userEXT/.
 
 ## Add the below line in .fvwm/UserEXT.sys.
-Read $[USER_DIR]/AutoMoveWin/autoMoveW.sys
+Read $[USER_DIR]/AutoMoveWin/autoMoveW.sys #102
 
 Untag and add your own in autoMoveW.sys

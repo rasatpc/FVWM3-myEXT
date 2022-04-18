@@ -6,7 +6,7 @@ Install coreEXT/1Functions/MyInitMgr/
 Install coreEXT/MODULES/FvwmOverView/
 
 ## Add the below line below "Modules".
-Read $[EXTRA_DIR]/MODULES/TaskButtonsFlux/taskBFlux.sys
+Read $[EXTRA_DIR]/MODULES/TaskButtonsFlux/action/fluxSouth.conf #608
 
 ## Center TaskButtonsFlux postion as per screen resolution.
 ## Add below line in 1Functions/MyInitMgr/myInitMgr.sys (without "#").

@@ -5,6 +5,6 @@
 To install or edit .fvwm/CoreExt.sys
 
 ## Add the below line below "Styles".
-Read $[EXTRA_DIR]/Styles/MyBorderStyle/myBorderStyle.sys
+Read $[EXTRA_DIR]/Styles/MyBorderStyle/myBorderStyle.sys #203
 
 ## Any addon or modification in .fvwm/UserEXT.sys

@@ -6,6 +6,6 @@ https://www.fvwm.org/Wiki/Tips/AutoHidingWindows/
 To install copy folder AutoHideList/ to userEXT/.
 
 ## Add the below line below "Functions".
-Read $[USER_DIR]/AutoHideList/autoHideL.sys
+Read $[USER_DIR]/AutoHideList/autoHideL.sys #101
 
 Untag and add your own in autoHideL.sys

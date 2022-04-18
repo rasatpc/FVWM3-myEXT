@@ -7,7 +7,7 @@ Package dependency Styles/FvwmThumbnails
 To install or edit .fvwm/ExtraEXT.sys
 
 ## Add the below lines below "Styles".
-Read $[EXTRA_DIR]/Styles/DiaryThumbnails/diaryThumbPlace.sys
+Read $[EXTRA_DIR]/Styles/DiaryThumbnails/diaryThumbPlace.sys #202
 
 ## Any addon or modification in .fvwm/UserEXT.sys
 

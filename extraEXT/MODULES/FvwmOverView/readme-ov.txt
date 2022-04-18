@@ -3,7 +3,7 @@
 To install or edit .fvwm/ExtraExt.sys
 
 ## Add the below line below "Load 7.Modules".
-Read $[EXTRA_DIR]/MODULES/FvwmOverView/fvwmWOview.sys
+Read $[EXTRA_DIR]/MODULES/FvwmOverView/fvwmWOview.sys #605
 
 ## Any addon or modification in .fvwm/userEXT.sys
 
