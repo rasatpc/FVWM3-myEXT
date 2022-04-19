@@ -76,9 +76,9 @@ Install FVWM3
 Read dev-docs/INSTALL.md
 
 # For login manager
-* COPY ~/.fvwm/setup/fvwm.desktop to /usr/share/xsessions/
+* COPY ~/.fvwm/setup/xsessions/fvwm3.desktop to /usr/share/xsessions/
 
-OR create fvwm.desktop with below content.
+OR create fvwm3.desktop with below content.
 
 ---------
 
