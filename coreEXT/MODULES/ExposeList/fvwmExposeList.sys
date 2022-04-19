@@ -12,7 +12,7 @@ AddToFunc FvwmExpose
 + I Current InfoStoreAdd CURRENTWINDOW $[w.id]
 + I AddToMenu FvwmExposeMenu " W I N D O W  L I S T  $[page.nx] - $[page.ny]"  Title
 + I + DynamicPopDownAction DestroyMenu FvwmExposeMenu
-+ I All (!Fvwm*, !Bru*, !Tool*, !Xfce-panel*, CurrentPage, !Shaded, AcceptsFocus)\
++ I All (!Fvwm*, !Bru*, !Tool*, !Xfce4-panel*, CurrentPage, !Shaded, AcceptsFocus)\
     PipeRead "echo Raise; \
         xwd -silent -id $[w.id] | convert -scale $$(($[w.width]/4)) -quality 0 xwd:- \
         png:$[cacheExp]/icon.exp.$[w.id].png \
