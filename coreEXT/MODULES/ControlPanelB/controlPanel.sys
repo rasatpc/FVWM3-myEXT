@@ -41,8 +41,8 @@ DestroyModuleConfig ControlPanelB: *
 
 *ControlPanelB: (1x1, Icon $[smallIcons]/resize-w.png, Action Resize )
 *ControlPanelB: (1x1, Icon $[smallIcons]/move-w.png, Action Move  )
-*ControlPanelB: (1x1, Icon $[smallIcons]/detile-w.png, Action DeTile)
 *ControlPanelB: (1x1, Icon $[smallIcons]/tile-w.png, Action WTile)
+*ControlPanelB: (1x1, Icon $[smallIcons]/detile-w.png, Action DeTile)
 *ControlPanelB: (Title Min, Back #faa46e, Action Thumbnail )
 *ControlPanelB: (Title Max, Back #85a772, Action Maximize 97 90 ) #width and hight
 *ControlPanelB: (Title Close, Back #e55757, Action Destroy)
