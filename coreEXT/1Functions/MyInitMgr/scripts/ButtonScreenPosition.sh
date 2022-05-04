@@ -27,8 +27,4 @@ sed -i "/Rectangle/c\*TaskButtonsFlux: (70x1, Icon $[tpc-image]/Fvwm-58x20.png, 
 
 sed -i "/450x96/c\*RestartShutdown: Geometry 450x96-$4" "$path/coreEXT/MODULES/RestartShutdown/restartSDown.sys"
 
-# sed -i "/440x200/c\*InfoPanel: Geometry 440x200-$4" "$path/coreEXT/MODULES/InfoPanel/infoPanel.sys"
-# sed -i "/440x100/c\*ExitButtons: Geometry 440x100-$4" "$path/coreEXT/MODULES/InfoPanel/action/exit.sys"
-
 sed -i "/+80+70/c\*bgWOButton: Geometry $5+80+70" "$path/coreEXT/MODULES/FvwmOverView/OverView/bgWOview.sys"
-

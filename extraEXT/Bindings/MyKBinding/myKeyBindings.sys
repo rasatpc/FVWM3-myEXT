@@ -1,4 +1,4 @@
-x## Bindings: myKeyBindings.sys
+## Bindings: myKeyBindings.sys
 #
 
 SetEnv CORE_DIR $[HOME]/.fvwm/coreEXT/

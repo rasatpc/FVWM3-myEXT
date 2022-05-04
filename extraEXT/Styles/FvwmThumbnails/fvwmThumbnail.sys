@@ -3,11 +3,11 @@
 ## Needs imagemagick for this function to work
 #
 
-## Set Thumbnail cache folder
 SetEnv CORE_DIR $[HOME]/.fvwm/coreEXT/
 SetEnv EXTRA_DIR $[HOME]/.fvwm/extraEXT/
 SetEnv HOME_DIR $[HOME]/.fvwm
 
+## Set Thumbnail cache folder
 SetEnv cacheth $[EXTRA_DIR]/Styles/FvwmThumbnails/cache
 
 DestroyFunc Thumbnail

@@ -1,7 +1,6 @@
 # readme-dh.txt
 
-This is an additional function for DashToDock.
-Currently it is still unstable that requires an additinal mouse strok changing the hide direction. For example, from west to north the 1px hiding line remains at west side until making DTD bar visible with the mouse.
+Currently, it is still unstable that requires an additional mouse stroke to change the hide direction. For example, from west to north the 1px hiding line remains on the west side until making DTD bar visible to the mouse.
 
 To install or edit .fvwm/UserExt.sys
 

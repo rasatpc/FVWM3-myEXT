@@ -8,7 +8,6 @@ SetEnv HOME_DIR $[HOME]/.fvwm
 
 SetEnv cacheov $[EXTRA_DIR]/MODULES/FvwmOverView/cache
 
-Win
 MenuStyle * MenuColorset 18, ActiveColorset 15, TitleColorset 15
 MenuStyle * ItemFormat "%|%4.2i%5.3l%5.70>%|"
 MenuStyle * BorderWidth 2
