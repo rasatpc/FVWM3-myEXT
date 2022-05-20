@@ -13,14 +13,17 @@ Extract and copy subfolders to ~/.fvwm
 
 Install Fvwm3 package `(if available)` or Fvwm2
 
-Debian based Linux:
-* sudo apt install fvwm3
+Debian based GNU/Linux:
+* `sudo apt install fvwm3`
 
 Arch Linux:
-* sudo yay -S fvwm3
+* `yay -S fvwm3`
 
-Fedora:
-* sudo dfn install fvwm3
+Fedora/OpenSUSE/other RPM-based distros:
+* `sudo dfn install fvwm3`
+
+Alpine Linux:
+* `apk add fvwm`
 
 # Installing from Git FVWM3:
 
@@ -76,7 +79,7 @@ Install FVWM3
 Read dev-docs/INSTALL.md
 
 # For login manager
-* COPY ~/.fvwm/setup/xsessions/fvwm3.desktop to /usr/share/xsessions/
+* `cp .fvwm/setup/xsessions/fvwm3.desktop /usr/share/xsessions/`
 
 OR create fvwm3.desktop with below content.
 
