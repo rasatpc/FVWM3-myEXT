@@ -11,6 +11,9 @@ KillModule FvwmPager miniPager
 KillModule FvwmPager V1x5Pager
 KillModule FvwmPager V2x4Pager
 
+# Load DashToDock
+# Read $[USER_DIR]/MODULES/DashToDock/action/west.conf
+
 ## Change wallpaper.
 # SetBG grey480x480.png
 

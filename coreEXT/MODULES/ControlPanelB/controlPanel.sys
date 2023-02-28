@@ -36,7 +36,6 @@ DestroyModuleConfig ControlPanelB: *
 *ControlPanelB: Font "xft:Sans:size=9:antialias=True"
 *ControlPanelB: Padding 2 2
   
-# *ControlPanelB: (1x1, Icon $[smallIcons]/search-w.png, Action(Mouse 1) "Exec exec ulauncher" )
 *ControlPanelB: (1x1, Icon $[smallIcons]/search-w.png, Action(Mouse 1) "Exec exec rofi -show" )
 
 *ControlPanelB: (1x1, Icon $[smallIcons]/resize-w.png, Action Resize )

@@ -19,15 +19,15 @@ AddToFunc Desk22
 + I Read $[EXTRA_DIR]/DeskSwitch/VDesk/VM-Desk.sys
 Silent Key d A M Desk22
 
-DestroyFunc DeskScroll (alt-mouse left click)
-AddToFunc DeskScroll
-+ I Read $[EXTRA_DIR]/DeskSwitch/VDesk/mouseScroll.conf
-Mouse 1 A M DeskScroll
+# DestroyFunc DeskScroll (alt-mouse left click)
+# AddToFunc DeskScroll
+# + I Read $[EXTRA_DIR]/DeskSwitch/VDesk/mouseScroll.conf
+# Mouse 1 A M DeskScroll
 
-DestroyFunc DeskLockScroll (ctrl-mouse right click)
-AddToFunc DeskLockScroll
-+ I Read $[EXTRA_DIR]/DeskSwitch/VDesk/lock.conf
-Mouse 1 A C DeskLockScroll
+# DestroyFunc DeskLockScroll (ctrl-mouse right click) #(conflicts with Gimp clone)
+# AddToFunc DeskLockScroll
+# + I Read $[EXTRA_DIR]/DeskSwitch/VDesk/lock.conf
+# Mouse 1 A C DeskLockScroll
 
 ## Maximize (within Desk 2x2) alt-m
 Silent Key m A M Maximize 145 175 # width hight

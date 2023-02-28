@@ -47,7 +47,7 @@ KillModule FvwmButtons InfoPanel
 ## Change preloaded CORE and EXTRA settings.
 
 ## Permanent wallpaper
-# SetBG cloth-grey-1920x1080.png
+# SetBG cloth-grey-tiled.png
 
 ## or last selected
 Exec exec fvwm-root $[HOME_DIR]/.BGdefault
