@@ -1,8 +1,8 @@
-28 Feb 2023
+1 Mar 2023
 # HOW TO INSTALL myEXT and FVWM3 (or Fvwm2)
 
 myEXT:
-One time install and then updgrade with the Extension Installer.
+One-time install and then upgrade with the Extension Installer.
 
 Download:
 * https://github.com/rasatpc/FVWM3-myEXT/archive/refs/heads/main.zip
@@ -13,7 +13,7 @@ Extract and copy subfolders to ~/.fvwm
 
 Install Fvwm3 package `(if available)` or Fvwm2
 
-Debian based GNU/Linux:
+Debian-based GNU/Linux:
 * `sudo apt install fvwm3`
 
 Arch Linux:
@@ -153,3 +153,4 @@ Touchpad:
 * sudo dnf install xorg-x11-drv-synaptics
 
 Read more in .fvwm/setup/install.txt
+

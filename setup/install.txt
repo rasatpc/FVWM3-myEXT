@@ -5,7 +5,7 @@ minstall-pkexec
 click "Installer" icon in home folder.
 
 Arch FVWM3 live CD (terminal)
-sudo archinstall (for advance users)
+sudo archinstall (for advanced users)
 
 ######
 Manually
@@ -43,7 +43,7 @@ Test (x synclient) Exec synclient TouchpadOff=1
 # BACKGROUND
 -------------
 
-FVWM myExtension is designed for Fvwm3 but also works on Fvwm2 with minor differences. The configs are split into folders and runs in the same sequence as the default.
+FVWM myExtensions is designed for Fvwm3 but also works on Fvwm2 with minor differences. The configs are split into folders and run in the same sequence as the default.
 
 .fvwm/coreEXT (essential configs)
 1. 1Functions/
@@ -63,7 +63,8 @@ AND
 5. MODULES/
 6. Styles/
 
-This structure helps to maintain, debug, create new functions, decors, and modules.
+This structure helps to maintain, debug, and create new functions, decors, and modules.
 
 By rasat (8 Dec 2020)
-Last update: 28 Feb 2023
+Last update: 1 Mar 2023
+
