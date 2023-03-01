@@ -1,0 +1,28 @@
+## Modules: exitPanel.sys
+## Shotdown, Reboot, Suspend, Logout, and Lock 
+## By ceeslans
+
+SetEnv EXTRA_DIR $[HOME]/.fvwm/extraEXT/
+SetEnv HOME_DIR $[HOME]/.fvwm
+
+## Colorsets check MyColorsets/myColorsets.sys
+
+SetEnv exit-icon $[EXTRA_DIR]/MODULES/ExitMenu
+Module FvwmButtons ExitPanel
+
+DestroyModuleConfig ExitPanel: *
+*ExitPanel: Geometry 80x40-0+50
+*ExitPanel: PressColorset 4
+*ExitPanel: Frame 0
+*ExitPanel: Rows 1
+*ExitPanel: Columns 1
+*ExitPanel: Padding 0 0
+*ExitPanel: (1x1, Back #4caf50)
+*ExitPanel: (46x1, Back #4caf50, Icon $[exit-icon]/logout.png, Action(Mouse 1) `Exec exec $[EXTRA_DIR]/MODULES/ExitMenu/script/fblogout` )
+
+#*ExitPanel: (5x1, Back #4caf50)
+
+Style ExitPanel !Borders, !Title, WindowListSkip, Sticky, StaysOnTop
+
+## Check position: yadPos.sys
+Read $[CORE_DIR]/1Functions/YadPosition/yadPos.sys

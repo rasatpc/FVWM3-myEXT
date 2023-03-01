@@ -1,0 +1,82 @@
+#!/bin/bash
+
+### Set path to folder where config file is located - e.g : 
+# source $HOME/.config/fblogout.conf
+
+### OR source config file if located in SAME folder as script:
+DIR="$(cd "$(dirname "$0")" && pwd)"
+source $DIR/fblogout.conf
+
+path=$DIR/fblogout-svg
+
+###===========================================================
+
+if [[ $layout = "standard" ]];then
+
+	if [[ $mode = "vertical" ]]; then
+			### --field="<span font='$monofnt'>_ Refresh    </span>!$path/$sizestd/fbrefresh.svg!":fbtn "fluxbox-remote restart"
+		yad --form --columns 1 --width=180 --class="yad-fblogout" --class="yad-fblogout" --window-title="ExitMenu" --title="ExitMenu" --borders=10 --center --keep-icon-size --no-buttons  --single-click --skip-taskbar $nodeco $timer $tbar \
+		--field="<span font='$monofnt'>_ Lock      </span>!$path/$sizestd/lock.svg!":fbtn "dm-tool 'switch-to-greeter' " \
+		--field="<span font='$monofnt'>_ Logout    </span>!$path/$sizestd/logout.svg!":'bash -c "killall fvwm3"' \
+		--field="<span font='$monofnt'>_ Suspend   </span>!$path/$sizestd/suspend.svg!":fbtn "sudo 'pm-suspend' " \
+		--field="<span font='$monofnt'>_ Reboot    </span>!$path/$sizestd/reboot.svg!":fbtn "sudo reboot" \
+		--field="<span font='$monofnt'>_ Shutdown  </span>!$path/$sizestd/shutdown.svg!":fbtn "sudo halt" 
+	
+	elif [[ $mode = "horizontal" ]]; then
+			### --button="<span font='$fnt'>_ Refresh</span>!$path/$sizestd/fbrefresh.svg!":"fluxbox-remote restart"
+			 ##--css=gtk.css
+			 ## GTK_THEME="Exit-menu" \
+			 
+				yad --center --borders=4 --class="yad-fblogout" --window-title="ExitMenu" --title="ExitMenu" --keep-icon-size --buttons-layout=center  --skip-taskbar --sticky --single-click $nodeco $timer $tbar \
+		--button="<span font='$fnt'>_ Lock</span>!$path/$sizestd/lock.svg!":"dm-tool 'switch-to-greeter' " \
+		--button="<span font='$fnt'>_ Logout</span>!$path/$sizestd/logout.svg!":'bash -c "killall fvwm3"' \
+		--button="<span font='$fnt'>_ Suspend</span>!$path/$sizestd/suspend.svg!":"sudo 'pm-suspend' " \
+		--button="<span font='$fnt'>_ Reboot</span>!$path/$sizestd/reboot.svg!":"sudo reboot" \
+		--button="<span font='$fnt'>_ Shutdown</span>!$path/$sizestd/shutdown.svg!":"sudo halt"
+	fi
+
+elif [[ $layout = "textOnly" ]];then
+
+	if [[ $mode = "vertical" ]]; then
+			### --field="_Refresh!":fbtn "fluxbox-remote restart"
+		yad --form --columns 1 --width=180 --class="yad-fblogout" --window-title="ExitMenu" --title="ExitMenu" --borders=10 --center --no-buttons  --single-click --skip-taskbar $nodeco $timer $tbar \
+		--field="_Lock!":fbtn "dm-tool 'switch-to-greeter' " \
+		--field="_Logout!":'bash -c "killall fvwm3"' \
+		--field="_Suspend!":fbtn "sudo 'pm-suspend' " \
+		--field="_Reboot!":fbtn "sudo reboot" \
+		--field="_Shutdown!":fbtn "sudo halt"
+	
+	elif [[ $mode = "horizontal" ]]; then
+			### --button="_Refresh!":"fluxbox-remote restart"
+		yad --center --borders=10 --width 180 --class="yad-fblogout" --window-title="ExitMenu" --title="ExitMenu" --buttons-layout=center  --skip-taskbar --sticky --single-click $nodeco $timer $tbar \
+		--button="_Lock!":"dm-tool 'switch-to-greeter' " \
+		--button="_Logout!":'bash -c "killall fvwm3"' \
+		--button="_Suspend!":"sudo 'pm-suspend' " \
+		--button="_Reboot!":"sudo reboot" \
+		--button="_Shutdown!":"sudo halt"
+	fi
+
+elif [[ $layout = "iconsOnly" ]];then
+
+	if [[ $mode = "vertical" ]]; then
+			### --field="!$path/$sizeico/fbrefresh.svg!Refresh":fbtn "fluxbox-remote restart"
+		yad --form --columns 1 --class="yad-fblogout" --window-title=" " --title=" " --borders=10 --center --keep-icon-size --no-buttons  --single-click --skip-taskbar $nodeco $timer $tbar \
+		--field="!$path/$sizeico/lock.svg!Lock":fbtn "dm-tool 'switch-to-greeter' " \
+		--field="!$path/$sizeico/logout.svg!Logout":'bash -c "killall fvwm3"' \
+		--field="!$path/$sizeico/suspend.svg!Suspend":fbtn "sudo 'pm-suspend' " \
+		--field="!$path/$sizeico/reboot.svg!Reboot":fbtn "sudo reboot" \
+		--field="!$path/$sizeico/shutdown.svg!Shutdown":fbtn "sudo halt" 
+	
+	elif [[ $mode = "horizontal" ]]; then
+			### --field="!$path/$sizeico/fbrefresh.svg!Refresh":fbtn "fluxbox-remote restart"
+		yad --form --columns 6 --class="yad-fblogout" --window-title=" " --title=" " --borders=10 --center --keep-icon-size --no-buttons  --single-click --skip-taskbar $nodeco $timer $tbar \
+		--field="!$path/$sizeico/lock.svg!Lock":fbtn "dm-tool 'switch-to-greeter' " \
+		--field="!$path/$sizeico/logout.svg!Logout":'bash -c "killall fvwm3"' \
+		--field="!$path/$sizeico/suspend.svg!Suspend":fbtn "sudo 'pm-suspend' " \
+		--field="!$path/$sizeico/reboot.svg!Reboot":fbtn "sudo reboot" \
+		--field="!$path/$sizeico/shutdown.svg!Shutdown":fbtn "sudo halt" 
+	fi
+
+fi
+	
+exit 0

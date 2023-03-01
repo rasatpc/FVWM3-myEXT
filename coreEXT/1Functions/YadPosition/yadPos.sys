@@ -16,3 +16,4 @@ AddToFunc   MoveYad
 + I ThisWindow ("Alert*") Move -15 -30
 + I ThisWindow ("*Update*") Move -15 -30
 + I ThisWindow ("*myExt*") Move -15 -30
++ I ThisWindow ("*ExitMenu*") Move -15 -30

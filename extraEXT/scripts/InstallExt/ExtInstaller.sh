@@ -25,7 +25,7 @@ yad --plug=$key --tabnum=1 \
     --width=900 --height=680 \
     --separator=" " \
     --column=Y/n --column="Type" \
-    --column=Extension --column=Description --column="" --column=# \
+    --column=Extra-Extensions --column=Description --column="" --column=# \
 TRUE Functions "<b>Auto Hide List</b>" "Hides widgets not to use desktop space." "images/auto-hide.png" 101 \
 TRUE Functions "<b>Auto Move Windows</b>" "Moves apps to a specific workspace." "images/auto-move.png" 102 \
 TRUE Styles "<b>Fvwm Thumbnails</b>" "Iconified windows." "images/fvwm-thumb.png" 201 \
@@ -43,14 +43,16 @@ false Modules "<b>Extension Switch</b>" "Preview of different extension setup." 
 TRUE Modules "<b>Fvwm Over View</b>" "View of running windows on current page." "images/over-view.png" 605 \
 false Modules "<b>MyRight Panel</b>" "Modified Fvwm Right Panel." "images/my-right-panel.png" 606 \
 false Modules "<b>Task Buttons Curve</b>" "Task bar based on Somatic theme." "images/task-curve.png" 607 \
+false Modules "<b>Wifi Sound Panel</b>" "Small wifi and sound tray." "images/wifi-sound.png" 612 \
 TRUE Modules "<b>Task Buttons Flux</b>" "Fluxbox style of task bar." "images/task-flux.png" 608 \
 TRUE Modules "<b>Time/Day Button</b>" "Date, time, and calendar panel." "images/time-day.png" 609 \
 TRUE Modules "<b>Vertical Pager 1x5</b>" "Miniature view of desktops (1x5)." "images/pager1x5.png" 610 \
 false Modules "<b>Vertical Pager 2x4</b>" "Miniature view of desktops (2x4)." "images/pager2x4.png" 611 \
+false Modules "<b>Exit Menu</b>" "Shotdown, Reboot, Suspend, Lock." "images/exit-menu.png" 613 \
 	>output.tmp &
 yad --plug=$key --tabnum=2 --list --no-headers --listen --cycle-read --column=":IMG" <&3  &
 yad --paned --key=$key --title="Extension Installer" \
-    --button=Close:1 --button='Reset:bash -c "./reset.sh"' --button='Upgrade myExt:bash -c "./checkLine-Update.sh"' --button=Install:0 --center --orient=Horizontal --splitter=620 --width=800 --height=630
+    --button=Close:1 --button='Reset:bash -c "./reset.sh"' --button='Upgrade myExt:bash -c "./checkLine-Update.sh"' --button=Install:0 --center --orient=Horizontal --splitter=620 --width=800 --height=640
 exec 3>&-
 # Change all extension to false.
 awk '{print $1 " " $NF}' output.tmp > install.tmp

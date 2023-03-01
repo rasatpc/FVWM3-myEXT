@@ -1,0 +1,27 @@
+## Modules: wifiSound.sys
+## By rasat
+
+SetEnv EXTRA_DIR $[HOME]/.fvwm/extraEXT
+
+## Colorset check coreEXT/2-3Styles/MyColorsets/my-Colorsets.sys
+
+Module FvwmButtons WifiSnd
+
+DestroyModuleConfig WifiSnd: *
+*WifiSnd: Geometry 100x30-0-128
+*WifiSnd: Back #6da2e3
+*WifiSnd: Frame 0
+*WifiSnd: Rows 1
+#*WifiSnd: Padding 0 0
+
+Test (x stalonetray) *WifiSnd: (100x1, Back #6da2e3, Swallow(NoClose,UseOld) \
+    stalonetray 'Exec exec stalonetray --config \
+    "$[FVWM_DATADIR]/default-config/.stalonetrayrc"' )
+    
+#*WifiSnd: (5x1, Colorset 363)
+*WifiSnd: (10x1, Back #6da2e3)
+
+## Style setting
+Style WifiSnd !Borders, !Title, WindowListSkip, Sticky, StaysOnTop
+
+Style WifiSnd NoTitle

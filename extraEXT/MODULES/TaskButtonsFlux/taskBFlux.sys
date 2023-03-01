@@ -7,6 +7,7 @@ SetEnv EXTRA_DIR $[HOME]/.fvwm/extraEXT
 ## Remove RightPanel+Calendar and Curve.
 KillModule FvwmButtons *RightPanel
 KillModule FvwmButtons TaskButtonsCurve
+KillModule FvwmButtons WifiSnd
 
 DestroyMenu MenuStart
 AddToMenu MenuStart
