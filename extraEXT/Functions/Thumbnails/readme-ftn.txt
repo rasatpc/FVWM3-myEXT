@@ -7,7 +7,7 @@ Menus/MyMenu is depended on this package.
 To install or edit .fvwm/ExtraEXT.sys
 
 ## Add the below lines below "Styles".
-Read $[EXTRA_DIR]/Styles/FvwmThumbnails/fvwmThumbnail.sys #201
+Read $[EXTRA_DIR]/Functions/Thumbnails/thumbnail.sys #201
 
 ## Any addon or modification in .fvwm/UserEXT.sys
 

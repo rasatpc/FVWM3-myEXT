@@ -28,6 +28,7 @@ Read $[CORE_DIR]/4Menus/FvwmCmenu/fvwmColorM.conf
 ## Load 5.Bindings
 Read $[CORE_DIR]/5Bindings/MyMBinding/myMouseBindings.sys
 Read $[CORE_DIR]/5Bindings/MoveResizeBdg/MoRzBinding.sys
+Read $[CORE_DIR]/5Bindings/ExposeList/fvwmExposeList.sys
 
 ## Load 6.Decorations
 
@@ -35,7 +36,6 @@ Read $[CORE_DIR]/5Bindings/MoveResizeBdg/MoRzBinding.sys
 Read $[CORE_DIR]/MODULES/FvwmIconMan/iconMan.sys
 Read $[CORE_DIR]/MODULES/ControlPanelB/controlPanel.sys
 Read $[CORE_DIR]/MODULES/SimpleButton/simpleB.sys
-Read $[CORE_DIR]/MODULES/ExposeList/fvwmExposeList.sys
 Read $[CORE_DIR]/MODULES/WinListSwitch/winLSwitch.sys
 
 #KillModule FvwmButtons RightPanel

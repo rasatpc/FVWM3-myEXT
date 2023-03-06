@@ -11,7 +11,7 @@ SetEnv HOME_DIR $[HOME]/.fvwm
 Module FvwmButtons TimeDayButton
 
 DestroyModuleConfig TimeDayButton:*
-*TimeDayButton: Geometry 90x70-0-60
+*TimeDayButton: Geometry 92x70-0-60
 *TimeDayButton: Colorset 10
 *TimeDayButton: Columns 120
 *TimeDayButton: Font "xft:Sans:Bold:size=10:antialias=True"
@@ -23,7 +23,6 @@ DestroyModuleConfig TimeDayButton:*
 Style TimeDayButton !Borders, !Title, WindowListSkip, Sticky, StaysOnTop
 Style Calendar* NoTitle # no titel bar
 Style MyRightPanel StaysOnBottom
-
 
 ## Check Functions: yadPos.sys
 Read $[CORE_DIR]/1Functions/YadPosition/yadPos.sys

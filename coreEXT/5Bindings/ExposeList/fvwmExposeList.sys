@@ -1,11 +1,11 @@
-## Modules: fvwmExposeList.sys
+## 5Bindings: fvwmExposeList.sys
 ## Inspired by Taviso’s WindowList function – FvwmExpose
 ## https://zensites.net/fvwm/guide/advanced_functions.html
 
 SetEnv CORE_DIR $[HOME]/.fvwm/coreEXT/
 SetEnv HOME_DIR $[HOME]/.fvwm
 
-SetEnv cacheExp $[CORE_DIR]/MODULES/ExposeList/cache
+SetEnv cacheExp $[CORE_DIR]/5Bindings/ExposeList/cache
 
 DestroyFunc FvwmExpose
 AddToFunc FvwmExpose

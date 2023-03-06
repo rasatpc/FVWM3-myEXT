@@ -2,8 +2,8 @@
 
 To install or edit .fvwm/CoreExt.sys
 
-## Add the below line below "Load 7.Modules".
-Read $[CORE_DIR]/MODULES/ExposeList/fvwmExposeList.sys
+## Add the below line at the end of "Load 5.Bindings".
+Read $[CORE_DIR]/5Bindings/ExposeList/fvwmExposeList.sys
 
 # Any addon or modification in .fvwm/userExt.sys
 

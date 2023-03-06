@@ -7,7 +7,7 @@ KillModule FvwmButtons DeskSwitch
 Module FvwmButtons DeskSwitch
 
 DestroyModuleConfig DeskSwitch: *
-*DeskSwitch: Geometry 90x30-0+150
+*DeskSwitch: Geometry 92x30-0+150
 *DeskSwitch: PressColorset 4
 *DeskSwitch: Frame 0
 *DeskSwitch: Rows 1

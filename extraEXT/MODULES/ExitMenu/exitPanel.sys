@@ -11,7 +11,7 @@ SetEnv exit-icon $[EXTRA_DIR]/MODULES/ExitMenu
 Module FvwmButtons ExitPanel
 
 DestroyModuleConfig ExitPanel: *
-*ExitPanel: Geometry 80x40-0+50
+*ExitPanel: Geometry 92x40-0+80
 *ExitPanel: PressColorset 4
 *ExitPanel: Frame 0
 *ExitPanel: Rows 1

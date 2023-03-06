@@ -17,8 +17,7 @@ Read $[USER_DIR]/AutoHideList/autoHideL.sys #101
 Read $[USER_DIR]/AutoMoveWin/autoMoveW.sys #102
 
 ## Styles
-Read $[EXTRA_DIR]/Styles/FvwmThumbnails/fvwmThumbnail.sys #201
-Read $[EXTRA_DIR]/Styles/DiaryThumbnails/diaryThumbPlace.sys #202
+Read $[EXTRA_DIR]/Styles/Thumbnails/thumbnail.sys #201
 Read $[EXTRA_DIR]/Styles/MyBorderStyle/myBorderStyle.sys #203
 
 ## Menus

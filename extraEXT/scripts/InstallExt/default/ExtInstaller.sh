@@ -28,9 +28,8 @@ yad --plug=$key --tabnum=1 \
     --column=Extra-Extensions --column=Description --column="" --column=# \
 TRUE Functions "<b>Auto Hide List</b>" "Hides widgets not to use desktop space." "images/auto-hide.png" 101 \
 TRUE Functions "<b>Auto Move Windows</b>" "Moves apps to a specific workspace." "images/auto-move.png" 102 \
-TRUE Styles "<b>Fvwm Thumbnails</b>" "Iconified windows." "images/fvwm-thumb.png" 201 \
-TRUE Styles "<b>Diary Thumbnails</b>" "Thumbnails based on addy-fe's theme." "images/dairy-thumb.png" 202 \
-TRUE Styles "<b>My Border Style</b>" "Thin window border." "images/my-border.png" 203 \
+TRUE Functions "<b>Thumbnails</b>" "Iconified windows." "images/thumbnails.png" 103 \
+TRUE Styles "<b>My Border Style</b>" "Thin window border." "images/my-border.png" 201 \
 TRUE Menus "<b>My Menu</b>" "Menu list pop up bindings, hook and panel." "images/my-menu.png" 301 \
 false Bindings "<b>Diary Mouse Binding</b>" "Set of Dairy theme mouse button actions." "images/d-mouse-bind.png" 401 \
 TRUE Bindings "<b>My Key Binding</b>" "VM desk (alt-d), Thumbnail (alt-t), etc." "images/key-bind.png" 402 \

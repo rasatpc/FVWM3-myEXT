@@ -15,11 +15,10 @@ SetEnv HOME_DIR $[HOME]/.fvwm
 ## Functions
 Read $[USER_DIR]/AutoHideList/autoHideL.sys #101
 Read $[USER_DIR]/AutoMoveWin/autoMoveW.sys #102
+Read $[EXTRA_DIR]/Functions/Thumbnails/thumbnail.sys #103
 
 ## Styles
-Read $[EXTRA_DIR]/Styles/FvwmThumbnails/fvwmThumbnail.sys #201
-Read $[EXTRA_DIR]/Styles/DiaryThumbnails/diaryThumbPlace.sys #202
-Read $[EXTRA_DIR]/Styles/MyBorderStyle/myBorderStyle.sys #203
+Read $[EXTRA_DIR]/Styles/MyBorderStyle/myBorderStyle.sys #201
 
 ## Menus
 Read $[EXTRA_DIR]/Menus/MyMenu/mMenu.conf #301

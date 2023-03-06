@@ -1,4 +1,4 @@
-1 Mar 2023
+6 Mar 2023
 # HOW TO INSTALL myEXT and FVWM3 (or Fvwm2)
 
 myEXT:
@@ -13,8 +13,8 @@ Extract and copy subfolders to ~/.fvwm
 
 Install Fvwm3 package `(if available)` or Fvwm2
 
-Debian-based GNU/Linux:
-* `sudo apt install fvwm3`
+MX Linux:
+https://rasatpc.net/fvwm-ext/index.php/Install_on_MX_Linux
 
 Arch Linux:
 * `yay -S fvwm3`
@@ -32,8 +32,7 @@ Important dependencies for installation and usage.
 CORE
 ====
 
-Debian:
-* sudo apt-get install libevent-dev libx11-dev libxrandr-dev libxrender-dev libxt-dev libxft-dev
+MX Linux:
 
 Arch Linux:
 * sudo pacman -Syu libevent-dev libx11-dev libxrandr-dev libxrender-dev libxt-dev libxft-dev
@@ -51,8 +50,7 @@ To generate/view fvwm3's documentation, XDG menu, and Network:
 OPTIONAL
 ========
 
-Debian:
-* sudo apt-get install libfribidi-dev libncurses5-dev libpng-dev libreadline-dev libxcursor-dev libxpm-dev sharutils
+MX Linux:
 
 Arch Linux:
 * sudo pacman -Syu libfribidi-dev libncurses5-dev libpng-dev libreadline-dev libxcursor-dev libxpm-dev sharutils
@@ -62,12 +60,11 @@ Fedora:
 
 Make & install command dependencies:
 ====================================
-* sudo apt-get install automake dh-autoreconf autogen
 * sudo pacman -Syu automake autoreconf autogen
 * sudo dnf install automake dh-autoreconf autogen
 
-Install FVWM3
-=============
+Install FVWM3 from Git Hub
+==========================
 
 * git clone https://github.com/fvwmorg/fvwm3.git
 * cd fvwm3
