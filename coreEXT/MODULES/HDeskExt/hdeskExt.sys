@@ -1,0 +1,21 @@
+## Modules: hdeskExt.sys
+## By rasat 11 March 2023
+
+SetEnv CORE_DIR $[HOME]/.fvwm/coreEXT/
+SetEnv HOME_DIR $[HOME]/.fvwm
+
+KillModule FvwmButtons DeskSwitch
+
+Module FvwmButtons HDesk
+
+DestroyModuleConfig HDesk: *
+*HDesk: Geometry 92x30-0+150
+*HDesk: PressColorset 4
+*HDesk: Frame 0
+*HDesk: Rows 1
+*HDesk: Font "xft:Sans:size=13:antialias=True"
+*HDesk: Padding 0 0
+*HDesk: (90x1, Title "H Desk", Back #83abaa, Fore #ffffff, Action(Mouse 1) `Read $[CORE_DIR]/MODULES/HDeskExt/Hdesk/hDesk.sys`)
+
+# Style Setting
+Style HDesk !Borders, !Title, StaysOnTop, WindowListSkip, Sticky

@@ -37,6 +37,7 @@ Read $[CORE_DIR]/MODULES/FvwmIconMan/iconMan.sys
 Read $[CORE_DIR]/MODULES/ControlPanelB/controlPanel.sys
 Read $[CORE_DIR]/MODULES/SimpleButton/simpleB.sys
 Read $[CORE_DIR]/MODULES/WinListSwitch/winLSwitch.sys
+Read $[CORE_DIR]/MODULES/HDeskExt/hdeskExt.sys
 
 #KillModule FvwmButtons RightPanel
 #Module FvwmButtons RightPanel

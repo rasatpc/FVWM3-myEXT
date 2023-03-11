@@ -25,3 +25,6 @@ rm ~/.fvwm/extraEXT/scripts/InstallExt/*.tmp
 
 yad --width=300 --height=30 --title="Alert" --text-align=center \
   --text="<b> Close installer, left-click and Restart myExt. </b>" --button=OK:0
+  
+# Restart
+killall -SIGUSR1 fvwm3

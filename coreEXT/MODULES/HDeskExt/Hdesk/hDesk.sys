@@ -1,0 +1,31 @@
+## MODULES/HDeskExt/Hdesk: hDesk.sys
+
+SetEnv CORE_DIR $[HOME]/.fvwm/coreEXT/
+SetEnv HOME_DIR $[HOME]/.fvwm
+
+## Close Modules
+KillModule FvwmButtons FvwmOverView
+KillModule FvwmButtons ControlPanelB
+KillModule FvwmButtons ExitPanel
+KillModule FvwmButtons WinListSwitch
+KillModule FvwmButtons HDesk
+
+## Load pages grid lines.
+Read $[CORE_DIR]/MODULES/HDeskExt/Hdesk/gridPageFunc.sys
+
+Read $[CORE_DIR]/MODULES/HDeskExt/Hdesk/horizontalDesk.sys
+
+## Change pre-settings of FvwmOverView
+Read $[EXTRA_DIR]/MODULES/FvwmOverView/fvwmWOview.sys
+*FvwmOverView: Geometry 77x36+6+7
+
+## Change Maximize
+Mouse 1 4 A Maximize 160 100
+
+### Thumbnail
+## Minimize to Thumbnail Placeholder
+Style * IconBox 400x600+20+50, IconGrid 1 1, \
+IconFill top left, !IconTitle, IconBackgroundRelief 0
+
+AddToFunc Thumbnail
++ I Stick

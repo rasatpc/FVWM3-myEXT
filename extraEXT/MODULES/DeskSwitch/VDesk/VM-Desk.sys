@@ -1,4 +1,4 @@
-## Modules/VDesk: VM-Desk.sys
+## MODULES/DeskSwitch/VDesk: VM-Desk.sys
 #
 
 SetEnv CORE_DIR $[HOME]/.fvwm/coreEXT/

@@ -34,7 +34,7 @@ Read $[EXTRA_DIR]/Decors/MyDecor/myDec.sys #501
 ## Modules
 # Read $[EXTRA_DIR]/MODULES/ControlPagerB/controlPg.sys #601
 Read $[EXTRA_DIR]/MODULES/DashToDock/action/west.conf #602
-Read $[EXTRA_DIR]/MODULES/DeskSwitch/deskSwitch.sys #603
+# Read $[EXTRA_DIR]/MODULES/DeskSwitch/deskSwitch.sys #603
 # Read $[EXTRA_DIR]/MODULES/ExtensionSwitch/extSwitch.sys #604
 Read $[EXTRA_DIR]/MODULES/FvwmOverView/fvwmWOview.sys #605
 # Read $[EXTRA_DIR]/MODULES/MyRightPanel/myRPanel.sys #606
@@ -53,5 +53,6 @@ Read $[EXTRA_DIR]/MODULES/V1x5Pager/vPager5.sys #610
 Style SimpleButton NoTitle
 Style WinListSwitch NoTitle
 Style ControlPanelB NoTitle
+Style HDesk NoTitle
 
 Exec exec fvwm-root $[HOME_DIR]/.BGdefault

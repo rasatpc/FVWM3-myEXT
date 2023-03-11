@@ -1,4 +1,4 @@
-## Modules/VDesk: virtualGrid.sys
+## MODULES/DeskSwitch/VDesk: virtualGrid.sys
 
 SetEnv CORE_DIR $[HOME]/.fvwm/coreEXT/
 SetEnv EXTRA_DIR $[HOME]/.fvwm/extraEXT/

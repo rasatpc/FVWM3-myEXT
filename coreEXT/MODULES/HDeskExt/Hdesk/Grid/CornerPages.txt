@@ -1,0 +1,18 @@
+Corner positions.
+
+Left top:		+0+0
+Right top:		-0+0
+
+Left bottom:	+0-0
+Right bottom:	-0-0
+
+
+Page numbers of Desktop size 2x3. Six pages.
+
+ -----------
+ |0 0 |1 0 |
+ -----------
+ |0 1 |1 1 |
+ -----------
+ |0 2 |1 2 |
+ -----------
