@@ -42,7 +42,7 @@ false Modules "<b>Extension Switch</b>" "Preview of different extension setup." 
 TRUE Modules "<b>Fvwm Over View</b>" "View of running windows on current page." "images/over-view.png" 605 \
 false Modules "<b>MyRight Panel</b>" "Modified Fvwm Right Panel." "images/my-right-panel.png" 606 \
 false Modules "<b>Task Buttons Curve</b>" "Task bar based on Somatic theme." "images/task-curve.png" 607 \
-false Modules "<b>Wifi Sound Panel</b>" "Small wifi and sound tray." "images/wifi-sound.png" 612 \
+TRUE Modules "<b>Wifi Sound Panel</b>" "Small wifi and sound tray." "images/wifi-sound.png" 612 \
 TRUE Modules "<b>Task Buttons Flux</b>" "Fluxbox style of task bar." "images/task-flux.png" 608 \
 TRUE Modules "<b>Time/Day Button</b>" "Date, time, and calendar panel." "images/time-day.png" 609 \
 TRUE Modules "<b>Vertical Pager 1x5</b>" "Miniature view of desktops (1x5)." "images/pager1x5.png" 610 \

@@ -39,7 +39,7 @@ Read $[EXTRA_DIR]/MODULES/DashToDock/action/west.conf #602
 Read $[EXTRA_DIR]/MODULES/FvwmOverView/fvwmWOview.sys #605
 # Read $[EXTRA_DIR]/MODULES/MyRightPanel/myRPanel.sys #606
 # Read $[EXTRA_DIR]/MODULES/TaskButtonsCurve/taskBCurve.sys #607
-# Read $[EXTRA_DIR]/MODULES/WifiSnd/wifiSound.sys #612
+Read $[EXTRA_DIR]/MODULES/WifiSnd/wifiSound.sys #612
 Read $[EXTRA_DIR]/MODULES/TaskButtonsFlux/action/fluxSouth.conf #608
 Read $[EXTRA_DIR]/MODULES/TimeDayButton/timeDayB.sys #609
 Read $[EXTRA_DIR]/MODULES/V1x5Pager/vPager5.sys #610

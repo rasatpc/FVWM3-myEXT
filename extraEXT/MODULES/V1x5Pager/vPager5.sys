@@ -7,6 +7,7 @@ SetEnv EXTRA_DIR $[HOME]/.fvwm/extraEXT
 KillModule FvwmButtons *RightPanel
 KillModule FvwmPager V2x4Pager
 KillModule FvwmButtons ControlPagerB
+KillModule FvwmButtons HDesk
 
 ########
 # Vertical Pager (5 pages)

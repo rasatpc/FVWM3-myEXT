@@ -24,7 +24,7 @@ DestroyModuleConfig MiniControlB: *
 *MiniControlB: (1x1, Icon $[smallIcons]/move-w.png, Action Move  )
 *MiniControlB: (1x1, Back #85a772, Icon $[Icons]/unlock-w.png, Action(Mouse 1) `Read $[CORE_DIR]/MODULES/HDeskExt/Hdesk/mouseScroll.conf` )
 *MiniControlB: (1x1, Back #e55757, Icon $[Icons]/lock-w.png, Action(Mouse 1) `Read $[CORE_DIR]/MODULES/HDeskExt/Hdesk/lock.conf` )
-*MiniControlB: (Title MaxH, Back #149bcb, Fore #ffffff, Action Maximize 160 100 )
+*MiniControlB: (Title Max, Back #c18d01, Fore #ffffff, Action Maximize 160 100 )
 *MiniControlB: (Title Exit, Back #e55757, Fore #ffffff, Action Restart)
 
 Style MiniControlB !Borders, !Title, WindowListSkip, StaysOnTop, Sticky
