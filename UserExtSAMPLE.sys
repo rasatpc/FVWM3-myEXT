@@ -50,7 +50,7 @@ KillModule FvwmButtons InfoPanel
 # SetBG cloth-grey-tiled.png
 
 ## or last selected
-Exec exec fvwm-root $[HOME_DIR]/.BGdefault
+Exec exec fvwm3-root $[FVWM_USERDIR]/.BGdefault
 # Read $[EXTRA_DIR]/Menus/MyMenu/BgPanel/bluePanel.conf
 
 -----

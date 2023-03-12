@@ -15,11 +15,10 @@ InfoStoreAdd runcmd "dmenu_run -nb '#2b4e5e'"
 # actions that are run after a restart.
 DestroyFunc StartFunction
 AddToFunc   StartFunction
-+ I Test (Init, f $[HOME_DIR]/.BGdefault) \
-    Exec exec fvwm-root $[HOME_DIR]/.BGdefault
-# + I TestRc (NoMatch) Exec exec fvwm-root \
++ I Test (Init, f $[FVWM_USERDIR]/.BGdefault) \
+    Exec exec fvwm3-root $[FVWM_USERDIR]/.BGdefault
++ I TestRc (NoMatch) Exec exec fvwm3-root \
     $[FVWM_DATADIR]/default-config/images/background/bg1.png
-# + I Module FvwmButtons RightPanel # Doesn't allow KillModule in .fvwm/local.config.  
 + I Module FvwmEvent EventNewDesk
 
 # Mouse Bindings Functions
@@ -52,19 +51,19 @@ AddToFunc   ViewManPage
 #
 # SetBG is used with the background menu to set the background
 # image and configure it to be loaded the next time fvwm is run.
-# Note, fvwm-root can't use .jpeg or resize images. Use something
+# Note, fvwm3-root can't use .jpeg or resize images. Use something
 # like display, feh, etc.
 DestroyFunc SetBG
 AddToFunc   SetBG
-+ I Test (f $[HOME_DIR]/images/background/$0) \
-    Exec exec fvwm-root $[HOME_DIR]/images/background/$0
++ I Test (f $[FVWM_USERDIR]/images/background/$0) \
+    Exec exec fvwm3-root $[FVWM_USERDIR]/images/background/$0
 + I TestRc (Match) Exec exec ln -fs images/background/$0 \
-    $[HOME_DIR]/.BGdefault
+    $[FVWM_USERDIR]/.BGdefault
 + I TestRc (Match) Break
 + I Test (!f $[FVWM_DATADIR]/default-config/images/background/$0) Break
-+ I Exec exec fvwm-root $[FVWM_DATADIR]/default-config/images/background/$0
++ I Exec exec fvwm3-root $[FVWM_DATADIR]/default-config/images/background/$0
 + I Exec exec ln -fs $[FVWM_DATADIR]/default-config/images/background/$0 \
-    $[HOME_DIR]/.BGdefault
+    $[FVWM_USERDIR]/.BGdefault
 
 # Function: IconManClick
 #
