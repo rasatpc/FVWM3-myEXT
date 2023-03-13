@@ -32,6 +32,7 @@ DestroyModuleConfig ControlPagerB: *
 *ControlPagerB: BoxSize smart
 *ControlPagerB: Font -*-helvetica-medium-r-*-*-12-*
 *ControlPagerB: Padding 2 2
+*ControlPagerB: UseSkipList # hides modules
 
 *ControlPagerB: (4x1, Swallow "FvwmPager" `FvwmPager *`, Frame 0)
 
