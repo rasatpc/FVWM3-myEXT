@@ -2,7 +2,7 @@
 ## Downloads latest myExt package.
 
 ## Backup ExtraExtT.sys
-cp ~/.fvwm/ExtraExt.sys ~/.fvwm/extraEXT/scripts/InstallExt/backup/ExtraExt.bak
+cp ~/.fvwm/ExtraExt.sys ~/.fvwm/ExtraExt.bak
 
 ## Create output.tmp
 cd ~/.fvwm/extraEXT/scripts/InstallExt/

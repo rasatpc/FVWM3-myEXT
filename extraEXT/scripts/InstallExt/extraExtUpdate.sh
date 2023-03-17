@@ -23,8 +23,19 @@ cp tmp.sh ExtInstaller.sh
 rm tmp.sh
 rm ~/.fvwm/extraEXT/scripts/InstallExt/*.tmp
 
-yad --width=300 --height=30 --title="Alert" --text-align=center \
-  --text="<b> Close installer, left-click and Restart myExt. </b>" --button=OK:0
+## Checks for number of new extensions.
+
+	oldExt=$(sed -n '$=' ~/.fvwm/extraEXT/ExtraExt.bak)
+	newExt=$(sed -n '$=' ~/.fvwm/extraEXT/scripts/InstallExt/default/ExtraExt.sys)
+	
+	if [ "$oldExt" = "$newExt" ]; then
+		yad --width=300 --height=40 --title="Alert" --text-align=center \
+		--text="<b> Close installer, left-click and Restart myExt. </b>" --button=OK:0
+
+	else
+		
+		yad --width=340 --height=40 --title="Alert" --text-align=center \
+		--text="<b>New extensions (total $newExt) </b> (check ExtraExt.sys vs. ExtraExt.bak).<b> Close installer, left-click and Restart.</b>" --button=OK:0
   
 # Restart
 killall -SIGUSR1 fvwm3
