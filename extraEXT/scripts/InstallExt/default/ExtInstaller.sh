@@ -22,7 +22,7 @@ yad --plug=$key --tabnum=1 \
     --select-action='bash -c "split_arg %s >$fpipe"' \
     --hide-column=5 \
     --list --checklist \
-    --width=900 --height=680 \
+    --width=940 --height=690 \
     --separator=" " \
     --column=Y/n --column="Type" \
     --column=Extra-Extensions --column=Description --column="" --column=# \
@@ -52,7 +52,7 @@ false Modules "<b>Exit Menu</b>" "Shotdown, Reboot, Suspend, Lock." "images/exit
 	>output.tmp &
 yad --plug=$key --tabnum=2 --list --no-headers --listen --cycle-read --column=":IMG" <&3  &
 yad --paned --key=$key --title="Extension Installer" \
-    --button=Close:1 --button='Reset:bash -c "./reset.sh"' --button='Upgrade myExt:bash -c "./checkLine-Update.sh"' --button=Install:0 --center --orient=Horizontal --splitter=620 --width=800 --height=660
+    --button=Close:1 --button='Reset:bash -c "./reset.sh"' --button='Upgrade myExt:bash -c "./checkLine-Update.sh"' --button=Install:0 --center --orient=Horizontal --splitter=690 --width=870 --height=690
 exec 3>&-
 # Change all extension to false.
 awk '{print $1 " " $NF}' output.tmp > install.tmp
