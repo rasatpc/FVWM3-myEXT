@@ -1,5 +1,6 @@
 #!/bin/bash
-# By rasat 17 March 2023
+# By Jose Stack Overflow 9 Mar 2022
+# By rasat 10 March 2020
 # Updates ExtInstaller.sh and ExtraExt.sys as per checklist.
 
 # Tag all Read lines.
@@ -22,17 +23,8 @@ cp tmp.sh ExtInstaller.sh
 rm tmp.sh
 rm ~/.fvwm/extraEXT/scripts/InstallExt/*.tmp
 
-## Copy new ExtraExt.sys as ExtraExt.new to compare with previous ExtraExt.sys.
-
-cp ~/.fvwm/extraEXT/scripts/InstallExt/default/ExtraExt.sys ~/.fvwm/ExtraExt.new
-
-## Checks for number new extensions.
-
-	oldExt=$(sed -n '$=' ~/.fvwm/ExtraExt.bak)
-	newExt=$(sed -n '$=' ~/.fvwm/extraEXT/scripts/InstallExt/default/ExtraExt.sys)
-	
-yad --width=300 --height=10 --title="Alert" --text-align=center \
-  --text="\n<b>Old:</b> $oldExt and <b>New:</b> $newExt extra extensions.\n \n<b>If old and new differs, compare ExtraExt.sys with ExtraExt.new</b>\n \n Close installer, left-click and Restart myExt." --button=OK:0
+yad --width=300 --height=30 --title="Alert" --text-align=center \
+  --text="<b> Close installer, left-click and Restart myExt. </b>" --button=OK:0
   
 # Restart
 killall -SIGUSR1 fvwm3
