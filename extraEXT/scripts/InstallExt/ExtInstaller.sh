@@ -37,17 +37,17 @@ TRUE Decorations "<b>My Decor</b>" "Simple title bar." "images/my-decor.png" 501
 false Decorations "<b>Diary Decor</b>" "Right-side title bar based on addy-fe's theme." "images/diary-decor.png" 502 \
 false Decorations "<b>QNX Decor</b>" "MultiPixmap option to place transitional images." "images/qnx-decor.png" 503 \
 false Modules "<b>Control Pager</b>" "Pager, 2x2 miniture view of desktop." "images/control-pg.png" 601 \
-false Modules "<b>Dash To Dock</b>" "Application panel bar." "images/dash-to-d.png" 602 \
+TRUE Modules "<b>Dash To Dock</b>" "Application panel bar." "images/dash-to-d.png" 602 \
 false Modules "<b>Desk Switch</b>" "Virtual window management." "images/desk-switch.png" 603 \
 false Modules "<b>Extension Switch</b>" "Preview of different extension setup." "images/ext-switch.png" 604 \
 TRUE Modules "<b>Fvwm Over View</b>" "View of running windows on current page." "images/over-view.png" 605 \
 false Modules "<b>MyRight Panel</b>" "Modified Fvwm Right Panel." "images/my-right-panel.png" 606 \
 false Modules "<b>Task Buttons Curve</b>" "Task bar based on Somatic theme." "images/task-curve.png" 607 \
 TRUE Modules "<b>Wifi Sound Panel</b>" "Small wifi and sound tray." "images/wifi-sound.png" 612 \
-false Modules "<b>Task Buttons Flux</b>" "Fluxbox style of task bar." "images/task-flux.png" 608 \
+TRUE Modules "<b>Task Buttons Flux</b>" "Fluxbox style of task bar." "images/task-flux.png" 608 \
 TRUE Modules "<b>Time/Day Button</b>" "Date, time, and calendar panel." "images/time-day.png" 609 \
-false Modules "<b>Vertical Pager 1x5</b>" "Miniature view of desktops (1x5)." "images/pager1x5.png" 610 \
-TRUE Modules "<b>Vertical Pager 2x4</b>" "Miniature view of desktops (2x4)." "images/pager2x4.png" 611 \
+TRUE Modules "<b>Vertical Pager 1x5</b>" "Miniature view of desktops (1x5)." "images/pager1x5.png" 610 \
+false Modules "<b>Vertical Pager 2x4</b>" "Miniature view of desktops (2x4)." "images/pager2x4.png" 611 \
 false Modules "<b>Exit Menu</b>" "Shotdown, Reboot, Suspend, Lock." "images/exit-menu.png" 613 \
 	>output.tmp &
 yad --plug=$key --tabnum=2 --list --no-headers --listen --cycle-read --column=":IMG" <&3  &
