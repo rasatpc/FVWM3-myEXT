@@ -1,9 +1,11 @@
 #!/bin/bash
 ## Downloads latest myExt package.
 
-## Backup ExtraExtT.sys
-cp ~/.fvwm/ExtraExt.sys ~/.fvwm/Backup/ExtraExt.sys.BAKup
+## Backup CoreExtT.sys and ExtraExtT.sys
+cp ~/.fvwm/ExtraExt.sys ~/.fvwm/Backup/ExtraExt.sys.BAK
+cp ~/.fvwm/CoreExt.sys ~/.fvwm/Backup/CoreExt.sys.BAK
 cp ~/.fvwm/ExtraExt.sys ~/.fvwm/extraEXT/scripts/InstallExt/backup/ExtraExt.sys.bak
+cp ~/.fvwm/CoreExt.sys ~/.fvwm/extraEXT/scripts/InstallExt/backup/CoreExt.sys.bak
 
 ## Create output.tmp
 cd ~/.fvwm/extraEXT/scripts/InstallExt/
