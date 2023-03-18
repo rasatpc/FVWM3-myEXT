@@ -1,5 +1,5 @@
 #!/bin/bash
-# By rasat 17 March 2023
+# By rasat 18 March 2023
 # Updates ExtInstaller.sh and ExtraExt.sys as per checklist.
 
 # Tag all Read lines.
@@ -26,13 +26,20 @@ rm ~/.fvwm/extraEXT/scripts/InstallExt/*.tmp
 
 cp ~/.fvwm/extraEXT/scripts/InstallExt/default/ExtraExt.sys ~/.fvwm/ExtraExt.new
 
-## Checks for number new extensions.
+## Checks last update, old and new number Core and Extra extensions.
+## Before any updates, edit ~/.fvwm/Backup/ExtOld-NewNo.txt.
 
-	oldExt=$(sed -n '$=' ~/.fvwm/ExtraExt.bak)
-	newExt=$(sed -n '$=' ~/.fvwm/extraEXT/scripts/InstallExt/default/ExtraExt.sys)
+## Checks last update, old and new number Core and Extra extensions.
+## Before any updates, edit ~/.fvwm/Backup/ExtOld-NewNo.txt.
+
+	LastUpdate=$(awk 'NR>1 {print $2}' ~/.fvwm/Backup/ExtOld-New.txt)
+	OldCore=$(awk 'NR>1 {print $4}' ~/.fvwm/Backup/ExtOld-New.txt)
+	NewCore=$(awk 'NR>1 {print $6}' ~/.fvwm/Backup/ExtOld-New.txt)
+	OldExtra=$(awk 'NR>1 {print $8}' ~/.fvwm/Backup/ExtOld-New.txt)
+	NewExtra=$(awk 'NR>1 {print $10}' ~/.fvwm/Backup/ExtOld-New.txt)
 	
-yad --width=300 --height=10 --title="Alert" --text-align=center \
-  --text="\n<b>Old:</b> $oldExt and <b>New:</b> $newExt extra extensions.\n \n<b>If old and new differs, compare ExtraExt.sys with ExtraExt.new</b>\n \n Close installer, left-click and Restart myExt." --button=OK:0
+yad --width=350 --height=10 --title="Alert" --text-align=left \
+  --text="\n LAST Update: <b>$LastUpdate</b>\n <b>Core old: </b>$OldCore <b>new:</b> $NewCore \n <b>Extra old:</b> $OldExtra <b>new: </b>$NewExtra  \n \n<b>When there are new extensions,</b> \n compare CoreExt.sys and ExtraExt.sys \n with new ones in folder: \n <b>/ Backup / ExtOld-New.txt</b> \n \n <b>Close installer</b>, left-click and Restart myExt." --button=OK:0
   
 # Restart
 killall -SIGUSR1 fvwm3

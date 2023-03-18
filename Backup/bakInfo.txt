@@ -1,0 +1,4 @@
+## bakInfo.txt
+
+This folder stores backup of CoreExt.sys, ExtraExt.sys, and the number of extensions (total and new ones).
+
