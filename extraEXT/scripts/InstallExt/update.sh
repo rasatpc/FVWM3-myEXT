@@ -3,7 +3,7 @@
 
 ## Backup ExtraExtT.sys
 cp ~/.fvwm/ExtraExt.sys ~/.fvwm/extraEXT/scripts/InstallExt/backup/ExtraExt.sys.bak
-cp ~/.fvwm/ExtraExt.sys ~/.fvwm/Backup/ExtraExt.sys.BackUp
+cp ~/.fvwm/ExtraExt.sys ~/.fvwm/Backup/ExtraExt.sys.BAKup
 
 ## Create output.tmp
 cd ~/.fvwm/extraEXT/scripts/InstallExt/
