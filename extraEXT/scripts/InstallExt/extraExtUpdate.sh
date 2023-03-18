@@ -37,7 +37,7 @@ cp ~/.fvwm/extraEXT/scripts/InstallExt/default/CoreExt.sys ~/.fvwm/Backup/CoreEx
 	NewExtra=$(awk 'NR>1 {print $10}' ~/.fvwm/Backup/ExtOld-New.txt)
 	
 yad --width=350 --height=10 --title="Alert" --text-align=left \
-  --text="\n LAST Update: <b>$LastUpdate</b>\n <b>Total Core: </b>$OldCore <b>new:</b> $NewCore \n <b>Total Extra:</b> $OldExtra <b>new: </b>$NewExtra  \n \n<b>When there are new extensions,</b> \n compare CoreExt.sys and ExtraExt.sys \n with new ones (.BAK and .NEW) in folder: \n <b>/ Backup </b>, also ExtOld-New.txt \n \n <b>Close installer</b>, left-click and Restart myExt." --button=OK:0
+  --text="\n LAST Update: <b>$LastUpdate</b>\n <b>Total Core: </b>$OldCore <b>new:</b> $NewCore \n <b>Total Extra:</b> $OldExtra <b>new: </b>$NewExtra  \n \n<b>When there are new extensions,</b> \n compare CoreExt.sys and ExtraExt.sys \n with new ones (.BAK and .NEW) in folder: \n <b>/ Backup </b>, also numbers in <b>ExtOld-New.txt</b> \n \n <b>Close installer</b>, left-click and Restart myExt." --button=OK:0
   
 # Restart
 killall -SIGUSR1 fvwm3
