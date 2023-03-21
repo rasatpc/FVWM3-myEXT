@@ -9,7 +9,7 @@ if [ $? -ne 0 ]; then
   
 else
 
-  cp -f default/EXTInstaller.sh ~/.fvwm/extraEXT/scripts/InstallExt/EXTInstaller.sh
+  cp -f default/ExtInstaller.sh ~/.fvwm/extraEXT/scripts/InstallExt/ExtInstaller.sh
   cp default/ExtraExt.sys ~/.fvwm/ExtraExt.sys
   rm install.tmp output.tmp
   

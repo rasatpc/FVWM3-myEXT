@@ -9,7 +9,7 @@ cp ~/.fvwm/CoreExt.sys ~/.fvwm/extraEXT/scripts/InstallExt/backup/CoreExt.sys.ba
 
 ## Create output.tmp
 cd ~/.fvwm/extraEXT/scripts/InstallExt/
-grep '^TRUE' EXTInstaller.sh > outputUpg.tmp
+grep '^TRUE' ExtInstaller.sh > outputUpg.tmp
 
 ## Download
 cd ~/.fvwm/extraEXT/scripts/InstallExt/download/
@@ -38,13 +38,13 @@ download(){
   yad --form --width=300 --height=30 --title="Update" --text-align=center \
   --text="<b> Press UPGRADE to update myExt. </b>" --button=UPGRADE:0
 
-# Update EXTInstaller.sh and ExtraExt.sys
+# Update ExtInstaller.sh and ExtraExt.sys
 cd ~/.fvwm/extraEXT/scripts/InstallExt/
   awk '{print $1 " " $(NF-1)}' outputUpg.tmp > install.tmp
 
 if [ -s install.tmp ]
 	then
-sed -i 's/TRUE/false/g' EXTInstaller.sh #CODE
+sed -i 's/TRUE/false/g' ExtInstaller.sh #CODE
 		./extraExtUpdate.sh
 	else
 		exit
