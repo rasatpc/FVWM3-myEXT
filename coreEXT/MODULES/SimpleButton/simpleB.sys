@@ -31,7 +31,7 @@ DestroyModuleConfig SimpleButton: *
 *SimpleButton: (1x1, Icon $[sbicons]/ext-switch.png, \
               Action(Mouse 1) `Read $[EXTRA_DIR]/MODULES/ExtensionSwitch/extSwitch.sys`)
 *SimpleButton: (1x1, Icon $[sbicons]/ext-installer.png, \
-              Action(Mouse 1) "Exec ~/.fvwm/extraEXT/scripts/InstallExt/EXTInstaller.sh")
+              Action(Mouse 1) "Exec ~/.fvwm/extraEXT/scripts/InstallExt/ExtInstaller.sh")
 *SimpleButton: (1x1, Icon $[sbicons]/gparted.png, \
               Action(Mouse 1) "Exec exec /usr/bin/gparted ")
 *SimpleButton: (1x1, Icon $[sbicons]/screenshooter.png, \

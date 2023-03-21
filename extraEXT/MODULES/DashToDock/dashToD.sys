@@ -26,7 +26,7 @@ DestroyModuleConfig DashToDock: *
 *DashToDock: (1x1, Colorset 268, Icon $[dTDicons]/gimp.png, \
               Action(Mouse 1) "Exec exec gimp")
 *DashToDock: (1x1, Colorset 268, Icon $[dTDicons]/ext-installer.png, \
-              Action(Mouse 1) "Exec ~/.fvwm/extraEXT/scripts/InstallExt/EXTInstaller.sh")
+              Action(Mouse 1) "Exec ~/.fvwm/extraEXT/scripts/InstallExt/ExtInstaller.sh")
 *DashToDock: (1x1, Colorset 268, Icon $[dTDicons]/desktop-color.png, \
               Action(Mouse 1) "Exec exec lxappearance")         
 *DashToDock: (1x1, Colorset 268, Icon $[dTDicons]/screenshooter.png, \

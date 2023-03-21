@@ -10,7 +10,7 @@ SetEnv HOME_DIR $[HOME]/.fvwm
 DestroyMenu MenuStart
 AddToMenu MenuStart
 Test (x xfce4-appfinder) + "Apps " Exec exec xfce4-appfinder
-+ "Ext-Install  " Exec ~/.fvwm/extraEXT/scripts/InstallExt/EXTInstaller.sh
++ "Ext-Install  " Exec ~/.fvwm/extraEXT/scripts/InstallExt/ExtInstaller.sh
 Test (x featherpad) + "Help " Exec exec featherpad $[HOME_DIR]/setup/help.txt
 Test (x mousepad) + "Help " Exec exec mousepad $[HOME_DIR]/setup/help.txt
 + "-" Nop
