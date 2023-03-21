@@ -30,7 +30,6 @@ Read $[EXTRA_DIR]/Bindings/MyKBinding/myKeyBindings.sys #402
 ## Decorations
 Read $[EXTRA_DIR]/Decors/MyDecor/myDec.sys #501
 # Read $[EXTRA_DIR]/Decors/DiaryDecor/diaDecor.sys #502
-# Read $[EXTRA_DIR]/Decors/QNX-Decor/qnxDecor.sys #503
 
 ## Modules
 # Read $[EXTRA_DIR]/MODULES/ControlPagerB/controlPg.sys #601
@@ -52,7 +51,7 @@ Read $[EXTRA_DIR]/MODULES/V1x5Pager/vPager5.sys #610
 ######
 
 Style SimpleButton NoTitle
-Style WinListB NoTitle
+Style WinListSwitch NoTitle
 Style ControlPanelB NoTitle
 Style HDesk NoTitle
 
