@@ -1,24 +1,24 @@
 #!/bin/bash
 # By rasat 18 March 2023
-# Updates ExtInstaller.sh and ExtraExt.sys as per checklist.
+# Updates EXTInstaller.sh and ExtraExt.sys as per checklist.
 
 # Tag all Read lines.
 sed -i 's/Read/# Read/g' ~/.fvwm/ExtraExt.sys
 sed -i 's/# # Read/# Read/g' ~/.fvwm/ExtraExt.sys
 
 # Reset line #CODE to TRUE/false
-sed -i "/#CODE/c\sed -i 's/TRUE/false/g' ExtInstaller.sh #CODE" ExtInstaller.sh
+sed -i "/#CODE/c\sed -i 's/TRUE/false/g' EXTInstaller.sh #CODE" EXTInstaller.sh
 
 # Update ExtraExt.sys extensions.
 search=$(awk 'BEGIN{OFS=ORS=""}{if(NR>1){print "|"}print $2;}' install.tmp)
 sed -i -r "s/^# (.*#($search))$/\1/g" ~/.fvwm/ExtraExt.sys
 
-# Update ExtInstaller.sh
+# Update EXTInstaller.sh
 awk '
 NR==FNR {a[$2] = $1; next}
 $(NF-1) in a {$1 = a[$(NF-1)]}
-1' install.tmp ExtInstaller.sh > tmp.sh
-cp tmp.sh ExtInstaller.sh
+1' install.tmp EXTInstaller.sh > tmp.sh
+cp tmp.sh EXTInstaller.sh
 rm tmp.sh
 rm ~/.fvwm/extraEXT/scripts/InstallExt/*.tmp
 

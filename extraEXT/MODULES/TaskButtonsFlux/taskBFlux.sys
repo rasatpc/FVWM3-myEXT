@@ -12,7 +12,7 @@ KillModule FvwmButtons WifiSnd
 DestroyMenu MenuStart
 AddToMenu MenuStart
 Test (x xfce4-appfinder) + "Apps " Exec exec xfce4-appfinder
-+ "Ext-Install  " Exec ~/.fvwm/extraEXT/scripts/InstallExt/ExtInstaller.sh
++ "Ext-Install  " Exec ~/.fvwm/extraEXT/scripts/InstallExt/EXTInstaller.sh
 + "Help " Exec exec display -size 960x540 $[HOME]/.fvwm/setup/images/fvwm3-myext-2.2-help.png
 + "-" Nop
 # + "Close OV" KillModule FvwmPager HPager
