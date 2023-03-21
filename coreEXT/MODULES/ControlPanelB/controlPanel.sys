@@ -16,6 +16,13 @@ DestroyFunc DeTile
 AddToFunc DeTile
 + I All (CurrentPage, !Iconic, CirculateHit, !Sticky) Maximize Off
 + I WindowId $0 WarpToWindow 50 50
++ I KillModule FvwmButtons DeTi
+
+DestroyMenu MenuStart
+AddToMenu MenuStart
+Test (x featherpad) + "Bindings " Exec exec featherpad $[HOME_DIR]/setup/key-mouse-bindings.txt
+Test (x mousepad) + "Bindings " Exec exec mousepad $[HOME_DIR]/setup/Key-Mouse-Bindings.txt
++ "How To " Exec exec display -size 960x540 $[HOME]/.fvwm/setup/images/fvwm3-myext-2.2-help.png
 
 SetEnv CORE_DIR $[HOME]/.fvwm/coreEXT/
 SetEnv HOME_DIR $[HOME]/.fvwm
@@ -33,18 +40,18 @@ DestroyModuleConfig ControlPanelB: *
 *ControlPanelB: Frame 0
 *ControlPanelB: Rows 1
 *ControlPanelB: BoxSize smart
-*ControlPanelB: Font "xft:Sans:size=9:antialias=True"
+*ControlPanelB: Font "xft:Sans:size=10:antialias=True"
 *ControlPanelB: Padding 2 2
   
 *ControlPanelB: (1x1, Icon $[smallIcons]/search-w.png, Action(Mouse 1) "Exec exec rofi -show" )
-
 *ControlPanelB: (1x1, Icon $[smallIcons]/resize-w.png, Action Resize )
 *ControlPanelB: (1x1, Icon $[smallIcons]/move-w.png, Action Move  )
-*ControlPanelB: (1x1, Icon $[smallIcons]/tile-w.png, Action WTile)
-*ControlPanelB: (1x1, Icon $[smallIcons]/detile-w.png, Action DeTile)
-*ControlPanelB: (Title Min, Back #faa46e, Action Thumbnail )
-*ControlPanelB: (Title Max, Back #85a772, Action Maximize 97 90 ) #width and hight
-*ControlPanelB: (Title Close, Back #e55757, Action Destroy)
+*ControlPanelB: (1x1, Icon $[smallIcons]/tile-w.png, Action \
+    `Read $[CORE_DIR]/MODULES/ControlPanelB/wTile.sys` )
+
+*ControlPanelB: (Title Max, Back #52932d, Action Maximize 97 90 ) #width and hight
+*ControlPanelB: (Title Help, Back #f27120,  ActionOnPress, Action(Mouse 1) Menu MenuStart Rectangle +$left+28 0 12m)
+*ControlPanelB: (Title Close, Back #dc2929, Action Destroy)
 *ControlPanelB: (1x1, Icon $[smallIcons]/quit-w.png, Action \
     `Read $[CORE_DIR]/MODULES/RestartShutdown/restartSDown.sys` )
 

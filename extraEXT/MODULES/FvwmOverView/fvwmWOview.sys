@@ -13,7 +13,7 @@ SetEnv wo-icon $[EXTRA_DIR]/MODULES/FvwmOverView/icons
 Module FvwmButtons FvwmOverView
 
 DestroyModuleConfig FvwmOverView: *
-*FvwmOverView: Geometry 77x36+0+3
+*FvwmOverView: Geometry 77x36+0+42
 *FvwmOverView: PressColorset 4
 *FvwmOverView: Frame 0
 *FvwmOverView: Rows 1

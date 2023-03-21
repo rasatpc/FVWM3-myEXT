@@ -1,15 +1,15 @@
-## Functions: yadPos.sys
+## Functions: winPos.sys
 ##
 
-## Yad position
+## Window position
 AddToFunc StartFunction I Module FvwmEvent FvwmEvent-MoveWindow
 
 DestroyModuleConfig FvwmEvent-MoveWindow: *
 *FvwmEvent-MoveWindow: Cmd Function
-*FvwmEvent-MoveWindow: add_window MoveYad
+*FvwmEvent-MoveWindow: add_window MoveWin
 
-DestroyFunc MoveYad
-AddToFunc   MoveYad
+DestroyFunc MoveWin
+AddToFunc   MoveWin
 + I ThisWindow ("Calendar") Move -2 -10
 + I ThisWindow ("*Installer") Move -5 -20
 + I ThisWindow ("Confirm*") Move -15 -30

@@ -8,7 +8,7 @@ KillModule FvwmButtons Bg*
 KillModule FvwmButtons FvwmOverView
 KillModule FvwmButtons ControlPanelB
 KillModule FvwmButtons ExitPanel
-KillModule FvwmButtons WinListSwitch
+KillModule FvwmButtons WinListB
 KillModule FvwmButtons HDesk
 
 ## Load pages grid lines.
@@ -18,7 +18,11 @@ Read $[CORE_DIR]/MODULES/HDeskExt/Hdesk/horizontalDesk.sys
 
 ## Change pre-settings of FvwmOverView
 Read $[EXTRA_DIR]/MODULES/FvwmOverView/fvwmWOview.sys
-*FvwmOverView: Geometry 77x36+6+7
+*FvwmOverView: Geometry 77x36+8+20
+
+KillModule FvwmButtons SimpleButton
+Read $[CORE_DIR]/MODULES/SimpleButton/simpleB.sys
+*SimpleButton: Geometry 350x40-530+20
 
 ## Change Maximize
 Mouse 1 4 A Maximize 160 100

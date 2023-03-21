@@ -27,17 +27,19 @@ rm ~/.fvwm/extraEXT/scripts/InstallExt/*.tmp
 cp ~/.fvwm/extraEXT/scripts/InstallExt/default/ExtraExt.sys ~/.fvwm/Backup/ExtraExt.sys.NEW
 cp ~/.fvwm/extraEXT/scripts/InstallExt/default/CoreExt.sys ~/.fvwm/Backup/CoreExt.sys.NEW
 
-## Checks last update, old and new number Core and Extra extensions.
-## Before any updates, edit ~/.fvwm/Backup/ExtOld-NewNo.txt.
+## Checks last date of update, old and new number Core and Extra extensions.
 
-	LastUpdate=$(awk 'NR>1 {print $2}' ~/.fvwm/Backup/ExtOld-New.txt)
-	OldCore=$(awk 'NR>1 {print $4}' ~/.fvwm/Backup/ExtOld-New.txt)
-	NewCore=$(awk 'NR>1 {print $6}' ~/.fvwm/Backup/ExtOld-New.txt)
-	OldExtra=$(awk 'NR>1 {print $8}' ~/.fvwm/Backup/ExtOld-New.txt)
-	NewExtra=$(awk 'NR>1 {print $10}' ~/.fvwm/Backup/ExtOld-New.txt)
+	LastUpdate=$(awk 'NR==1 {print $1 $2 $3}' ~/.fvwm/version.txt)
+	OldCore=$(grep -c "Read" ~/.fvwm/Backup/CoreExt.sys.BAK)
+	NewCore=$(grep -c "Read" ~/.fvwm/Backup/CoreExt.sys.NEW)
+	OldExtra=$(grep -c "Read" ~/.fvwm/Backup/ExtraExt.sys.BAK)
+	NewExtra=$(grep -c "Read" ~/.fvwm/Backup/ExtraExt.sys.NEW)
+	
+	TotNewCore=$(echo "$(($NewCore-$OldCore))")
+	TotNewExtra=$(echo "$(($NewExtra-$OldExtra))")
 	
 yad --width=350 --height=10 --title="Alert" --text-align=left \
-  --text="\n LAST Update: <b>$LastUpdate</b>\n <b>Total Core: </b>$OldCore <b>new:</b> $NewCore \n <b>Total Extra:</b> $OldExtra <b>new: </b>$NewExtra  \n \n<b>When there are new extensions,</b> \n compare CoreExt.sys and ExtraExt.sys \n with new ones (.BAK and .NEW) in folder: \n <b>/ Backup </b>, also numbers in <b>ExtOld-New.txt</b> \n \n <b>Close installer</b>, left-click and Restart myExt." --button=OK:0
+  --text="\n <b>Last update:</b> $LastUpdate \n <b>Total Core: </b>$OldCore <b>new:</b> $TotNewCore \n <b>Total Extra:</b> $OldExtra <b>new: </b>$TotNewExtra  \n \n<b>When there are new extensions,</b> \n compare CoreExt.sys and ExtraExt.sys \n with new ones (.BAK and .NEW) in folder: \n <b>~/.fvwm / Backup </b>\n \n <b>Close installer</b>, left-click and Restart myExt." --button=OK:0
   
 # Restart
 killall -SIGUSR1 fvwm3

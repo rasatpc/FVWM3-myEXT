@@ -12,7 +12,7 @@ AddToFunc FocusWhenMove
 
 Mouse 1 WS 4 FocusWhenMove
 
-## Resize windows with Super+left mouse click
+## Resize windows with Super+right mouse click
 DestroyFunc FocusWhenResize
 AddToFunc FocusWhenResize
  + I Raise

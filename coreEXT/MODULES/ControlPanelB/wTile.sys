@@ -1,0 +1,7 @@
+## wTiles.sys
+
+## Vertical/horizontal tiling
+WTile
+
+## DeTile button
+Read $[CORE_DIR]/MODULES/ControlPanelB/deTile.sys

@@ -1,0 +1,15 @@
+## deTiles.sys
+
+Module FvwmButtons DeTi
+
+DestroyModuleConfig DeTi: *
+*DeTi: Geometry 70x52-200+100
+*DeTi: Back #deb274
+*DeTi: PressColorset 4
+*DeTi: Frame 0
+*DeTi: Rows 1
+*DeTi: Padding 0 0
+*DeTi: (1x1, Icon $[smallIcons]/closeTile-48x48.png, Action DeTile)
+
+# Style Setting
+Style DeTi !Borders, !Title, StaysOnTop, WindowListSkip, !Sticky

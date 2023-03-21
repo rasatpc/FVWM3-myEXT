@@ -16,7 +16,7 @@ Read $[EXTRA_DIR]/MODULES/ExtensionSwitch/extSwitch.sys
 Read $[EXTRA_DIR]/MODULES/TaskButtonsFlux/taskBFlux.sys
 Read $[EXTRA_DIR]/MODULES/TimeDayButton/timeDayB.sys
 Read $[CORE_DIR]/MODULES/ControlPanelB/controlPanel.sys
-Read $[CORE_DIR]/MODULES/WinListSwitch/winLSwitch.sys
+Read $[CORE_DIR]/MODULES/WinListB/winLB.sys
 Read $[EXTRA_DIR]/MODULES/DeskSwitch/deskSwitch.sys
 Read $[EXTRA_DIR]/MODULES/V2x4Pager/vPager4.sys
 

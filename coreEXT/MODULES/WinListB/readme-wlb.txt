@@ -1,9 +1,9 @@
-# readme-wls.txt
+# readme-wlb.txt
 
 To install or edit .fvwm/CoreExt.sys
 
 ## Add the below line below "Load 7.Modules".
-Read $[CORE_DIR]/MODULES/WinListSwitch/winLSwitch.sys
+Read $[CORE_DIR]/MODULES/WinListB/winLB.sys
 
 NOTE: Change geometry to adjust with controlPg.sys, vPager5.sys, and myRPanel.sys.
 

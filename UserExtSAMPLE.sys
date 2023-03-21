@@ -58,8 +58,8 @@ Exec exec fvwm3-root $[FVWM_USERDIR]/.BGdefault
 ## Keyboard TouchPad on/off
 # Test (x synclient) Exec synclient TouchpadOff=1
 
-## Load Yad script postions.
-Read $[CORE_DIR]/1Functions/YadPosition/yadPos.sys
+## Load Window script postions.
+Read $[CORE_DIR]/1Functions/WinPosition/winPos.sys
 
 ## Change default font.
 # DefaultFont "xft:Noto Sans:size=10"

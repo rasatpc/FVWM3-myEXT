@@ -95,9 +95,9 @@ Read $[EXTRA_DIR]/MODULES/DeskSwitch/VDesk/Panel/gridCmd.sys
 ## Change preloaded settings
 
 ## Change WinList postion
-KillModule FvwmButtons WinListSwitch
-Read $[CORE_DIR]/MODULES/WinListSwitch/winLSwitch.sys
-*WinListSwitch: Geometry 90x30-10+55
+KillModule FvwmButtons WinListB
+Read $[CORE_DIR]/MODULES/WinListB/winLB.sys
+*WinListB: Geometry 90x30-10+55
 
 ## Load Mouse scroll
 Read $[EXTRA_DIR]/MODULES/DeskSwitch/VDesk/mouseScroll.conf

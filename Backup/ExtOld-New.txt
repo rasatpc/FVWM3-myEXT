@@ -1,2 +1,0 @@
-# Before any new updates, edit the below total number of Core and Extra extensions, including the new ones. And the number of new extensions (keep the space between each column).
-LastUpdate: 18mar2023	TotalCore: 16	NewCore: 0	TotalExtra: 23	NewExtra: 0
