@@ -1,6 +1,6 @@
 #!/bin/bash
-# By Misko - Yad Command Google Forum 10 Mar 2022
-# By rasat 15 Mar 2022
+## By Misko - Yad Command Google Forum 10 Mar 2022
+## By rasat 15 Mar 2022
 ## IMPORTANT: No space between the lines.
 
 # At startup, checks if new update.
