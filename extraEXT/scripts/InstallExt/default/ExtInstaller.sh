@@ -1,7 +1,10 @@
 #!/bin/bash
 # By Misko - Yad Command Google Forum 10 Mar 2022
-# By rasat 15 Mar 2022
-## IMPORTANT: No space between the lines.
+# By rasat 22 Mar 2022
+######## IMPORTANT: NO SPACE BETWEEN LINES ##########
+# At startup, checks if new update.
+	cd ~/.fvwm/extraEXT/scripts/InstallExt/
+	./anyNUpdate.sh
 if ! [ -x "$(command -v awk)" ]; then
    yad --form --width=360 --height=40 --title="Alert" --text-align=center \
   --text="<b>Requires gawk to run Ext Installer.</b>" --button=OK:0

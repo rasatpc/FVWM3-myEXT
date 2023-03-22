@@ -1,7 +1,7 @@
 #!/bin/bash
 # By Misko - Yad Command Google Forum 10 Mar 2022
 # By rasat 22 Mar 2022
-## IMPORTANT: No space between the lines.
+######## IMPORTANT: NO SPACE BETWEEN LINES ##########
 # At startup, checks if new update.
 	cd ~/.fvwm/extraEXT/scripts/InstallExt/
 	./anyNUpdate.sh

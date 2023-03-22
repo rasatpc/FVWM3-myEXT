@@ -16,7 +16,7 @@
 	verLocal=$(grep -oE '[0-9]+\.[0-9]+\.[0-9]+' ~/.fvwm/version.txt)
 	
 		if [ "$verGit" = "$verLocal" ]; then
-		rm *.txt
+		rm *
 		exec 3>&-
 		
 		else
@@ -25,7 +25,7 @@
 		--text="<b>New upgrade available ( $verGit ) </b>" --button=Close:0
 		
   			if [ $? -ne 0 ]; then
-  			rm *.txt
+  			rm *
   			cd ~/.fvwm/extraEXT/scripts/InstallExt/
   			rm *.tmp
 			exit
