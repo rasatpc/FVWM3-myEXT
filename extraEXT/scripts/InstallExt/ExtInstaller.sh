@@ -2,6 +2,11 @@
 # By Misko - Yad Command Google Forum 10 Mar 2022
 # By rasat 15 Mar 2022
 ## IMPORTANT: No space between the lines.
+
+# At startup, checks if new update.
+	cd ~/.fvwm/extraEXT/scripts/InstallExt/
+	./anyNUpdate.sh
+
 if ! [ -x "$(command -v awk)" ]; then
    yad --form --width=360 --height=40 --title="Alert" --text-align=center \
   --text="<b>Requires gawk to run Ext Installer.</b>" --button=OK:0
@@ -52,14 +57,14 @@ false Modules "<b>Exit Menu</b>" "Shotdown, Reboot, Suspend, Lock." "images/exit
 	>output.tmp &
 yad --plug=$key --tabnum=2 --list --no-headers --listen --cycle-read --column=":IMG" <&3  &
 yad --paned --key=$key --title="Extension Installer" \
-    --button=Close:1 --button='Reset:bash -c "./reset.sh"' --button='Upgrade myExt:bash -c "./checkLine-Update.sh"' --button=Install:0 --center --orient=Horizontal --splitter=620 --width=800 --height=660
+    --button=Close:1 --button='Reset:bash -c "./reset.sh"' --button='Upgrade myExt:bash -c "./checkLine-Update.sh"' --button=Install:0 --center --orient=Horizontal --splitter=690 --width=870 --height=690
 exec 3>&-
 # Change all extension to false.
 awk '{print $1 " " $NF}' output.tmp > install.tmp
 if [ -s install.tmp ]
 	then
 sed -i 's/TRUE/false/g' ExtInstaller.sh #CODE
-		./extraExtUpdate.sh
+		./extraInstall.sh
 	else
 		exit
 fi

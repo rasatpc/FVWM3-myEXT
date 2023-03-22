@@ -23,8 +23,24 @@ cp tmp.sh ExtInstaller.sh
 rm tmp.sh
 rm ~/.fvwm/extraEXT/scripts/InstallExt/*.tmp
 
-yad --width=300 --height=30 --title="Alert" --text-align=center \
-  --text="<b> Close installer, left-click and Restart myExt. </b>" --button=OK:0
-  
+## Copy new CoreExt.sys and ExtraExt.sys as *.NEW to compare with previous CoreExt.sys.BAK and ExtraExt.sys.BAK
+
+cp ~/.fvwm/extraEXT/scripts/InstallExt/default/ExtraExt.sys ~/.fvwm/Backup/ExtraExt.sys.NEW
+cp ~/.fvwm/extraEXT/scripts/InstallExt/default/CoreExt.sys ~/.fvwm/Backup/CoreExt.sys.NEW
+
+## Checks last date of update, old and new number Core and Extra extensions.
+
+	LastUpdate=$(awk 'NR==1 {print $1 $2 $3}' ~/.fvwm/version.txt)
+	OldCore=$(grep -c "Read" ~/.fvwm/Backup/CoreExt.sys.BAK)
+	NewCore=$(grep -c "Read" ~/.fvwm/Backup/CoreExt.sys.NEW)
+	OldExtra=$(grep -c "Read" ~/.fvwm/Backup/ExtraExt.sys.BAK)
+	NewExtra=$(grep -c "Read" ~/.fvwm/Backup/ExtraExt.sys.NEW)
+	
+	TotNewCore=$(echo "$(($NewCore-$OldCore))")
+	TotNewExtra=$(echo "$(($NewExtra-$OldExtra))")
+	
+yad --width=350 --height=10 --title="Alert" --text-align=left \
+  --text="\n <b>Last update:</b> $LastUpdate \n <b>Total Core: </b>$OldCore <b>new:</b> $TotNewCore \n <b>Total Extra:</b> $OldExtra <b>new: </b>$TotNewExtra  \n \n<b>When there are new extensions,</b> \n compare CoreExt.sys and ExtraExt.sys \n with new ones (.BAK and .NEW) in folder: \n <b>~/.fvwm / Backup </b>\n \n <b>Close installer</b>, left-click and Restart myExt." --button=OK:0
+
 # Restart
 killall -SIGUSR1 fvwm3

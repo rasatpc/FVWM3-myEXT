@@ -95,6 +95,10 @@ Read $[CORE_DIR]/1Functions/WinPosition/winPos.sys
 
 # Read $[HOME_DIR]/wmEXT/Xfce/xfceExt.sys #(open for Xfce)
 
+## No Title
+Style Grid* NoTitle
+Style Exit* NoTitle
+
 #######
 ## Add more or make changes here below.
 ##########
