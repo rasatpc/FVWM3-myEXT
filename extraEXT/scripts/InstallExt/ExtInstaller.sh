@@ -35,6 +35,7 @@ false Bindings "<b>Diary Mouse Binding</b>" "Set of Dairy theme mouse button act
 TRUE Bindings "<b>My Key Binding</b>" "VM desk (alt-d), Thumbnail (alt-t), etc." "images/key-bind.png" 402 \
 TRUE Decorations "<b>My Decor</b>" "Simple title bar." "images/my-decor.png" 501 \
 false Decorations "<b>Diary Decor</b>" "Right-side title bar based on addy-fe's theme." "images/diary-decor.png" 502 \
+false Decorations "<b>QNX Decor</b>" "MultiPixmap option to place transitional images." "images/qnx-decor.png" 503 \
 false Modules "<b>Control Pager Button</b>" "Pager, 2x2 miniture view of desktop." "images/control-pg.png" 601 \
 TRUE Modules "<b>Dash To Dock</b>" "Application panel bar." "images/dash-to-d.png" 602 \
 false Modules "<b>Desk Switch</b>" "Virtual window management." "images/desk-switch.png" 603 \
