@@ -27,6 +27,7 @@ Read $[CORE_DIR]/2-3Styles/MyColorsets/myColorsets.sys
 Read $[CORE_DIR]/4Menus/FvwmCmenu/fvwmColorM.conf
 
 ## Load 5.Bindings
+Read $[CORE_DIR]/5Bindings/MyMBinding/myMouseBindings.sys
 Read $[CORE_DIR]/5Bindings/MoveResizeBdg/MoRzBinding.sys
 Read $[CORE_DIR]/5Bindings/ExposeList/fvwmExposeList.sys
 
