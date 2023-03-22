@@ -44,6 +44,8 @@ yad --width=350 --height=10 --title="Alert" --text-align=left \
 
 cd ~/.fvwm/extraEXT/scripts/InstallExt/download/
 rm *
+cd ~/.fvwm/extraEXT/scripts/InstallExt/
+rm *.tmp
   
 # Restart
 killall -SIGUSR1 fvwm3

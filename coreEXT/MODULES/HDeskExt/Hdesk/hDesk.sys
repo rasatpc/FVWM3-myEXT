@@ -5,6 +5,7 @@ SetEnv HOME_DIR $[HOME]/.fvwm
 
 ## Close Modules
 KillModule FvwmButtons Bg*
+KillModule FvwmButtons Grid*
 KillModule FvwmButtons FvwmOverView
 KillModule FvwmButtons ControlPanelB
 KillModule FvwmButtons ExitPanel
