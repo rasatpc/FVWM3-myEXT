@@ -41,6 +41,9 @@ cp ~/.fvwm/extraEXT/scripts/InstallExt/default/CoreExt.sys ~/.fvwm/Backup/CoreEx
 	
 yad --width=350 --height=10 --title="Alert" --text-align=left \
   --text="\n <b>Last update:</b> $LastUpdate \n <b>Total Core: </b>$OldCore <b>new:</b> $TotNewCore \n <b>Total Extra:</b> $OldExtra <b>new: </b>$TotNewExtra  \n \n<b>When there are new extensions,</b> \n compare CoreExt.sys and ExtraExt.sys \n with new ones (.BAK and .NEW) in folder: \n <b>~/.fvwm / Backup </b>\n \n <b>Close installer</b>, left-click and Restart myExt." --button=OK:0
+
+cd ~/.fvwm/extraEXT/scripts/InstallExt/download/
+rm *
   
 # Restart
 killall -SIGUSR1 fvwm3
