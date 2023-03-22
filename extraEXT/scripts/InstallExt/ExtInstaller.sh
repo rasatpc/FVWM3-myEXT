@@ -59,7 +59,7 @@ awk '{print $1 " " $NF}' output.tmp > install.tmp
 if [ -s install.tmp ]
 	then
 sed -i 's/TRUE/false/g' ExtInstaller.sh #CODE
-		./extraExtUpdate.sh
+		./extraInstall.sh
 	else
 		exit
 fi
