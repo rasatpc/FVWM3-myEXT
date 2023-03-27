@@ -1,4 +1,4 @@
-22 Mar 2023
+27 Mar 2023
 # HOW TO INSTALL myEXT and FVWM3 (or Fvwm2)
 
 myEXT:
@@ -150,4 +150,3 @@ Touchpad:
 * sudo dnf install xorg-x11-drv-synaptics
 
 Read more in .fvwm/setup/install.txt
-

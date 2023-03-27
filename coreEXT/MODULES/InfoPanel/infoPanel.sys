@@ -20,7 +20,7 @@ DestroyModuleConfig InfoPanel: *
 *InfoPanel: Padding 2 2
 
 *InfoPanel: (Icon "$[logo-image]/fvwm-logo-small.png", Colorset 0)
-*InfoPanel: (3x1, Title "FVWM myExt 3", Colorset 0, Font "xft:Sans:size=24:antialias=True")
+*InfoPanel: (3x1, Title "FVWM myExt", Colorset 0, Font "xft:Sans:size=24:antialias=True")
 
 *InfoPanel: (4x1,Container(Rows 3,Frame 1))
 *InfoPanel: (Title CORE, Action(Mouse 1) `Read $[CORE_DIR]/MODULES/InfoPanel/action/infoCore.conf`)

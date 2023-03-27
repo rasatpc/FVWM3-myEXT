@@ -39,12 +39,11 @@ Module V1x5Pager
 
 ## Change preloaded settings
 
-## Titlebar Right Click >> Send To
+## Titlebar Right Click (check mMenu.conf Send To)
 DestroyMenu MenuSendTo
 AddToMenu MenuSendTo
-+ " Page 0" MoveToPage 0 0
-+ " Page 4" MoveToPage 0 4
-+ " Page 1" MoveToPage 0 1
-+ " Page 2" MoveToPage 0 2
-+ " Page 3" MoveToPage 0 3
-+ " Page 5" MoveToPage 0 5
++ " Page 0 " MoveToPage 0 0
++ " Page 1 " MoveToPage 0 1
++ " Page 2 " MoveToPage 0 2
++ " Page 3 " MoveToPage 0 3
++ " Page 4 " MoveToPage 0 4

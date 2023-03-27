@@ -5,6 +5,18 @@
 SetEnv CORE_DIR $[HOME]/.fvwm/coreEXT/
 SetEnv EXTRA_DIR $[HOME]/.fvwm/extraEXT/
 
+## Tiling
+DestroyFun RTile
+AddToFunc RTile
++ I Read $[EXTRA_DIR]/Decors/QNX-Decor/TileFunc.sys
+
+## De-tiling
+DestroyFunc DeRTile
+AddToFunc DeRTile
++ I All (CurrentPage, !Iconic, CirculateHit, !Sticky) Maximize Off
++ I WindowId $0 WarpToWindow 50 50
++ I KillModule FvwmButtons DeTileBtn
+
 # SetEnv Icons $[EXTRA_DIR]/Decors/QNX-Decor/qnx # 20px
 SetEnv Icons $[EXTRA_DIR]/Decors/QNX-Decor/icons # 30px
 
@@ -21,10 +33,11 @@ Colorset 4 fg #000000, bg #deb274 # frame
 
 ## Binding:
 
-# Window Button Locations [1 Title 6 4 2]
+# Window Button Locations [1 Title 8 6 4 2]
 Mouse 1 2 A Close
 Mouse 1 4 A Maximize
-Mouse 1 6 A Thumbnail # Iconify
+Mouse 1 6 A RTile # Tile
+Mouse 1 8 A Thumbnail # Iconify
 Mouse 1 1 A Menu MenuWindowOps
 
 ## Decor:
@@ -52,6 +65,9 @@ AddToDecor QNXDecor
         ActiveUp   (Pixmap $[Icons]/maximize-active.png   -- flat) \
         Inactive   (Pixmap $[Icons]/maximize-inactive.png   -- flat)
 + AddButtonStyle 6 \
+        ActiveUp   (Pixmap $[Icons]/tile-active.png   -- flat) \
+        Inactive   (Pixmap $[Icons]/tile-inactive.png   -- flat)
++ AddButtonStyle 8 \
         ActiveUp   (Pixmap $[Icons]/iconify-active.png   -- flat) \
         Inactive   (Pixmap $[Icons]/iconify-inactive.png   -- flat)
 + ButtonStyle All - Clear

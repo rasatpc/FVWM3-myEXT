@@ -11,7 +11,7 @@ SetEnv logo-image $[CORE_DIR]/MODULES/RestartShutdown/images
 Module FvwmButtons RestartShutdown
 
 DestroyModuleConfig RestartShutdown: *
-*RestartShutdown: Geometry 450x96-735-492
+*RestartShutdown: Geometry 450x116-735-492
 #*RestartShutdown: PressColorset 5
 *RestartShutdown: Fore #2b4e5e
 *RestartShutdown: Back #88b2b1
@@ -22,7 +22,7 @@ DestroyModuleConfig RestartShutdown: *
 *RestartShutdown: Padding 2 2
 
 *RestartShutdown: (Icon "$[logo-image]/fvwm-logo-small.png", Colorset 20)
-*RestartShutdown: (3x1, Title "Power Off", Colorset 202, Font "xft:Sans:size=16:antialias=True")
+*RestartShutdown: (3x1, Title "Power Off", Colorset 251, Fore #ffffff, Font "xft:Sans:size=16:antialias=True")
 
 *RestartShutdown: (4x1,Container(Rows 1,Frame 1))
 *RestartShutdown: (Title Cancel, Action(Mouse 1) KillModule FvwmButtons RestartShutdown)

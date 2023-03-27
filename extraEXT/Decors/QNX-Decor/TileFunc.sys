@@ -1,0 +1,18 @@
+## TileFunc.sys
+
+## Vertical/horizontal tiling
+FvwmRearrange -tile $0 -r -mn 3 -maximize 0 0 $[wa.width]p $[wa.height]p #(3 columns)
+ 
+## Detile button
+Module FvwmButtons DeTileBtn
+DestroyModuleConfig DeTileBtn: *
+*DeTileBtn: Geometry 70x52-200+100
+*DeTileBtn: Back #deb274
+*DeTileBtn: PressColorset 4
+*DeTileBtn: Frame 0
+*DeTileBtn: Rows 1
+*DeTileBtn: Padding 0 0
+*DeTileBtn: (1x1, Icon $[smallIcons]/closeTile-48x48.png, Action DeRTile)
+
+# Style Setting
+Style DeTileBtn !Borders, !Title, StaysOnTop, WindowListSkip, !Sticky

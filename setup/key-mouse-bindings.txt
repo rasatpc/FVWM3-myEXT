@@ -8,6 +8,8 @@ Close window (alt-x)
 MOUSE
 Move window (Super+left mouse click)
 Resize window (Super+right mouse click)
+
+For V DESK
 VM Desk (alt-d)
 Mouse scroll (alt-mouse left click)
 Mouse lock scroll (ctrl-mouse right click)

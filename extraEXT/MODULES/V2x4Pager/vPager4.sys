@@ -38,10 +38,14 @@ Module V2x4Pager
 
 ## Change preloaded settings
 
-## Titlebar Right Click >> Send To
+## Titlebar Right Click (check mMenu.conf Send To)
 DestroyMenu MenuSendTo
 AddToMenu MenuSendTo
-+ " Page L 1" MoveToPage 0 0
-+ " Page L 2" MoveToPage 0 1
-+ " Page R 1" MoveToPage 1 0
-+ " Page R 2" MoveToPage 1 1
++ " Page L 0 " MoveToPage 0 0
++ " Page R 0 " MoveToPage 1 0
++ " Page L 1 " MoveToPage 0 1
++ " Page R 1 " MoveToPage 1 1
++ " Page L 2 " MoveToPage 0 2
++ " Page R 2 " MoveToPage 1 2
++ " Page L 3 " MoveToPage 0 3
++ " Page R 3 " MoveToPage 1 3
