@@ -32,7 +32,7 @@ DestroyModuleConfig V2x4Pager: *
 *V2x4Pager: UseSkipList # hides modules
 *V2x4Pager: MiniIcons
 
-Style "V2x4Pager" NoTitle, !Handles, Borders, StaysOnTop, BorderWidth 5, BorderColorset 6, Sticky, WindowListSkip, FixedSize, !Iconifiable ## BorderColorset 19 (border line)
+Style "V2x4Pager" NoTitle, !Handles, Borders, StaysOnTop, BorderWidth 4, BorderColorset 6, Sticky, WindowListSkip, FixedSize, !Iconifiable ## BorderColorset 19 (border line)
 
 Module V2x4Pager
 
