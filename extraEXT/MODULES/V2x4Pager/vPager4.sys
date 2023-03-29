@@ -18,7 +18,8 @@ DesktopSize "2x4"
 Module FvwmPager V2x4Pager
 
 DestroyModuleConfig V2x4Pager: *
-*V2x4Pager: Geometry 172x400-0+190
+# *V2x4Pager: Geometry 172x400-0+190
+*V2x4Pager: Geometry 116x360-0+190
 *V2x4Pager: Back #d9d9d9
 *V2x4Pager: HilightColorset * 6 #selected page background (original 13)
 *V2x4Pager: BalloonColorset * 10 # font color

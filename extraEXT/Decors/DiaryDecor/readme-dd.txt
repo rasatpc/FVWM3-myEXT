@@ -6,7 +6,8 @@ By rasat 6-Dec-2020
 
 To install or edit .fvwm/ExtraEXT.sys
 
-## Add the below line below "Decorations".
+## Add the below lines below "Decorations".
+Read $[EXTRA_DIR]/Styles/MyBorderStyle/myBorderStyle.sys #201
 Read $[EXTRA_DIR]/Decors/DiaryDecor/diaDecor.sys #502
 
 ## Any addon or modification in .fvwm/UserEXT.sys

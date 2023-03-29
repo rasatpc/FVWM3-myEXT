@@ -1,22 +1,21 @@
 ## .fvwm/UserExt.sys
 
-## If not yet exist, copy and rename UserExtSAMPLE.sys to UserExt.sys, and
-## left-click select Restart.
+## If not yet exist, copy and rename UserExtSAMPLE.sys to UserExt.sys, and left-click and select Restart.
 
 ## This file is for you to edit/remove Core and Extra configs, and add your own.
-## UserExt.sys is now the startup setup of myExt config system.
+## UserExt.sys is the startup setup of myExt config system.
 
 ## Here below make your changes (tag and untag) and add your own.
 
 ## NOTE: There is also one user-friendly graphical Extension Installer to add and remove extensions.
-## Left-click, selcet <System><Ext-Install>
+## Left-click, select <System><Ext-Install>
 
 SetEnv CORE_DIR $[HOME]/.fvwm/coreEXT
 SetEnv EXTRA_DIR $[HOME]/.fvwm/extraEXT
 SetEnv USER_DIR $[HOME]/.fvwm/userEXT
 SetEnv HOME_DIR $[HOME]/.fvwm
 
-### STARTUP of Core and Extra extensions, and WM replace.
+### STARTUP of Core and Extra extensions and WM replace.
 
 ## CORE (essential configs)
 
@@ -58,7 +57,7 @@ Exec exec fvwm3-root $[FVWM_USERDIR]/.BGdefault
 ## Keyboard TouchPad on/off
 # Test (x synclient) Exec synclient TouchpadOff=1
 
-## Load Window script postions.
+## Load Window script position.
 Read $[CORE_DIR]/1Functions/WinPosition/winPos.sys
 
 ## Change default font.
@@ -71,7 +70,7 @@ Read $[CORE_DIR]/1Functions/WinPosition/winPos.sys
 
 ## Function: Auto Move Windows.
 ## To install this extension copy folder extraEXT/Functions/AutoMoveWin/ to userEXT/.
-## Edit AutoMoveWin/autoMoveW.sys as per choise of windows to move.
+## Edit AutoMoveWin/autoMoveW.sys as per the choice of windows to move.
 ## Untag the below line in ExtraExt.sys or this line.
 
 # Read $[USER_DIR]/AutoMoveWin/autoMoveW.sys
@@ -83,7 +82,7 @@ Read $[CORE_DIR]/1Functions/WinPosition/winPos.sys
 
 ## Load general Auto Hide List function.
 ## To install this extension copy folder extraEXT/Functions/AutoHideList/ to userEXT/.
-## Edit AutoHideList/autoHideL.sys as per the choise of windows to hide.
+## Edit AutoHideList/autoHideL.sys as per the  choice of windows to hide.
 ## Untag the below line in ExtraExt.sys or this line.
 
 # Read $[USER_DIR]/AutoHideList/autoHideL.sys
@@ -102,3 +101,6 @@ Style Exit* NoTitle
 #######
 ## Add more or make changes here below.
 ##########
+
+# *TimeDayButton: Geometry 94x70-0-60
+# *V2x4Pager: Geometry 116x360-0+190
