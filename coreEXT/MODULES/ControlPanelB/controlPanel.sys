@@ -49,8 +49,8 @@ DestroyModuleConfig ControlPanelB: *
 *ControlPanelB: (1x1, Icon $[smallIcons]/tile-w.png, Action \
     `Read $[CORE_DIR]/MODULES/ControlPanelB/wTile.sys` )
 
-*ControlPanelB: (Title Max, Back #52932d, Action Maximize 97 90 ) #width and hight
 *ControlPanelB: (Title Help, Back #f27120,  ActionOnPress, Action(Mouse 1) Menu MenuStart Rectangle +$left+38 0 12m)
+*ControlPanelB: (Title Max, Back #52932d, Action Maximize 97 90 ) #width and hight
 *ControlPanelB: (Title Close, Back #dc2929, Action Destroy)
 *ControlPanelB: (1x1, Icon $[smallIcons]/quit-w.png, Action \
     `Read $[CORE_DIR]/MODULES/RestartShutdown/restartSDown.sys` )
