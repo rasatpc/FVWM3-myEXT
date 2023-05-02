@@ -43,7 +43,6 @@ false Modules "<b>Control Pager Button</b>" "Pager, 2x2 miniture view of desktop
 TRUE Modules "<b>Dash To Dock</b>" "Application panel bar." "images/dash-to-d.png" 602 \
 false Modules "<b>Desk Switch</b>" "Virtual window management." "images/desk-switch.png" 603 \
 false Modules "<b>Extension Switch</b>" "Preview of different extension setup." "images/ext-switch.png" 604 \
-TRUE Modules "<b>Fvwm Over View</b>" "View of running windows on current page." "images/over-view.png" 605 \
 false Modules "<b>MyRight Panel</b>" "Modified Fvwm Right Panel." "images/my-right-panel.png" 606 \
 false Modules "<b>Task Buttons Curve</b>" "Task bar based on Somatic theme." "images/task-curve.png" 607 \
 TRUE Modules "<b>Wifi Sound Panel</b>" "Small wifi and sound tray." "images/wifi-sound.png" 612 \
