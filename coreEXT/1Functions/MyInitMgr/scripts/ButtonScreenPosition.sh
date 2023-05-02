@@ -26,5 +26,3 @@ sed -i "/Rectangle/c\*TaskButtonsFlux: (70x1, Icon $[tpc-image]/Fvwm-58x20.png, 
  ActionOnPress, Action(Mouse 1) Menu MenuStart Rectangle -$6+92 0 -0m)" "$path/extraEXT/MODULES/TaskButtonsFlux/action/fluxNorth.conf"
 
 sed -i "/450x96/c\*RestartShutdown: Geometry 450x96-$4" "$path/coreEXT/MODULES/RestartShutdown/restartSDown.sys"
-
-sed -i "/+80+70/c\*bgWOButton: Geometry $5+80+70" "$path/coreEXT/MODULES/FvwmOverView/OverView/bgWOview.sys"

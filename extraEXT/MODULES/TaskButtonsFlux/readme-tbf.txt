@@ -3,7 +3,6 @@
 To install or edit .fvwm/ExtraEXT.sys
 
 Install coreEXT/1Functions/MyInitMgr/
-Install coreEXT/MODULES/FvwmOverView/
 
 ## Add the below line below "Modules".
 Read $[EXTRA_DIR]/MODULES/TaskButtonsFlux/action/fluxSouth.conf #608

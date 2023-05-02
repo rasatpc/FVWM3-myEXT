@@ -7,7 +7,6 @@ SetEnv HOME_DIR $[HOME]/.fvwm
 KillModule FvwmButtons Bg*
 KillModule FvwmButtons Grid*
 KillModule FvwmButtons *RightPanel
-KillModule FvwmButtons FvwmOverView
 KillModule FvwmButtons ControlPanelB
 KillModule FvwmButtons ExitPanel
 KillModule FvwmButtons WinListB
@@ -17,10 +16,6 @@ KillModule FvwmButtons HDesk
 Read $[CORE_DIR]/MODULES/HDeskExt/Hdesk/gridPageFunc.sys
 
 Read $[CORE_DIR]/MODULES/HDeskExt/Hdesk/horizontalDesk.sys
-
-## Change pre-settings of FvwmOverView
-Read $[EXTRA_DIR]/MODULES/FvwmOverView/fvwmWOview.sys
-*FvwmOverView: Geometry 77x36+8+20
 
 KillModule FvwmButtons SimpleButton
 Read $[CORE_DIR]/MODULES/SimpleButton/simpleB.sys

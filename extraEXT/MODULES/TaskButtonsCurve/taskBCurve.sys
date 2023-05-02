@@ -52,6 +52,3 @@ Test (x stalonetray) *TaskButtonsCurve: (120x1, Colorset 111, Swallow(NoClose,Us
 
 ## Style setting
 Style TaskButtonsCurve !Borders, !Title, WindowListSkip, Sticky
-
-## Change Over View position (if loaded).
-*FvwmOverView: Geometry 77x36+0+45

@@ -22,4 +22,3 @@ Style *Manager* NoTitle
 KillModule FvwmButtons TaskButtonsFlux
 Read $[EXTRA_DIR]/MODULES/TaskButtonsCurve/taskBCurve.sys
 *TaskButtonsCurve: Geometry 730x36+0+27
-*FvwmOverView: Geometry 78x36+0+67

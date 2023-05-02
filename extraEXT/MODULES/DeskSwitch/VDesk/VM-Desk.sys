@@ -48,10 +48,6 @@ Test (x mousepad) + "HowTo" Exec exec mousepad $[EXTRA_DIR]/MODULES/DeskSwitch/V
 *TaskButtonsCurve: Geometry 595x30+10+10
 KillModule FvwmButtons TaskButtonsFlux
 
-## Change pre-settings of FvwmOverView and add one button
-Read $[EXTRA_DIR]/MODULES/FvwmOverView/fvwmWOview.sys
-*FvwmOverView: Geometry 63x43+10+45
-
 # EwmhBaseStruts [left] [right] [top] [bottom]
 # Reserves space along the edge(s) of the Screen.
 EwmhBaseStruts 30 30 60 40
