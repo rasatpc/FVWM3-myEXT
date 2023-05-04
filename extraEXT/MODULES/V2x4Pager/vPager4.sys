@@ -42,11 +42,11 @@ Module V2x4Pager
 ## Titlebar Right Click (check mMenu.conf Send To)
 DestroyMenu MenuSendTo
 AddToMenu MenuSendTo
-+ " Page L 0 " MoveToPage 0 0
-+ " Page R 0 " MoveToPage 1 0
-+ " Page L 1 " MoveToPage 0 1
-+ " Page R 1 " MoveToPage 1 1
-+ " Page L 2 " MoveToPage 0 2
-+ " Page R 2 " MoveToPage 1 2
-+ " Page L 3 " MoveToPage 0 3
-+ " Page R 3 " MoveToPage 1 3
++ " Page 0-0 " MoveToPage 0 0
++ " Page 1-0 " MoveToPage 1 0
++ " Page 0-1 " MoveToPage 0 1
++ " Page 1-1 " MoveToPage 1 1
++ " Page 0-2 " MoveToPage 0 2
++ " Page 1-2 " MoveToPage 1 2
++ " Page 0-3 " MoveToPage 0 3
++ " Page 1-3 " MoveToPage 1 3
