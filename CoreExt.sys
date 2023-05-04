@@ -77,6 +77,10 @@ Style FvwmPager NoTitle
 Style RightPanel NoTitle
 Style InfoPanel NoTitle
 
+## Titlebar menu inactive until a pager is activated.
+DestroyMenu MenuSendTo
+AddToMenu MenuSendTo
+
 ## Fvwm Quit location and style
 Style ConfirmQuit !Title, PositionPlacement Center, WindowListSkip, Layer 6
 Style FvwmIdent WindowListSkip
