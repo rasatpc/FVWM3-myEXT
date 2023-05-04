@@ -4,6 +4,12 @@
 ## Reset Window List
 KillModule FvwmButtons WinListB
 
+DestroyFunc SloppyExpFocus
+AddToFunc SloppyExpFocus
++ I Style * SloppyFocus
++ I Schedule 2000 FvwmExpose
++ I Schedule 2100 Style * ClickToFocus
+
 SetEnv CORE_DIR $[HOME]/.fvwm/coreEXT
 SetEnv HOME_DIR $[HOME]/.fvwm
 
@@ -19,7 +25,9 @@ DestroyModuleConfig WinListB: *
 *WinListB: Font "xft:Sans:size=10:antialias=True"
 *WinListB: Padding 2 2
   
-*WinListB: (1x1, Title CurW, Back #2b4e5e, Fore #ffffff, Action(Mouse 1) WindowList (CurrentPage) Root c c )
+## *WinListB: (1x1, Title CurW, Back #2b4e5e, Fore #ffffff, Action(Mouse 1) WindowList (CurrentPage) Root c c )
+*WinListB: (1x1, Title CurW, Back #2b4e5e, Fore #ffffff, Action(Mouse 1) SloppyExpFocus ) ## requires coreEXT/5Bindings/ExposeList
+
 *WinListB: (1x1, Title AllW, Back #faa46e, Fore #000000, Action(Mouse 1) WindowList Root c c)
 
 # Style Setting
