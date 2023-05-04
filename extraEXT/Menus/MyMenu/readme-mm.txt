@@ -1,5 +1,7 @@
 # readme-mm.txt
 
+Requires coreEXT/5Bindings/ExposeList
+
 To install or edit .fvwm/ExtraEXT.sys
 
 Install coreEXT/MODULES/RestartShutdown, dependency 2-3Styles/MyColorsets, Styles/DiaryThumbPlace , and Styles/FvwmThumbnails.

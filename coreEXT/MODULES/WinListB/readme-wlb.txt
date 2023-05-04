@@ -1,5 +1,7 @@
 # readme-wlb.txt
 
+Requires coreEXT/5Bindings/ExposeList
+
 To install or edit .fvwm/CoreExt.sys
 
 ## Add the below line below "Load 7.Modules".
