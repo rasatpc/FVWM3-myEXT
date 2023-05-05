@@ -17,7 +17,6 @@ Read $[EXTRA_DIR]/MODULES/TaskButtonsCurve/taskBCurve.sys
 Read $[EXTRA_DIR]/MODULES/TimeDayButton/timeDayB.sys
 Read $[CORE_DIR]/MODULES/ControlPanelB/controlPanel.sys
 Read $[CORE_DIR]/MODULES/WinListB/winLB.sys
-Read $[EXTRA_DIR]/MODULES/DeskSwitch/deskSwitch.sys
 
 ## Change SimpleButton geometry
 KillModule FvwmButtons SimpleButton

@@ -1,2 +1,2 @@
 5 May 2023
-FVWM myExtensions ver. 3.4.4
+FVWM myExtensions ver. 3.4.5

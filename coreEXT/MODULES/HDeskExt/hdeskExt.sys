@@ -4,8 +4,6 @@
 SetEnv CORE_DIR $[HOME]/.fvwm/coreEXT/
 SetEnv HOME_DIR $[HOME]/.fvwm
 
-KillModule FvwmButtons DeskSwitch
-
 Module FvwmButtons HDesk
 
 DestroyModuleConfig HDesk: *
