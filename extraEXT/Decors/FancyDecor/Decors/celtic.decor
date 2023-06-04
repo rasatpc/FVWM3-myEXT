@@ -2,7 +2,7 @@
 # Inspired by FancyDecors by robinlily
 # https://fvwmforums.org/t/some-fancy-decors-and-a-color-picker/4180/1
 
-# Title bar buttons
+## Title bar 1+3 buttons
 Read $[EXTRA_DIR]/Decors/FancyDecor/decor-setup-3btn.sys
 
 ## Inactive title bar
@@ -11,13 +11,11 @@ Colorset 406 fg '#FFFFF3F3D9D9', bg '#71C686179E79', \
 ## Active title bar
 Colorset 407 fg '#FFFFF3F3D9D9', bg '#49245D7579E7', \
            TiledPixmap $[DecorDemoHome]/images/knot_2blue.png, Tint
-# Colorset 2 fg '#FFFFF3F3D9D9', bg '#71C686179E79', Pixmap, Tint
-# Colorset 3 fg '#FFFFF3F3D9D9', bg '#49245D7579E7', Pixmap, Tint
 
-# Active font color
+## Active font color
 Colorset 2  bg white, fg white
 
-# Inactive black font color 
+## Inactive black font color 
 Style * Colorset 1
 
 AddToDecor "celtic" BorderStyle -- !NoInset

@@ -2,7 +2,7 @@
 # Inspired by FancyDecors by robinlily
 # https://fvwmforums.org/t/some-fancy-decors-and-a-color-picker/4180/1
 
-# Title bar buttons
+## Title bar 1+3 buttons 
 Read $[EXTRA_DIR]/Decors/FancyDecor/decor-setup-3btn.sys
 
 ## Inactive title bar
@@ -10,10 +10,10 @@ Colorset 400 fg cornsilk, bg #888888
 ## Active title bar
 Colorset 401 fg cornsilk, bg #670000
 
-# Active font color
+## Active font color
 Colorset 2  bg white, fg white
 
-# Inactive white font color 
+## Inactive white font color 
 # Style * Colorset 0
 
 AddToDecor "nouveau" BorderStyle Active Colorset 401

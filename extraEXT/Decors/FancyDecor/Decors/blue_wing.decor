@@ -2,7 +2,7 @@
 # Inspired by FancyDecors by robinlily
 # https://fvwmforums.org/t/some-fancy-decors-and-a-color-picker/4180/1
 
-# Title bar buttons
+## Title bar 1+3 buttons
 Read $[EXTRA_DIR]/Decors/FancyDecor/decor-setup-3btn.sys
 
 ## Inactive title bar
@@ -12,10 +12,10 @@ Colorset 404 fg '#ffebd6', bg '#8c897c', \
 Colorset 405 fg '#ffebd6', bg '#425573', \
            TiledPixmap $[DecorDemoHome]/images/brushedblue.png, Tint
 
-# Active font color
+## Active font color
 Colorset 2  bg white, fg white
 
-# Inactive black font color 
+## Inactive black font color 
 Style * Colorset 1
 
 AddToDecor "wing" BorderStyle Simple

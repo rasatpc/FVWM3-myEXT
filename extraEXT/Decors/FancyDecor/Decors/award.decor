@@ -1,8 +1,8 @@
-## Decors: starry.decor
+## Decors: award.decor
 # Inspired by FancyDecors by robinlily
 # https://fvwmforums.org/t/some-fancy-decors-and-a-color-picker/4180/1
 
-# Title bar buttons
+## Title bar 1+3 buttons
 Read $[EXTRA_DIR]/Decors/FancyDecor/decor-setup-3btn.sys
 
 ## Inactive title bar
@@ -10,10 +10,10 @@ Colorset 417 fg cornsilk, bg #ababab
 ## Active title
 Colorset 418 fg cornsilk, bg #717171
 
-# Active font color
+## Active font color
 Colorset 2  bg white, fg white
 
-# Inactive white font color 
+## Inactive white font color 
 # Style * Colorset 0
 
 AddToDecor "award" BorderStyle Active Colorset 418

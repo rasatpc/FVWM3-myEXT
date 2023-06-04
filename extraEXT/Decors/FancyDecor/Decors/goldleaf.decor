@@ -2,7 +2,7 @@
 # Inspired by FancyDecors by robinlily
 # https://fvwmforums.org/t/some-fancy-decors-and-a-color-picker/4180/1
 
-# Title bar buttons
+## Title bar 1+3 buttons
 Read $[EXTRA_DIR]/Decors/FancyDecor/decor-setup-3btn.sys
 
 ## Inactive title bar
@@ -11,13 +11,11 @@ Colorset 408 fg '#5a5142', bg '#baa57f', \
 ## Active title bar
 Colorset 409 fg '#251100', bg '#baa57f', \
            DGradient 48 ivory '#b19863', Tint
-#Colorset 2 fg '#251100', bg '#baa57f', \
-           VGradient 48 '#b19863' ivory, Tint
 
-# Active font color
+## Active font color
 Colorset 2  bg black, fg black
 
-# Inactive white font color 
+## Inactive white font color 
 Style * Colorset 0
 
 AddToDecor "goldleaf" BorderStyle -- Raised !HiddenHandles

@@ -2,7 +2,7 @@
 # Inspired by FancyDecors by robinlily
 # https://fvwmforums.org/t/some-fancy-decors-and-a-color-picker/4180/1
 
-# Title bar buttons
+## Title bar 1+3 buttons
 Read $[EXTRA_DIR]/Decors/FancyDecor/decor-setup-3btn.sys
 
 ## Inactive title bar
@@ -10,10 +10,10 @@ Colorset 402 fg black, bg gray92, TiledPixmap $[DecorDemoHome]/images/AquaCordur
 ## Active title bar
 Colorset 403 fg black, bg gray92, Pixmap $[DecorDemoHome]/images/AquaCorduroyGrad.png, Tint
 
-# Active font color
+## Active font color
 Colorset 2  bg white, fg black
 
-# Inactive white font color 
+## Inactive white font color 
  Style * Colorset 0
 
 AddToDecor "aqua" TitleStyle Colorset 403
@@ -39,7 +39,7 @@ AddToDecor "aqua" TitleStyle Height 24
     Inactive (Pixmap $[DecorDemoHome]/images/AquaYellow.png) \
     Active (Pixmap $[DecorDemoHome]/images/AquaYellowX.png)
 
-Style * BorderWidth 0
+Style * BorderWidth 1
 Style * HandleWidth 3
 
 Style * UseDecor aqua
