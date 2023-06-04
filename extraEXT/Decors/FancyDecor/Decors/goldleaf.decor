@@ -1,0 +1,66 @@
+## Decors: goldleaf.decor
+# Inspired by FancyDecors by robinlily
+# https://fvwmforums.org/t/some-fancy-decors-and-a-color-picker/4180/1
+
+# Title bar buttons
+Read $[EXTRA_DIR]/Decors/FancyDecor/decor-setup-3btn.sys
+
+## Inactive title bar
+Colorset 408 fg '#5a5142', bg '#baa57f', \
+           DGradient 48 ivory '#b19863', Tint
+## Active title bar
+Colorset 409 fg '#251100', bg '#baa57f', \
+           DGradient 48 ivory '#b19863', Tint
+#Colorset 2 fg '#251100', bg '#baa57f', \
+           VGradient 48 '#b19863' ivory, Tint
+
+# Active font color
+Colorset 2  bg black, fg black
+
+# Inactive white font color 
+Style * Colorset 0
+
+AddToDecor "goldleaf" BorderStyle -- Raised !HiddenHandles
+AddToDecor "goldleaf" BorderStyle Inactive TiledPixmap $[DecorDemoHome]/images/goldleaf_border.png
+AddToDecor "goldleaf" BorderStyle Active TiledPixmap $[DecorDemoHome]/images/goldleaf_border.png
+
+AddToDecor "goldleaf" TitleStyle MultiPixmap \
+    LeftMain $[DecorDemoHome]/images/goldleaf.png \
+    RightMain $[DecorDemoHome]/images/goldleaf.png \
+    LeftOfText $[DecorDemoHome]/images/gold_grad_left.png \
+    UnderText (stretched) $[DecorDemoHome]/images/gold_grad_mid.png \
+    RightOfText $[DecorDemoHome]/images/gold_grad_right.png
+
+AddToDecor "goldleaf" TitleStyle -- raised
+AddToDecor "goldleaf" TitleStyle Centered
+AddToDecor "goldleaf" TitleStyle Height 24
+
++ ButtonStyle Reset
++ ButtonStyle All Pixmap $[DecorDemoHome]/images/empty.png
++ ButtonStyle All DGradient 24 '#b29963' ivory
++ AddButtonStyle $[MenuButton] \
+    ActiveUp   (Pixmap $[DecorDemoHome]/images/gold_menu.png) \
+    ActiveDown (Pixmap $[DecorDemoHome]/images/gold_menu.png) \
+    Inactive   (Pixmap $[DecorDemoHome]/images/goldleaf.png)
++ AddButtonStyle $[MaxButton] \
+    ActiveUp   (Pixmap $[DecorDemoHome]/images/gold_max.png) \
+    ActiveDown (Pixmap $[DecorDemoHome]/images/gold_max.png) \
+    Inactive   (Pixmap $[DecorDemoHome]/images/goldleaf.png)
++ AddButtonStyle $[KillButton] \
+    ActiveUp   (Pixmap $[DecorDemoHome]/images/gold_close.png) \
+    ActiveDown (Pixmap $[DecorDemoHome]/images/gold_close.png) \
+    Inactive   (Pixmap $[DecorDemoHome]/images/goldleaf.png)
++ AddButtonStyle $[MinButton] \
+    ActiveUp   (Pixmap $[DecorDemoHome]/images/gold_min.png) \
+    ActiveDown (Pixmap $[DecorDemoHome]/images/gold_min.png) \
+    Inactive   (Pixmap $[DecorDemoHome]/images/goldleaf.png)
++ AddButtonStyle 1 \
+    Inactive (Pixmap $[DecorDemoHome]/images/medallion.png)
++ AddButtonStyle 2 \
+    Inactive (Pixmap $[DecorDemoHome]/images/medallion.png)
+
+Style * FvwmBorder
+Style * BorderWidth 7
+Style * HandleWidth 7
+
+Style * UseDecor goldleaf

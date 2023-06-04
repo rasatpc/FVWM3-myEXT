@@ -1,0 +1,45 @@
+## Decors: decor-setup.fvwm
+
+SetEnv DecorDemoHome $[EXTRA_DIR]/Decors/FancyDecor
+ImagePath $[DecorDemoHome]/images:+
+
+# Title bar buttons are numbered like this
+# 1 3 5  6 4 2
+
+AddToFunc TwmButtonOrder
+# Buttons 2-4 in TWM "native" order
++ I SetEnv MenuButton 1
++ I SetEnv MaxButton  2
++ I SetEnv KillButton 3
++ I SetEnv MinButton  4
++ I Function ButtonFunctions
+
+AddToFunc WindowsButtonOrder
+# Buttons in windows (and Gnome, KDE, etc) order
++ I SetEnv MenuButton 1
++ I SetEnv KillButton 2
++ I SetEnv MiniIconButton  3
++ I SetEnv MaxButton  4
++ I SetEnv MinButton  6
++ I Function ButtonFunctions
+
+AddToFunc MacButtonOrder
+# In MacOSX order
++ I SetEnv MenuButton 1
++ I SetEnv KillButton 3
++ I SetEnv MinButton  5
++ I SetEnv MaxButton  7
++ I Function ButtonFunctions
+
+AddToFunc ButtonFunctions
++ I Mouse 1         $[MaxButton]   A   Maximize 0 100
++ I Mouse 2         $[MaxButton]   A   Maximize 100 0
++ I Mouse 3         $[MaxButton]   A   Maximize
++ I Mouse 1         $[KillButton]  A   Delete
++ I Mouse 1         $[MinButton]   A   Thumbnail
+#+ I Mouse 1         $[MiniIconButton]   A   Nop
+
+############################################################
+# Use whichever button order you prefer
+Function WindowsButtonOrder
+############################################################

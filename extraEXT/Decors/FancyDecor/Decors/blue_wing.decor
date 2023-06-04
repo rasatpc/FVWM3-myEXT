@@ -1,0 +1,55 @@
+## Decors: blue_wing.decor
+# Inspired by FancyDecors by robinlily
+# https://fvwmforums.org/t/some-fancy-decors-and-a-color-picker/4180/1
+
+# Title bar buttons
+Read $[EXTRA_DIR]/Decors/FancyDecor/decor-setup-3btn.sys
+
+## Inactive title bar
+Colorset 404 fg '#ffebd6', bg '#8c897c', \
+           TiledPixmap $[DecorDemoHome]/images/brusheddust.png, Tint
+## Active title bar
+Colorset 405 fg '#ffebd6', bg '#425573', \
+           TiledPixmap $[DecorDemoHome]/images/brushedblue.png, Tint
+
+# Active font color
+Colorset 2  bg white, fg white
+
+# Inactive black font color 
+Style * Colorset 1
+
+AddToDecor "wing" BorderStyle Simple
+AddToDecor "wing" BorderStyle Active TiledPixmap   $[DecorDemoHome]/images/bronze.png
+AddToDecor "wing" BorderStyle Inactive TiledPixmap $[DecorDemoHome]/images/blue.png
+AddToDecor "wing" BorderStyle -- !NoInset
+AddToDecor "wing" BorderStyle -- HiddenHandles
+AddToDecor "wing" BorderStyle -- Sunk
+
+AddToDecor "wing" TitleStyle RightJustified
+AddToDecor "wing" TitleStyle Height 23
+
+AddToDecor "wing" TitleStyle Active MultiPixmap \
+    Main $[DecorDemoHome]/images/brushedblue.png \
+    LeftEnd $[DecorDemoHome]/images/leftbars.png
+
+AddToDecor "wing" TitleStyle Inactive MultiPixmap \
+    Main $[DecorDemoHome]/images/brusheddust.png \
+    LeftEnd $[DecorDemoHome]/images/leftbars.png
+
+AddToDecor "wing" TitleStyle ActiveUp -- flat
+AddToDecor "wing" TitleStyle ActiveDown -- raised
+AddToDecor "wing" TitleStyle Inactive -- flat
+
++ ButtonStyle Reset
++ ButtonStyle All Pixmap $[DecorDemoHome]/images/empty.png
++ ButtonStyle All -- flat UseTitleStyle
++ AddButtonStyle $[MenuButton] (Pixmap $[DecorDemoHome]/images/Ball_bronze.png)
++ AddButtonStyle $[MaxButton] (Pixmap $[DecorDemoHome]/images/gold_max.png)
++ AddButtonStyle $[MinButton] (Pixmap $[DecorDemoHome]/images/gold_min.png)
++ AddButtonStyle $[KillButton] (Pixmap $[DecorDemoHome]/images/gold_close.png)
+
+Style * FvwmBorder
+Style * BorderWidth 4
+Style * HandleWidth 5
+
+Style * UseDecor wing

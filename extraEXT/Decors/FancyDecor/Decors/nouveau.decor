@@ -1,0 +1,63 @@
+## Decors: nouvena.decor
+# Inspired by FancyDecors by robinlily
+# https://fvwmforums.org/t/some-fancy-decors-and-a-color-picker/4180/1
+
+# Title bar buttons
+Read $[EXTRA_DIR]/Decors/FancyDecor/decor-setup-3btn.sys
+
+## Inactive title bar
+Colorset 400 fg cornsilk, bg #888888
+## Active title bar
+Colorset 401 fg cornsilk, bg #670000
+
+# Active font color
+Colorset 2  bg white, fg white
+
+# Inactive white font color 
+# Style * Colorset 0
+
+AddToDecor "nouveau" BorderStyle Active Colorset 401
+AddToDecor "nouveau" BorderStyle Inactive Colorset 400
+AddToDecor "nouveau" BorderStyle -- NoInset HiddenHandles
+
+AddToDecor "nouveau" TitleStyle Active Colorset 401
+AddToDecor "nouveau" TitleStyle Active MultiPixmap \
+    Main Colorset 401 \
+    LeftOfText            $[DecorDemoHome]/images/nouveau-filled-left.png \
+    UnderText (stretched) $[DecorDemoHome]/images/nouveau-filled-mid.png \
+    RightOfText           $[DecorDemoHome]/images/nouveau-filled-right.png
+
+AddToDecor "nouveau" TitleStyle Inactive Colorset 400
+AddToDecor "nouveau" TitleStyle Inactive MultiPixmap \
+    Main Colorset 400 \
+    LeftOfText            $[DecorDemoHome]/images/nouveau-bevel-left.png \
+    UnderText (stretched) $[DecorDemoHome]/images/nouveau-bevel-mid.png \
+    RightOfText           $[DecorDemoHome]/images/nouveau-bevel-right.png
+
+AddToDecor "nouveau"  TitleStyle -- flat
+AddToDecor "nouveau"  TitleStyle Centered
+AddToDecor "nouveau"  TitleStyle Height 28
+
++ ButtonStyle Reset
++ ButtonStyle All Pixmap $[DecorDemoHome]/images/empty.png
++ ButtonStyle All -- flat UseTitleStyle
++ AddButtonStyle $[MenuButton] \
+    Active (Pixmap $[DecorDemoHome]/images/nouveau-circle-menu.png) \
+    Inactive (Pixmap $[DecorDemoHome]/images/nouveau-circle.png)
++ AddButtonStyle $[MaxButton] \
+    Active (Pixmap $[DecorDemoHome]/images/nouveau-circle-max.png) \
+    Inactive (Pixmap $[DecorDemoHome]/images/nouveau-circle.png)
++ AddButtonStyle $[KillButton] \
+    Active (Pixmap $[DecorDemoHome]/images/nouveau-circle-kill.png) \
+    ToggledActive (Pixmap $[DecorDemoHome]/images/nouveau-circle-kill.png) \
+    Inactive (Pixmap $[DecorDemoHome]/images/nouveau-circle.png) \
+    ToggledInactive (Pixmap $[DecorDemoHome]/images/nouveau-circle.png)
++ AddButtonStyle $[MinButton] \
+    Active (Pixmap $[DecorDemoHome]/images/nouveau-circle-min.png) \
+    Inactive (Pixmap $[DecorDemoHome]/images/nouveau-circle.png)
+
+# Style * MwmBorder
+Style * BorderWidth  2
+Style * HandleWidth  2
+
+Style * UseDecor nouveau
