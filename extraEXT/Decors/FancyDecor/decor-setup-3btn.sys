@@ -32,10 +32,10 @@ AddToFunc MacButtonOrder
 + I Function ButtonFunctions
 
 AddToFunc ButtonFunctions
-+ I Mouse 1         $[MaxButton]   A   Maximize 0 100
-+ I Mouse 2         $[MaxButton]   A   Maximize 100 0
++ I Mouse 1         $[MaxButton]   A   Maximize
++ I Mouse 2         $[MaxButton]   A   Maximize
 + I Mouse 3         $[MaxButton]   A   Maximize
-+ I Mouse 1         $[KillButton]  A   Delete
++ I Mouse 1         $[KillButton]  A   Close
 + I Mouse 1         $[MinButton]   A   Thumbnail
 #+ I Mouse 1         $[MiniIconButton]   A   Nop
 
