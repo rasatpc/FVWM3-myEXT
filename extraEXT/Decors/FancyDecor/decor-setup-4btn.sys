@@ -1,0 +1,58 @@
+## Decors: decor-setup-4btn.sys
+
+SetEnv DecorDemoHome $[EXTRA_DIR]/Decors/FancyDecor
+ImagePath $[DecorDemoHome]/images:+
+
+## Tiling
+DestroyFun RTile
+AddToFunc RTile
++ I Read $[EXTRA_DIR]/Decors/FancyDecor/TileFunc.sys
+
+## De-tiling
+DestroyFunc DeRTile
+AddToFunc DeRTile
++ I All (CurrentPage, !Iconic, CirculateHit, !Sticky) Maximize Off
++ I WindowId $0 WarpToWindow 50 50
++ I KillModule FvwmButtons DeTileBtn
+
+# Title bar buttons are numbered like this
+# 1 Title 8 6 4 2
+
+AddToFunc TwmButtonOrder
+# Buttons 2-4 in TWM "native" order
++ I SetEnv MenuButton 1
++ I SetEnv MaxButton  2
++ I SetEnv KillButton 3
++ I SetEnv MinButton  4
++ I SetEnv TileButton  8
++ I Function ButtonFunctions
+
+AddToFunc WindowsButtonOrder
+# Buttons in windows (and Gnome, KDE, etc) order
++ I SetEnv MenuButton 1
++ I SetEnv KillButton 2
++ I SetEnv MiniIconButton  3
++ I SetEnv MaxButton  4
++ I SetEnv MinButton  6
++ I SetEnv TileButton  8
++ I Function ButtonFunctions
+
+AddToFunc MacButtonOrder
+# In MacOSX order
++ I SetEnv MenuButton 1
++ I SetEnv KillButton 3
++ I SetEnv MinButton  6
++ I SetEnv MaxButton  7
++ I SetEnv TileButton  8
++ I Function ButtonFunctions
+
+AddToFunc ButtonFunctions
++ I Mouse 1         $[TileButton]  A   RTile
++ I Mouse 1         $[MinButton]   A   Thumbnail
++ I Mouse 1         $[MaxButton]   A   Maximize
++ I Mouse 1         $[KillButton]  A   Close
+
+############################################################
+# Use whichever button order you prefer
+Function WindowsButtonOrder
+############################################################

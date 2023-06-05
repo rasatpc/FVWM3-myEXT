@@ -2,8 +2,8 @@
 # Inspired by FancyDecors by robinlily
 # https://fvwmforums.org/t/some-fancy-decors-and-a-color-picker/4180/1
 
-## Title bar 1+3 buttons 
-Read $[EXTRA_DIR]/Decors/FancyDecor/decor-setup-3btn.sys
+## Title bar 1+4 buttons 
+Read $[EXTRA_DIR]/Decors/FancyDecor/decor-setup-4btn.sys
 
 ## Inactive title bar
 Colorset 400 fg cornsilk, bg #888888
@@ -54,6 +54,9 @@ AddToDecor "nouveau"  TitleStyle Height 28
     ToggledInactive (Pixmap $[DecorDemoHome]/images/nouveau-circle.png)
 + AddButtonStyle $[MinButton] \
     Active (Pixmap $[DecorDemoHome]/images/nouveau-circle-min.png) \
+    Inactive (Pixmap $[DecorDemoHome]/images/nouveau-circle.png)
++ AddButtonStyle $[TileButton] \
+    Active (Pixmap $[DecorDemoHome]/images/nouveau-circle.png) \
     Inactive (Pixmap $[DecorDemoHome]/images/nouveau-circle.png)
 
 # Style * MwmBorder
