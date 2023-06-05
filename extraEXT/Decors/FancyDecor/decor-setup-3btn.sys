@@ -1,10 +1,15 @@
-## Decors: decor-setup.fvwm
+## Decors: decor-setup-3btn.fvwm
 
 SetEnv DecorDemoHome $[EXTRA_DIR]/Decors/FancyDecor
 ImagePath $[DecorDemoHome]/images:+
 
 # Title bar buttons are numbered like this
 # 1 3 5  6 4 2
+
+## Reset
+Mouse 1 8 A Nop
+AddToFunc ButtonFunctions
++ I Mouse 1 $[TileButton] A Nop
 
 AddToFunc TwmButtonOrder
 # Buttons 2-4 in TWM "native" order
