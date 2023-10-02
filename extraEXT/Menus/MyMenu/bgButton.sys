@@ -6,7 +6,7 @@
 
 Module FvwmButtons BgHButton
 DestroyModuleConfig BgHButton:*
-*BgHButton: Geometry $[vp.width]x43-0+0
+*BgHButton: Geometry $[vp.width]x40-0+0
 *BgHButton: Columns $[vp.width]
 *BgHButton: Frame 0
 

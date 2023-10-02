@@ -26,6 +26,7 @@ Read $[HOME_DIR]/CoreExt.sys
 
 ## EXTRA (additional configs)
 
+## Kill RightPanel
 DestroyFunc StartFunction #(close for NsCDE)
 Read $[HOME_DIR]/ExtraExt.sys
 

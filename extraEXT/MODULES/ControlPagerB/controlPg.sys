@@ -26,13 +26,12 @@ Module FvwmButtons ControlPagerB
 DestroyModuleConfig ControlPagerB: *
 *ControlPagerB: Fore #ffffff
 *ControlPagerB: Back #2b4e5e
-*ControlPagerB: Geometry 130x115-0+0
+*ControlPagerB: Geometry 135x148-1+1
 *ControlPagerB: Frame 0
 *ControlPagerB: Rows 1
 *ControlPagerB: BoxSize smart
 *ControlPagerB: Font -*-helvetica-medium-r-*-*-12-*
 *ControlPagerB: Padding 2 2
-*ControlPagerB: UseSkipList # hides modules
 
 *ControlPagerB: (4x1, Swallow "FvwmPager" `FvwmPager *`, Frame 0)
 
@@ -42,4 +41,4 @@ Style ControlPagerB Borders, BorderWidth 3, BorderColorset 10, NoTitle, WindowLi
 ## Change pre-settings of controlPanelB
 KillModule FvwmButtons ControlPanelB
 Read $[CORE_DIR]/MODULES/ControlPanelB/controlPanel.sys
-*ControlPanelB: Geometry 360x39-135+3
+*ControlPanelB: Geometry 360x39-155+3

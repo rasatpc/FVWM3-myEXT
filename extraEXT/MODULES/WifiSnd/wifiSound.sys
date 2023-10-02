@@ -8,13 +8,13 @@ SetEnv EXTRA_DIR $[HOME]/.fvwm/extraEXT
 Module FvwmButtons WifiSnd
 
 DestroyModuleConfig WifiSnd: *
-*WifiSnd: Geometry 94x30-0-128
+*WifiSnd: Geometry 92x30-0-128
 *WifiSnd: Back #6da2e3
 *WifiSnd: Frame 0
 *WifiSnd: Rows 1
 #*WifiSnd: Padding 0 0
 
-Test (x stalonetray) *WifiSnd: (94x1, Back #6da2e3, Swallow(NoClose,UseOld) \
+Test (x stalonetray) *WifiSnd: (92x1, Back #6da2e3, Swallow(NoClose,UseOld) \
     stalonetray 'Exec exec stalonetray --config \
     "$[FVWM_DATADIR]/default-config/.stalonetrayrc"' )
     

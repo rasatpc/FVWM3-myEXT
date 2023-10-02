@@ -21,8 +21,8 @@ DestroyModuleConfig TimeDayButton:*
 *TimeDayButton: (120x25, Frame 0)
 
 Style TimeDayButton !Borders, !Title, WindowListSkip, Sticky, StaysOnTop
+
 Style Calendar* NoTitle # no titel bar
-Style MyRightPanel StaysOnBottom
 
 ## Check Functions: winPos.sys
 Read $[CORE_DIR]/1Functions/WinPosition/winPos.sys
