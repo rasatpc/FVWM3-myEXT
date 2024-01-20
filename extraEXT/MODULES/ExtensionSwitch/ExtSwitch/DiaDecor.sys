@@ -34,3 +34,5 @@ Style ExtensionSwitch NoTitle
 Style TaskButtonsCurve NoTitle
 Style TaskButtonsFlux NoTitle
 Style *TimeDay* NoTitle
+Style DashToDock NoTitle
+Style hideBar NoTitle
