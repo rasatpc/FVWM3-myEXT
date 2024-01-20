@@ -8,14 +8,26 @@ SetEnv EXTRA_DIR $[HOME]/.fvwm/extraEXT/
 ## Load Styles
 Read $[EXTRA_DIR]/Styles/DiaryThumbnails/diaryThumbPlace.sys
 Read $[EXTRA_DIR]/Styles/FvwmThumbnails/fvwmThumbnail.sys
-Read $[EXTRA_DIR]/Styles/DiaryBorderStyle/dBorderStyle.sys
+Read $[EXTRA_DIR]/Styles/MyBorderStyle/myBorderStyle.sys
 
 ## Load 5.Bindings
 Read $[EXTRA_DIR]/Bindings/DiaryMouseBinding/diaryMBindings.sys
 
 ## Load Decorations
-Read $[EXTRA_DIR]/Decors/DiaryDecor/dDecor.sys
+Read $[EXTRA_DIR]/Decors/DiaryDecor/diaDecor.sys
 
 ## Change preloaded settings
 ## Mouse click behaviour
 Style * ClickToFocus
+
+## No title
+Style FvwmPager NoTitle
+Style RightPanel NoTitle
+Style InfoPanel NoTitle
+Style SimpleButton NoTitle
+Style WinListB NoTitle
+Style ControlPanelB NoTitle
+Style HDesk NoTitle
+Style NoDeskI NoTitle
+Style MyRightPanel NoTitle
+Style ExtensionSwitch NoTitle
