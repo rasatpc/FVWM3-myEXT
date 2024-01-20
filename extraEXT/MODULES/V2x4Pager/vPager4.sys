@@ -23,7 +23,7 @@ DestroyModuleConfig V2x4Pager: *
 *V2x4Pager: Back #d9d9d9
 *V2x4Pager: HilightColorset * 6 #selected page background (original 13)
 *V2x4Pager: BalloonColorset * 10 # font color
-*V2x4Pager: WindowColorsets 10 27 # (inactive and active apps)
+*V2x4Pager: WindowColorsets 10 46 # (inactive and active apps)
 *V2x4Pager: Font none
 *V2x4Pager: SolidSeparators
 *V2x4Pager: WindowBorderWidth 1

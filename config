@@ -16,72 +16,44 @@ Read $[CORE_DIR]/1Functions/verCheck/verCh.sys
 ## Load function, style and stalonetray (wifi, screen brightness & battery, and sound volume).
 Read $[CORE_DIR]/1Functions/MyInitMgr/myInitMgr.sys
 Read $[CORE_DIR]/2-3Styles/FVWM-Page/fvwmPage.sys
+Read $[CORE_DIR]/2-3Styles/MyColorsets/myColorsets.sys
 
 ## Start InfoPanel
 Read $[CORE_DIR]/MODULES/InfoPanel/infoPanel.sys
 
 #Colorsets
 #
-Colorset 0  fg #ffffff, bg #003c3c, hi, sh, Plain, NoShape
-Colorset 1  fg #000000, bg #eeeeee, hi, sh, Plain, NoShape
-Colorset 2  fg #ffffff, bg #003c3c, hi, sh, Plain, NoShape
-#Colorset 3  fg black, bg #4d4d4d, hi #676767, sh #303030, Plain, NoShape
-Colorset 4  fg black, bg #2d2d2d, hi #474747, sh #101010, Plain, NoShape
-Colorset 10 fg #ffffff, bg #003c3c, hi #aaaaaa, sh #999999, Plain, NoShape
+Colorset 0  fg #ffffff, bg #2b4e5e, hi, sh, Plain, NoShape
+Colorset 1  fg #000000, bg #88b2b1, hi, sh, Plain, NoShape
+Colorset 2  fg #ffffff, bg #2b4e5e, hi, sh, Plain, NoShape
+Colorset 3  fg black, bg #415554, hi, sh, Plain, NoShape
+Colorset 4  fg black, bg #14252c, hi #24424f, sh #111f26, Plain, NoShape
+Colorset 5  fg #000000, bg #cbdcca, hi, sh, Plain, NoShape
+Colorset 6  fg #ffffff, bg #88b2b1, hi, sh, Plain, NoShape
+Colorset 7  fg #999999, bg #cbdcca, hi, sh, Plain, NoShape
+Colorset 8  fg #ffffff, bg #2b4e5e, hi, sh, Plain, NoShape
+Colorset 10 fg #ffffff, bg #2b4e5e, hi #aaaaaa, sh #999999, Plain, NoShape
 Colorset 11 fg #ffffff, bg #1a6e99, hi #ffffff, sh #ffffff, Plain, NoShape
 Colorset 12 fg #2d2d2d, bg #ffffff, hi, sh, Plain, NoShape
 Colorset 13 fg #ffffff, bg #006c6c, hi, sh, Plain, NoShape
-Colorset 14 fg #555555, bg #003c3c, hi #aaaaaa, sh #999999, Plain, NoShape
+Colorset 14 fg #a8988f, bg #2b4e5e, hi #aaaaaa, sh #999999, Plain, NoShape
+
+DestroyModuleConfig FvwmScript:*
+*FvwmScript: DefaultColorset 10
 
 # Window Decor
 #
 Read $[CORE_DIR]/6Decors/FVWM-Decor/fvwmDecor.sys
 
-# FvwmPager
-#
-DestroyModuleConfig FvwmPager:*
-*FvwmPager: Colorset * 10
-*FvwmPager: HilightColorset * 13
-*FvwmPager: BalloonColorset * 10
-*FvwmPager: WindowColorsets 10 11
-*FvwmPager: Font None
-*FvwmPager: Balloons All
-*FvwmPager: BalloonFont "xft:Sans:Bold:size=8:antialias=True"
-*FvwmPager: BallonYOffset +2
-*FvwmPager: Window3dBorders
-*FvwmPager: MiniIcons
+# FvwmButtons - RightPanel
 
-# FvwmIconMan
-#
-DestroyModuleConfig FvwmIconMan:*
-*FvwmIconMan: UseWinList true
-*FvwmIconMan: ButtonGeometry 120x20
-*FvwmIconMan: ManagerGeometry 1x1
-*FvwmIconMan: Background #003c3c
-*FvwmIconMan: Foreground #ffffff
-*FvwmIconMan: FocusColorset 11
-*FvwmIconMan: IconColorset 14
-*FvwmIconMan: FocusAndSelectColorset 12
-*FvwmIconMan: SelectColorset 12
-*FvwmIconMan: IconAndSelectColorset 12
-*FvwmIconMan: DrawIcons always
-*FvwmIconMan: ReliefThickness 0
-*FvwmIconMan: Format "%t"
-*FvwmIconMan: Font "xft:Sans:Bold:size=8:antialias=True"
-*FvwmIconMan: Action Mouse 0 A ret
-*FvwmIconMan: Action Mouse 1 A sendcommand IconManClick
-*FvwmIconMan: Action Mouse 3 A sendcommand "Menu MenuIconOps"
-*FvwmIconMan: Resolution global
-*FvwmIconMan: Tips needed
-*FvwmIconMan: Sort id
-
-# RightPanel (default)
+# Load RightPanel
 Module FvwmButtons RightPanel
 
 DestroyModuleConfig RightPanel:*
-*RightPanel: Geometry 120x$[vp.height]-0+0
+*RightPanel: Geometry 120x$[monitor.$[monitor.primary].height]-0+0@p
 *RightPanel: Colorset 10
-*RightPanel: Rows $[vp.height]
+*RightPanel: Rows $[monitor.$[monitor.primary].height]
 *RightPanel: Columns 120
 *RightPanel: Frame 0
 *RightPanel: Font "xft:Sans:Bold:size=10:antialias=True"
@@ -98,11 +70,10 @@ DestroyModuleConfig RightPanel:*
 *RightPanel: (5x80, Frame 0)
 *RightPanel: (120x5, Frame 0)
 Test (x stalonetray) *RightPanel: (120x20, Swallow(NoClose,UseOld) \
-    stalonetray 'Exec exec stalonetray --config \
-    "$[FVWM_DATADIR]/default-config/.stalonetrayrc"', Frame 0)
-Test (x stalonetray) PipeRead 'echo "*RightPanel: (120x$(($[vp.height]-225)), \
+    stalonetray 'Exec exec stalonetray --config ~/.fvwm/setup/stalonetrayrc', Frame 0)
+Test (x stalonetray) PipeRead 'echo "*RightPanel: (120x$(($[monitor.$[monitor.primary].height]-225)), \
     Top, Swallow FvwmIconMan \'Module FvwmIconMan\', Frame 0)"'
-Test (!x stalonetray) PipeRead 'echo "*RightPanel: (120x$(($[vp.height]-205)),\
+Test (!x stalonetray) PipeRead 'echo "*RightPanel: (120x$(($[monitor.$[monitor.primary].height]-205)),\
     Top, Swallow FvwmIconMan \'Module FvwmIconMan\', Frame 0)"'
 *RightPanel: (120x45, Swallow DateTime 'Module FvwmScript FvwmScript-DateTime',\
     Frame 0)
@@ -110,6 +81,45 @@ Test (!x stalonetray) PipeRead 'echo "*RightPanel: (120x$(($[vp.height]-205)),\
 
 Style RightPanel !Title, !Borders, !Handles, Sticky, \
                  WindowListSkip, NeverFocus
+
+# FvwmPager
+
+DestroyModuleConfig FvwmPager:*
+*FvwmPager: Geometry 110x80
+*FvwmPager: Colorset * 10
+*FvwmPager: HilightColorset * 13
+*FvwmPager: BalloonColorset * 10
+*FvwmPager: WindowColorsets 10 11
+*FvwmPager: Font None
+*FvwmPager: Balloons All
+*FvwmPager: BalloonFont "xft:Sans:Bold:size=8:antialias=True"
+*FvwmPager: BallonYOffset +2
+*FvwmPager: Window3dBorders
+*FvwmPager: UseSkipList # hides modules
+*FvwmPager: MiniIcons
+
+# FvwmIconMan
+
+DestroyModuleConfig FvwmIconMan:*
+*FvwmIconMan: UseWinList true
+*FvwmIconMan: ButtonGeometry 120x20
+*FvwmIconMan: ManagerGeometry 1x1
+*FvwmIconMan: Colorset 10
+*FvwmIconMan: FocusColorset 11
+*FvwmIconMan: IconColorset 14
+*FvwmIconMan: FocusAndSelectColorset 12
+*FvwmIconMan: SelectColorset 12
+*FvwmIconMan: IconAndSelectColorset 12
+*FvwmIconMan: DrawIcons always
+*FvwmIconMan: ReliefThickness 0
+*FvwmIconMan: Format "%t"
+*FvwmIconMan: Font "xft:Sans:Bold:size=8:antialias=True"
+*FvwmIconMan: Action Mouse 0 A ret
+*FvwmIconMan: Action Mouse 1 A sendcommand IconManClick
+*FvwmIconMan: Action Mouse 3 A sendcommand "Menu MenuIconOps"
+*FvwmIconMan: Resolution global
+*FvwmIconMan: Tips needed
+*FvwmIconMan: Sort id
 
 #######################
 ## USER

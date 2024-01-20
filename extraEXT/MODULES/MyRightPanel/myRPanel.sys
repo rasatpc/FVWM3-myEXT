@@ -8,15 +8,17 @@ SetEnv EXTRA_DIR $[HOME]/.fvwm/extraEXT/
 KillModule FvwmButtons TaskButtonsCurve
 KillModule FvwmButtons TaskButtonsFlux
 KillModule FvwmButtons RightPanel
+KillModule FvwmPager V2x4Pager
+KillModule FvwmPager V1x5Pager
 
 SetEnv logo-icon $[EXTRA_DIR]/MODULES/MyRightPanel/icons
 
 Module FvwmButtons MyRightPanel
 
 DestroyModuleConfig MyRightPanel:*
-*MyRightPanel: Geometry 91x$[vp.height]-1+210
-#*MyRightPanel: Colorset 10
-*MyRightPanel: Back #6da2e3
+*MyRightPanel: Geometry 91x$[vp.height]-0+250
+*MyRightPanel: Colorset 10
+#*MyRightPanel: Back #6da2e3
 *MyRightPanel: Rows $[vp.height]
 #*MyRightPanel: Columns 1
 *MyRightPanel: Frame 0
@@ -24,9 +26,8 @@ DestroyModuleConfig MyRightPanel:*
 *MyRightPanel: (91x40, Icon "$[logo-icon]/fvwm-logo-small.png", Frame 0)
 *MyRightPanel: (91x10, ActiveColorset 12, Frame 0)
 
-Test (x stalonetray) *MyRightPanel: (91x20, Back #3c5a80, Swallow(NoClose,UseOld) \
-    stalonetray 'Exec exec stalonetray --config \
-    "$[FVWM_DATADIR]/default-config/.stalonetrayrc"', Frame 0)
+Test (x stalonetray) *MyRightPanel: (91x20, Colorset 21, Swallow(NoClose,UseOld) \
+    stalonetray 'Exec exec stalonetray --config ~/.fvwm/setup/stalonetrayrc', Frame 0)
 
 PipeRead 'echo "*MyRightPanel: (91x$(($[vp.height]-325)), \
     Top, Swallow FvwmIconMan \'Module FvwmIconMan\', Frame 0)"'

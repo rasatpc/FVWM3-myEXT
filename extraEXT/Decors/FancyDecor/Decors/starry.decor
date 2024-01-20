@@ -8,15 +8,15 @@
 Read $[EXTRA_DIR]/Decors/FancyDecor/decor-setup-3btn.sys
 
 ## Active title bar
-Colorset 415 fg gray70, bg '#1A2C3A', Pixmap, Tint
+Colorset 83 fg gray70, bg '#1A2C3A', Pixmap, Tint
 ## Inactive title bar
-Colorset 416 fg white,  bg '#2B3D4B', Pixmap, Tint
+Colorset 84 fg white,  bg '#2B3D4B', Pixmap, Tint
 
 ## Active font color
 Colorset 2  bg white, fg white
 
 ## Inactive white font color 
-Style * Colorset 0
+Style * Colorset 26
 
 AddToDecor "starry" BorderStyle -- NoInset HiddenHandles
 
@@ -46,7 +46,7 @@ AddToDecor "starry" TitleStyle Height 22
 + AddButtonStyle 2 \
     Inactive (Pixmap $[DecorDemoHome]/images/star_silver.png)
 
-Style * Colorset 0
+Style * Colorset 26
 Style * BorderWidth 4
 Style * HandleWidth 5
 

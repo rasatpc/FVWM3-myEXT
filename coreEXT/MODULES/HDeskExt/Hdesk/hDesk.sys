@@ -11,6 +11,9 @@ KillModule FvwmButtons ControlPanelB
 KillModule FvwmButtons ExitPanel
 KillModule FvwmButtons WinListB
 KillModule FvwmButtons HDesk
+KillModule FvwmButtons NoDeskI
+KillModule FvwmButtons ControlPagerB
+KillModule FvwmPager VdeskPager
 
 ## Load pages grid lines.
 Read $[CORE_DIR]/MODULES/HDeskExt/Hdesk/gridPageFunc.sys

@@ -8,30 +8,30 @@ SetEnv USER_DIR $[HOME]/.fvwm/userEXT
 Module FvwmButtons DashToDock
 
 DestroyModuleConfig DashToDock: *
-*DashToDock: PressColorset 4
+*DashToDock: PressColorset 32
 *DashToDock: Frame 0
 
 ## [EDIT start]
 *DashToDock: (1x1, $[colorCode], Icon $[search-icon], Action(Mouse 1) "Exec exec xfce4-appfinder" )
-*DashToDock: (1x1, Colorset 268, Icon $[dTDicons]/terminal.png \
+*DashToDock: (1x1, Colorset 64, Icon $[dTDicons]/terminal.png \
 			  Action(Mouse 1) "Exec exec xfce4-terminal")
-*DashToDock: (1x1, Colorset 268, Icon $[dTDicons]/thunar.png, \
+*DashToDock: (1x1, Colorset 64, Icon $[dTDicons]/thunar.png, \
               Action(Mouse 1) "Exec exec thunar")
-*DashToDock: (1x1, Colorset 268, Icon $[dTDicons]/firefox.png, \
+*DashToDock: (1x1, Colorset 64, Icon $[dTDicons]/firefox.png, \
               Action(Mouse 1) "Exec exec firefox")
-*DashToDock: (1x1,Colorset 268, Icon $[dTDicons]/thunderbird.png, \
+*DashToDock: (1x1,Colorset 64, Icon $[dTDicons]/thunderbird.png, \
               Action(Mouse 1) "Exec exec thunderbird")
-*DashToDock: (1x1, Colorset 268, Icon $[dTDicons]/featherpad.png, \
+*DashToDock: (1x1, Colorset 64, Icon $[dTDicons]/featherpad.png, \
               Action(Mouse 1) "Exec exec featherpad")
-*DashToDock: (1x1, Colorset 268, Icon $[dTDicons]/gimp.png, \
+*DashToDock: (1x1, Colorset 64, Icon $[dTDicons]/gimp.png, \
               Action(Mouse 1) "Exec exec gimp")
-*DashToDock: (1x1, Colorset 268, Icon $[dTDicons]/ext-installer.png, \
+*DashToDock: (1x1, Colorset 64, Icon $[dTDicons]/ext-installer.png, \
               Action(Mouse 1) "Exec ~/.fvwm/extraEXT/scripts/InstallExt/ExtInstaller.sh")
-*DashToDock: (1x1, Colorset 268, Icon $[dTDicons]/desktop-color.png, \
+*DashToDock: (1x1, Colorset 64, Icon $[dTDicons]/desktop-color.png, \
               Action(Mouse 1) "Exec exec lxappearance")         
-*DashToDock: (1x1, Colorset 268, Icon $[dTDicons]/screenshooter.png, \
+*DashToDock: (1x1, Colorset 64, Icon $[dTDicons]/screenshooter.png, \
               Action(Mouse 1) "Exec exec xfce4-screenshooter")
-*DashToDock: (1x1, Colorset 268, Icon $[dTDicons]/gparted.png, \
+*DashToDock: (1x1, Colorset 64, Icon $[dTDicons]/gparted.png, \
               Action(Mouse 1) "Exec exec /usr/sbin/gparted ")
               
 ## [EDIT end] (number of buttons edit Rows in action/west.conf, east.conf and north.conf)
@@ -44,9 +44,9 @@ Style DashToDock !Borders, !Title, WindowListSkip, StaysOnTop, Sticky
 Module FvwmButtons hideBar
 DestroyModuleConfig hideBar: *
 
-*hideBar: PressColorset 4
+*hideBar: PressColorset 32
 *hideBar: Frame 2
 *hideBar: Rows 1
-*hideBar: (4x1, Colorset 269)
+*hideBar: (4x1, Colorset 65)
 
 Style hideBar !Borders, !Title, WindowListSkip, StaysOnTop, Sticky

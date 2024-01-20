@@ -33,21 +33,20 @@ Module FvwmButtons TaskButtonsCurve
 
 DestroyModuleConfig TaskButtonsCurve: *
 *TaskButtonsCurve: Geometry 730x36+0+3
-*TaskButtonsCurve: Colorset 111
+*TaskButtonsCurve: Colorset 53
 *TaskButtonsCurve: Frame 0
 *TaskButtonsCurve: Rows 1
 *TaskButtonsCurve: Padding 0 0
 
-*TaskButtonsCurve: (60x1, Icon $[tpc-image]/Fvwm-58x20.png, Colorset 272,  ActionOnPress, Action(Mouse 1) Menu MenuStart Rectangle +$left+28 0 12m)
+*TaskButtonsCurve: (60x1, Icon $[tpc-image]/Fvwm-58x20.png, Colorset 62,  ActionOnPress, Action(Mouse 1) Menu MenuStart Rectangle +$left+28 0 12m)
 
 *TaskButtonsCurve: (341x1, Swallow FvwmIconMan 'Module FvwmIconMan', Frame 2)
 
-Test (x stalonetray) *TaskButtonsCurve: (120x1, Colorset 111, Swallow(NoClose,UseOld) \
-    stalonetray 'Exec exec stalonetray --config \
-    "$[FVWM_DATADIR]/default-config/.stalonetrayrc"', Frame 0)
+Test (x stalonetray) *TaskButtonsCurve: (120x1, Colorset 53, Swallow(NoClose,UseOld) \
+    stalonetray 'Exec exec stalonetray --config ~/.fvwm/setup/stalonetrayrc', Frame 0)
     
-*TaskButtonsCurve: (5x1, Colorset 111)
-*TaskButtonsCurve: (37x1, Icon $[tpc-image]/curve2.png, Colorset 266)
+*TaskButtonsCurve: (5x1, Colorset 53)
+*TaskButtonsCurve: (37x1, Icon $[tpc-image]/curve2.png, Colorset 61)
 #*TaskButtonsCurve: (5x1, Back #6da2e3)
 
 ## Style setting

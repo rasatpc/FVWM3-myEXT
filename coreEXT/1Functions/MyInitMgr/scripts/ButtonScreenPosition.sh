@@ -20,9 +20,9 @@ set -- $(grep -Fm 1 "#: $res" "$0")
 
 sed -i "/1020x36/c\*TaskButtonsFlux: Geometry 1020x36-$3-18" "$path/extraEXT/MODULES/TaskButtonsFlux/taskBFlux.sys"
 sed -i "/1020x36/c\*TaskButtonsFlux: Geometry 1020x36-$3+55" "$path/extraEXT/MODULES/TaskButtonsFlux/action/fluxNorth.conf"
-sed -i "/Rectangle/c\*TaskButtonsFlux: (70x1, Icon $[tpc-image]/Fvwm-58x20.png, Colorset 363, \
+sed -i "/Rectangle/c\*TaskButtonsFlux: (70x1, Icon $[tpc-image]/Fvwm-58x20.png, Colorset 57, \
  ActionOnPress, Action(Mouse 1) Menu MenuStart Rectangle -$6-42 0 -111m)" "$path/extraEXT/MODULES/TaskButtonsFlux/taskBFlux.sys"
-sed -i "/Rectangle/c\*TaskButtonsFlux: (70x1, Icon $[tpc-image]/Fvwm-58x20.png, Colorset 363, \
+sed -i "/Rectangle/c\*TaskButtonsFlux: (70x1, Icon $[tpc-image]/Fvwm-58x20.png, Colorset 57, \
  ActionOnPress, Action(Mouse 1) Menu MenuStart Rectangle -$6+92 0 -0m)" "$path/extraEXT/MODULES/TaskButtonsFlux/action/fluxNorth.conf"
 
 sed -i "/450x96/c\*RestartShutdown: Geometry 450x96-$4" "$path/coreEXT/MODULES/RestartShutdown/restartSDown.sys"

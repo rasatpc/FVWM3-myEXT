@@ -6,17 +6,17 @@
 Read $[EXTRA_DIR]/Decors/FancyDecor/decor-setup-3btn.sys
 
 ## Inactive title bar
-Colorset 404 fg '#ffebd6', bg '#8c897c', \
+Colorset 71 fg '#ffebd6', bg '#8c897c', \
            TiledPixmap $[DecorDemoHome]/images/brusheddust.png, Tint
 ## Active title bar
-Colorset 405 fg '#ffebd6', bg '#425573', \
+Colorset 72 fg '#ffebd6', bg '#425573', \
            TiledPixmap $[DecorDemoHome]/images/brushedblue.png, Tint
 
 ## Active font color
 Colorset 2  bg white, fg white
 
 ## Inactive black font color 
-Style * Colorset 1
+Style * Colorset 31
 
 AddToDecor "wing" BorderStyle Simple
 AddToDecor "wing" BorderStyle Active TiledPixmap   $[DecorDemoHome]/images/bronze.png

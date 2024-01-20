@@ -8,7 +8,7 @@ Module FvwmButtons DeTi
 DestroyModuleConfig DeTi: *
 *DeTi: Geometry 70x52-200+100
 *DeTi: Back #deb274
-*DeTi: PressColorset 4
+*DeTi: PressColorset 32
 *DeTi: Frame 0
 *DeTi: Rows 1
 *DeTi: Padding 0 0

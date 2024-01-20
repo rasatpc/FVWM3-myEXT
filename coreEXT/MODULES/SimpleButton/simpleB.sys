@@ -16,7 +16,7 @@ Module FvwmButtons SimpleButton
 DestroyModuleConfig SimpleButton: *
 *SimpleButton: Geometry 350x40-530+3
 *SimpleButton: Colorset 10
-*SimpleButton: PressColorset 4
+*SimpleButton: PressColorset 32
 *SimpleButton: Frame 0
 *SimpleButton: Rows 1
 

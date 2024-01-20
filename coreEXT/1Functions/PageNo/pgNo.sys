@@ -1,9 +1,0 @@
-## FUNCTION: pgNo.sys
-## By rasat 21 March 2023
-
-SetEnv CORE_DIR $[HOME]/.fvwm/coreEXT/
-SetEnv HOME_DIR $[HOME]/.fvwm
-
-# Load lable on each page.
-Read $[CORE_DIR]/1Functions/PageNo/lablePgFunc.sys
-

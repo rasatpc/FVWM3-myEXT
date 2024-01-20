@@ -12,7 +12,7 @@ DestroyModuleConfig MiniControlB: *
 *MiniControlB: Fore #ffffff
 *MiniControlB: Back #2b4e5e
 *MiniControlB: Geometry 370x32-8+20
-*MiniControlB: PressColorset 4
+*MiniControlB: PressColorset 32
 *MiniControlB: Frame 0
 *MiniControlB: Rows 1
 *MiniControlB: BoxSize smart

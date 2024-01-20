@@ -6,26 +6,24 @@
 Read $[EXTRA_DIR]/Decors/FancyDecor/decor-setup-3btn.sys
 
 ## Active title bar
-Colorset 412 fg black, bg '#bf9d79', \
-    VGradient 24 '#ad8153' '#e5d8c8', Tint
+Colorset 81 fg black, bg '#bf9d79', VGradient 24 '#ad8153' '#e5d8c8', Tint
 ## Inactive title bar
-Colorset 413 fg '#FFF3D9', bg '#a23b3d', \
-    VGradient 24 '#781d1c' '#d65f65', Tint
+Colorset 82 fg '#FFF3D9', bg '#a23b3d', VGradient 24 '#781d1c' '#d65f65', Tint
 
 ## Active font color
 Colorset 2  bg white, fg white
 
 ## Inactive white font color 
-Style * Colorset 0
+Style * Colorset 26
 
 AddToDecor "redgold" BorderStyle -- !NoInset
 
 AddToDecor "redgold" TitleStyle Active MultiPixmap \
-    Main Colorset 413 \
+    Main Colorset 82 \
     LeftOfText $[DecorDemoHome]/images/goldfleur_r.png \
     RightOfText $[DecorDemoHome]/images/goldfleur_l.png
 AddToDecor "redgold" TitleStyle Inactive MultiPixmap \
-    Main Colorset 412 \
+    Main Colorset 81 \
     LeftOfText $[DecorDemoHome]/images/goldfleur_r.png \
     RightOfText $[DecorDemoHome]/images/goldfleur_l.png \
 
@@ -35,8 +33,8 @@ AddToDecor "redgold" TitleStyle Height 26
 + ButtonStyle Reset
 + ButtonStyle All -- UseTitleStyle
 + ButtonStyle All -- raised
-+ ButtonStyle All Inactive Colorset 412
-+ ButtonStyle All Active Colorset 413
++ ButtonStyle All Inactive Colorset 81
++ ButtonStyle All Active Colorset 82
 + AddButtonStyle $[MenuButton] \
     (Pixmap $[DecorDemoHome]/images/gold_mwm_menu.png)
 + AddButtonStyle $[MaxButton] \

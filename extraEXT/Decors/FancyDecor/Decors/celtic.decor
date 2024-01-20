@@ -6,25 +6,25 @@
 Read $[EXTRA_DIR]/Decors/FancyDecor/decor-setup-3btn.sys
 
 ## Inactive title bar
-Colorset 406 fg '#FFFFF3F3D9D9', bg '#71C686179E79', \
+Colorset 73 fg '#FFFFF3F3D9D9', bg '#71C686179E79', \
            TiledPixmap $[DecorDemoHome]/images/knot_blue.png, Tint
 ## Active title bar
-Colorset 407 fg '#FFFFF3F3D9D9', bg '#49245D7579E7', \
+Colorset 74 fg '#FFFFF3F3D9D9', bg '#49245D7579E7', \
            TiledPixmap $[DecorDemoHome]/images/knot_2blue.png, Tint
 
 ## Active font color
 Colorset 2  bg white, fg white
 
 ## Inactive black font color 
-Style * Colorset 1
+Style * Colorset 31
 
 AddToDecor "celtic" BorderStyle -- !NoInset
 AddToDecor "celtic" BorderStyle -- !HiddenHandles
 AddToDecor "celtic" BorderStyle Active   TiledPixmap $[DecorDemoHome]/images/blue-swirl.png
 AddToDecor "celtic" BorderStyle Inactive TiledPixmap $[DecorDemoHome]/images/blue-swirl.png
 
-AddToDecor "celtic" TitleStyle Active  Colorset 407
-AddToDecor "celtic" TitleStyle Inactive Colorset 406
+AddToDecor "celtic" TitleStyle Active  Colorset 74
+AddToDecor "celtic" TitleStyle Inactive Colorset 73
 AddToDecor "celtic" TitleStyle ActiveUp -- raised
 AddToDecor "celtic" TitleStyle Inactive -- raised
 AddToDecor "celtic" TitleStyle Centered

@@ -1,44 +1,48 @@
 ## Modules: controlPg.sys
 ## By rasat
 # Manpage: http://manpages.ubuntu.com/manpages/xenial/man1/FvwmButtons.1.html
-#
 
 SetEnv CORE_DIR $[HOME]/.fvwm/coreEXT/
 SetEnv EXTRA_DIR $[HOME]/.fvwm/extraEXT/
 SetEnv HOME_DIR $[HOME]/.fvwm
 
+KillModule FvwmPager V2x4Pager
+KillModule FvwmPager V1x5Pager
+
 # Load Control Panel Buttons
 Read $[CORE_DIR]/MODULES/ControlPanelB/controlPanel.sys
-
-# Change geometry
-*ControlPanelB: Geometry 278x38-180+3
-
-# Change color
-#*ControlPanelB: Back #666c62
 
 ## Pager
 
 # Virtual Desktop
 DesktopSize "2x2"
 
-Module FvwmButtons ControlPagerB
+Module FvwmPager ControlPagerB
 
 DestroyModuleConfig ControlPagerB: *
 *ControlPagerB: Fore #ffffff
 *ControlPagerB: Back #2b4e5e
-*ControlPagerB: Geometry 135x148-1+1
-*ControlPagerB: Frame 0
-*ControlPagerB: Rows 1
-*ControlPagerB: BoxSize smart
-*ControlPagerB: Font -*-helvetica-medium-r-*-*-12-*
-*ControlPagerB: Padding 2 2
-
-*ControlPagerB: (4x1, Swallow "FvwmPager" `FvwmPager *`, Frame 0)
+*ControlPagerB: Geometry 135x148-0+0
+*ControlPagerB: HilightColorset * 13
+*ControlPagerB: BalloonColorset * 10
+*ControlPagerB: WindowColorsets 10 11
+*ControlPagerB: Font none
+#*ControlPagerB: SolidSeparators
+*ControlPagerB: WindowBorderWidth 1
+*ControlPagerB: BalloonStringFormat %c
+*ControlPagerB: BallonYOffset +2
+*ControlPagerB: Window3dBorders
+*ControlPagerB: UseSkipList # hides modules
+*ControlPagerB: MiniIcons
 
 # Style Setting
 Style ControlPagerB Borders, BorderWidth 3, BorderColorset 10, NoTitle, WindowListSkip, Sticky, !Handles, StaysOnTop, !Iconifiable, FixedSize
 
-## Change pre-settings of controlPanelB
+## Change pre-settings of controlPanelB and WinList
 KillModule FvwmButtons ControlPanelB
 Read $[CORE_DIR]/MODULES/ControlPanelB/controlPanel.sys
 *ControlPanelB: Geometry 360x39-155+3
+
+KillModule FvwmButtons WinListB
+Read $[CORE_DIR]/MODULES/WinListB/winLB.sys
+*WinListB: Geometry 92x30-155+54

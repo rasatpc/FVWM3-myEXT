@@ -8,7 +8,7 @@ Module FvwmButtons DeTileBtn
 DestroyModuleConfig DeTileBtn: *
 *DeTileBtn: Geometry 70x52-200+100
 *DeTileBtn: Back #deb274
-*DeTileBtn: PressColorset 4
+*DeTileBtn: PressColorset 32
 *DeTileBtn: Frame 0
 *DeTileBtn: Rows 1
 *DeTileBtn: Padding 0 0

@@ -7,8 +7,8 @@ SetEnv HOME_DIR $[HOME]/.fvwm
 Module FvwmButtons HDesk
 
 DestroyModuleConfig HDesk: *
-*HDesk: Geometry 92x30-0+150
-*HDesk: PressColorset 4
+*HDesk: Geometry 92x30-0+156
+*HDesk: PressColorset 32
 *HDesk: Frame 0
 *HDesk: Rows 1
 *HDesk: Font "xft:Sans:size=13:antialias=True"

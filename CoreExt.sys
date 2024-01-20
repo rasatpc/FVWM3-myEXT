@@ -16,7 +16,6 @@ SetEnv HOME_DIR $[HOME]/.fvwm
 # Read $[CORE_DIR]/1Functions/MyInitMgr/myInitMgr.sys #(check local.config or config)
 # Read $[CORE_DIR]/1Functions/WinPosition/winPos.sys
 Read $[CORE_DIR]/1Functions/InitCheck/initC.sys
-Read $[CORE_DIR]/1Functions/PageNo/pgNo.sys
 
 ## Load 2-3.Styles
 # Read $[CORE_DIR]/2-3Styles/FVWM-Page/fvwmPage.sys #(loaded by default Fvwm3)
@@ -39,6 +38,7 @@ Read $[CORE_DIR]/MODULES/ControlPanelB/controlPanel.sys
 Read $[CORE_DIR]/MODULES/SimpleButton/simpleB.sys
 Read $[CORE_DIR]/MODULES/WinListB/winLB.sys
 Read $[CORE_DIR]/MODULES/HDeskExt/hdeskExt.sys
+Read $[CORE_DIR]/MODULES/PageIndicator/deskPgNo.sys
 
 #KillModule FvwmButtons RightPanel
 #Module FvwmButtons RightPanel

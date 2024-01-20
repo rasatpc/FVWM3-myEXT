@@ -6,30 +6,30 @@
 Read $[EXTRA_DIR]/Decors/FancyDecor/decor-setup-3btn.sys
 
 ## Inactive title bar
-Colorset 417 fg cornsilk, bg #ababab
+Colorset 69 fg cornsilk, bg #ababab
 ## Active title
-Colorset 418 fg cornsilk, bg #717171
+Colorset 70 fg cornsilk, bg #717171
 
 ## Active font color
 Colorset 2  bg white, fg white
 
 ## Inactive white font color 
-# Style * Colorset 0
+# Style * Colorset 26
 
-AddToDecor "award" BorderStyle Active Colorset 418
-AddToDecor "award" BorderStyle Inactive Colorset 417
+AddToDecor "award" BorderStyle Active Colorset 70
+AddToDecor "award" BorderStyle Inactive Colorset 69
 AddToDecor "award" BorderStyle -- NoInset HiddenHandles
 
-AddToDecor "award" TitleStyle Active Colorset 418
+AddToDecor "award" TitleStyle Active Colorset 70
 AddToDecor "award" TitleStyle Active MultiPixmap \
-    Main Colorset 418 \
+    Main Colorset 70 \
     LeftOfText $[DecorDemoHome]/images/bimetal_chevronleft.png \
     UnderText (stretched) $[DecorDemoHome]/images/bimetal_thin_mid.png \
     RightOfText $[DecorDemoHome]/images/bimetal_chevronright.png
 
-AddToDecor "award" TitleStyle Inactive Colorset 417
+AddToDecor "award" TitleStyle Inactive Colorset 69
 AddToDecor "award" TitleStyle Inactive MultiPixmap \
-    Main Colorset 417 \
+    Main Colorset 69 \
     LeftOfText $[DecorDemoHome]/images/bimetal_clear_chevronleft.png \
     UnderText AdjustedPixmap $[DecorDemoHome]/images/bimetal_clear_thin_mid.png \
     RightOfText $[DecorDemoHome]/images/bimetal_clear_chevronright.png

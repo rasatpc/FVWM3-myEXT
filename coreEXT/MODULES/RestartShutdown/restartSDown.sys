@@ -21,8 +21,8 @@ DestroyModuleConfig RestartShutdown: *
 *RestartShutdown: Font "xft:Sans:size=14:antialias=True"
 *RestartShutdown: Padding 2 2
 
-*RestartShutdown: (Icon "$[logo-image]/fvwm-logo-small.png", Colorset 20)
-*RestartShutdown: (3x1, Title "Power Off", Colorset 251, Fore #ffffff, Font "xft:Sans:size=16:antialias=True")
+*RestartShutdown: (Icon "$[logo-image]/fvwm-logo-small.png", Colorset 23)
+*RestartShutdown: (3x1, Title "Power Off", Colorset 60, Fore #ffffff, Font "xft:Sans:size=16:antialias=True")
 
 *RestartShutdown: (4x1,Container(Rows 1,Frame 1))
 *RestartShutdown: (Title Cancel, Action(Mouse 1) KillModule FvwmButtons RestartShutdown)

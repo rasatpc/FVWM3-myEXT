@@ -25,8 +25,8 @@ Module FvwmButtons TaskButtonsFlux
 
 DestroyModuleConfig TaskButtonsFlux: *
 *TaskButtonsFlux: Geometry 1020x36-450-18
-*TaskButtonsFlux: Colorset 111
-*TaskButtonsFlux: PressColorset 4
+*TaskButtonsFlux: Colorset 53
+*TaskButtonsFlux: PressColorset 32
 *TaskButtonsFlux: Frame 0
 *TaskButtonsFlux: Rows 1
 *TaskButtonsFlux: Font "xft:Sans:size=10:antialias=True"

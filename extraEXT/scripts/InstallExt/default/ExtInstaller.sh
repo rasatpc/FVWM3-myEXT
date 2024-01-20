@@ -49,7 +49,8 @@ TRUE Modules "<b>Task Buttons Flux</b>" "Fluxbox style of task bar." "images/tas
 TRUE Modules "<b>Time/Day Button</b>" "Date, time, and calendar panel." "images/time-day.png" 609 \
 TRUE Modules "<b>Vertical Pager 1x5</b>" "Miniature view of desktops (1x5)." "images/pager1x5.png" 610 \
 false Modules "<b>Vertical Pager 2x4</b>" "Miniature view of desktops (2x4)." "images/pager2x4.png" 611 \
-false Modules "<b>Exit Menu</b>" "Shotdown, Reboot, Suspend, Lock." "images/exit-menu.png" 613 \
+false Modules "<b>Work Vpager</b>" "Work Virtual Pager" "images/wVpager.png" 613 \
+false Modules "<b>Exit Menu</b>" "Shotdown, Reboot, Suspend, Lock." "images/exit-menu.png" 614 \
 	>output.tmp &
 yad --plug=$key --tabnum=2 --list --no-headers --listen --cycle-read --column=":IMG" <&3  &
 yad --paned --key=$key --title="Extension Installer" \

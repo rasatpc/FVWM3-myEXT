@@ -15,10 +15,9 @@ DestroyModuleConfig WifiSnd: *
 #*WifiSnd: Padding 0 0
 
 Test (x stalonetray) *WifiSnd: (92x1, Back #6da2e3, Swallow(NoClose,UseOld) \
-    stalonetray 'Exec exec stalonetray --config \
-    "$[FVWM_DATADIR]/default-config/.stalonetrayrc"' )
+    stalonetray 'Exec exec stalonetray --config ~/.fvwm/setup/stalonetrayrc' )
     
-#*WifiSnd: (5x1, Colorset 363)
+#*WifiSnd: (5x1, Colorset 57)
 *WifiSnd: (10x1, Back #6da2e3)
 
 ## Style setting

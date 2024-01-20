@@ -6,17 +6,17 @@
 Read $[EXTRA_DIR]/Decors/FancyDecor/decor-setup-3btn.sys
 
 ## Inactive title bar
-Colorset 402 fg black, bg gray92, TiledPixmap $[DecorDemoHome]/images/AquaCorduroyFlat.png, Tint
+Colorset 67 fg black, bg gray92, TiledPixmap $[DecorDemoHome]/images/AquaCorduroyFlat.png, Tint
 ## Active title bar
-Colorset 403 fg black, bg gray92, Pixmap $[DecorDemoHome]/images/AquaCorduroyGrad.png, Tint
+Colorset 68 fg black, bg gray92, Pixmap $[DecorDemoHome]/images/AquaCorduroyGrad.png, Tint
 
 ## Active font color
 Colorset 2  bg white, fg black
 
 ## Inactive white font color 
- Style * Colorset 0
+ Style * Colorset 26
 
-AddToDecor "aqua" TitleStyle Colorset 403
+AddToDecor "aqua" TitleStyle Colorset 68
 AddToDecor "aqua" BorderStyle -- Raised HiddenHandles
 
 AddToDecor "aqua" TitleStyle Centered

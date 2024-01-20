@@ -36,7 +36,7 @@ DestroyModuleConfig ControlPanelB: *
 *ControlPanelB: Fore #ffffff
 *ControlPanelB: Back #2b4e5e
 *ControlPanelB: Geometry 360x40-0+3 #Geometry -0+0
-*ControlPanelB: PressColorset 4
+*ControlPanelB: PressColorset 32
 *ControlPanelB: Frame 0
 *ControlPanelB: Rows 1
 *ControlPanelB: BoxSize smart

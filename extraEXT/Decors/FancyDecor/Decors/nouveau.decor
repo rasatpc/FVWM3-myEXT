@@ -6,30 +6,30 @@
 Read $[EXTRA_DIR]/Decors/FancyDecor/decor-setup-4btn.sys
 
 ## Inactive title bar
-Colorset 400 fg cornsilk, bg #888888
+Colorset 79 fg cornsilk, bg #888888
 ## Active title bar
-Colorset 401 fg cornsilk, bg #670000
+Colorset 80 fg cornsilk, bg #670000
 
 ## Active font color
 Colorset 2  bg white, fg white
 
 ## Inactive white font color 
-# Style * Colorset 0
+# Style * Colorset 26
 
-AddToDecor "nouveau" BorderStyle Active Colorset 401
-AddToDecor "nouveau" BorderStyle Inactive Colorset 400
+AddToDecor "nouveau" BorderStyle Active Colorset 80
+AddToDecor "nouveau" BorderStyle Inactive Colorset 79
 AddToDecor "nouveau" BorderStyle -- NoInset HiddenHandles
 
-AddToDecor "nouveau" TitleStyle Active Colorset 401
+AddToDecor "nouveau" TitleStyle Active Colorset 80
 AddToDecor "nouveau" TitleStyle Active MultiPixmap \
-    Main Colorset 401 \
+    Main Colorset 80 \
     LeftOfText            $[DecorDemoHome]/images/nouveau-filled-left.png \
     UnderText (stretched) $[DecorDemoHome]/images/nouveau-filled-mid.png \
     RightOfText           $[DecorDemoHome]/images/nouveau-filled-right.png
 
-AddToDecor "nouveau" TitleStyle Inactive Colorset 400
+AddToDecor "nouveau" TitleStyle Inactive Colorset 79
 AddToDecor "nouveau" TitleStyle Inactive MultiPixmap \
-    Main Colorset 400 \
+    Main Colorset 79 \
     LeftOfText            $[DecorDemoHome]/images/nouveau-bevel-left.png \
     UnderText (stretched) $[DecorDemoHome]/images/nouveau-bevel-mid.png \
     RightOfText           $[DecorDemoHome]/images/nouveau-bevel-right.png

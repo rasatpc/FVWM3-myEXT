@@ -10,7 +10,7 @@ DestroyModuleConfig ExtensionSwitch: *
 *ExtensionSwitch: Fore #2b4e5e
 *ExtensionSwitch: Back #88b2b1
 *ExtensionSwitch: Geometry 210x80-160+70
-*ExtensionSwitch: PressColorset 4
+*ExtensionSwitch: PressColorset 32
 *ExtensionSwitch: Frame 1
 *ExtensionSwitch: Rows 2
 *ExtensionSwitch: BoxSize smart

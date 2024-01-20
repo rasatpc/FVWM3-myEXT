@@ -28,4 +28,4 @@ AddButtonStyle 4 Active Vector 8 30x70@3 30x30@3 70x30@3 70x70@3 30x70@3 \
 AddButtonStyle 6 Active Vector 5 35x60@3 65x60@3 65x50@3 35x50@3 35x60@3 # Iconify
 
 ## Decoration Styles
-Style * BorderColorset 1, HilightBorderColorset 0 # inactive and active border color
+Style * BorderColorset 31, HilightBorderColorset 26 # inactive and active border color

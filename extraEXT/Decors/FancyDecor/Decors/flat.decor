@@ -6,22 +6,22 @@
 Read $[EXTRA_DIR]/Decors/FancyDecor/decor-setup-3btn.sys
 
 ## Inactive title bar
-Colorset 410 fg 'white', bg '#6d6b6c', fgsh white, TiledPixmap, Pixmap
+Colorset 75 fg 'white', bg '#6d6b6c', fgsh white, TiledPixmap, Pixmap
 ## Active title bar
-Colorset 411 fg 'white', bg '#404c5a', fgsh white, TiledPixmap, Pixmap
+Colorset 76 fg 'white', bg '#404c5a', fgsh white, TiledPixmap, Pixmap
 
 ## Active font color
 Colorset 2  bg white, fg white
 
 ## Inactive black font color 
-Style * Colorset 1
+Style * Colorset 31
 
-AddToDecor "basicflat" BorderStyle Active Colorset 411
-AddToDecor "basicflat" BorderStyle Inactive Colorset 410
+AddToDecor "basicflat" BorderStyle Active Colorset 76
+AddToDecor "basicflat" BorderStyle Inactive Colorset 75
 AddToDecor "basicflat" BorderStyle -- NoInset HiddenHandles
 
-AddToDecor "basicflat" TitleStyle Active Colorset 411
-AddToDecor "basicflat" TitleStyle Inactive Colorset 410
+AddToDecor "basicflat" TitleStyle Active Colorset 76
+AddToDecor "basicflat" TitleStyle Inactive Colorset 75
 AddToDecor "basicflat" TitleStyle -- flat
 AddToDecor "basicflat" TitleStyle Centered
 AddToDecor "basicflat" TitleStyle Height 22

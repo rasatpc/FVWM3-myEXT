@@ -12,7 +12,7 @@ Module FvwmButtons ExitPanel
 
 DestroyModuleConfig ExitPanel: *
 *ExitPanel: Geometry 92x40-0+80
-*ExitPanel: PressColorset 4
+*ExitPanel: PressColorset 32
 *ExitPanel: Frame 0
 *ExitPanel: Rows 1
 *ExitPanel: Columns 1

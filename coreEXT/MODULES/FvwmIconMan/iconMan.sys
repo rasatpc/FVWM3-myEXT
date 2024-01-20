@@ -8,7 +8,7 @@ DestroyModuleConfig FvwmIconMan:*
 *FvwmIconMan: ButtonGeometry 120x35 #width and hight of lable, don't change width.
 *FvwmIconMan: ManagerGeometry 1x1
 *FvwmIconMan: Colorset 10
-*FvwmIconMan: FocusColorset 15 (original 11)
+*FvwmIconMan: FocusColorset 34 (original 11)
 *FvwmIconMan: IconColorset 14
 *FvwmIconMan: FocusAndSelectColorset 12
 *FvwmIconMan: SelectColorset 1 #loaded apps. (original 12)

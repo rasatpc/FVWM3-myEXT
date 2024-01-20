@@ -6,17 +6,15 @@
 Read $[EXTRA_DIR]/Decors/FancyDecor/decor-setup-4btn.sys
 
 ## Inactive title bar
-Colorset 408 fg '#5a5142', bg '#baa57f', \
-           DGradient 48 ivory '#b19863', Tint
+Colorset 77 fg '#5a5142', bg '#baa57f', DGradient 48 ivory '#b19863', Tint
 ## Active title bar
-Colorset 409 fg '#251100', bg '#baa57f', \
-           DGradient 48 ivory '#b19863', Tint
+Colorset 78 fg '#251100', bg '#baa57f', DGradient 48 ivory '#b19863', Tint
 
 ## Active font color
 Colorset 2  bg black, fg black
 
 ## Inactive white font color 
-Style * Colorset 0
+Style * Colorset 26
 
 AddToDecor "goldleaf" BorderStyle -- Raised !HiddenHandles
 AddToDecor "goldleaf" BorderStyle Inactive TiledPixmap $[DecorDemoHome]/images/goldleaf_border.png
