@@ -9,7 +9,7 @@ SetEnv HOME_DIR $[HOME]/.fvwm
 
 ## Colorsets
 # ColorSet 24 RootTransparent Buffer, Tint #4A516A 50, fg white, bg black
-Colorset 16 fg #ffffff, bg #306ea2, hi #ffffff, sh #ffffff, Plain,
+Colorset 18 fg #ffffff, bg #306ea2, hi #ffffff, sh #ffffff, Plain,
 Colorset 17 fg #ffffff, bg #028383, hi, sh, Plain, NoShape
 
 KillModule FvwmButtons RightPager
@@ -33,7 +33,7 @@ DestroyModuleConfig VdeskPager: *
 *VdeskPager: Colorset * 10 ##  RootTransparent requires Picom.
 *VdeskPager: HilightColorset * 17  ## (active page background)
 *VdeskPager: BalloonColorset * 10  ## (font color)
-*VdeskPager: WindowColorsets 13 16  ## (inactive - active apps)
+*VdeskPager: WindowColorsets 13 18  ## (inactive - active apps)
 *VdeskPager: Font "xft:Sans:size=12:antialias=True"
 *VdeskPager: WindowBorderWidth 1
 *VdeskPager: BalloonStringFormat %c
