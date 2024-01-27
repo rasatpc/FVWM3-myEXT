@@ -1,8 +1,13 @@
 ## Modules: dashToD.sys
 ## By rasat
 
+## Fvwm myExt
 SetEnv EXTRA_DIR $[HOME]/.fvwm/extraEXT
 SetEnv USER_DIR $[HOME]/.fvwm/userEXT
+
+## Fvwm Kise
+# SetEnv CORE_DIR $[HOME]/.fvwm/core
+# SetEnv USER_DIR $[HOME]/.fvwm/user
 
 ## Dockbar
 Module FvwmButtons DashToDock

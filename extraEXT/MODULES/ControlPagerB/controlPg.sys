@@ -9,8 +9,21 @@ SetEnv HOME_DIR $[HOME]/.fvwm
 KillModule FvwmPager V2x4Pager
 KillModule FvwmPager V1x5Pager
 
+## Fvwm Kise
+# SetEnv CORE_DIR $[HOME]/.fvwm/core
+# SetEnv USER_DIR $[HOME]/.fvwm/user
+
+## Fvwm Kise
+# KillModule FvwmPager FvwmPagerBar
+# KillModule FvwmPager FvwmDesker
+# KillModule FvwmButtons BarButtons
+# KillModule FvwmButtons RightPager
+
 # Load Control Panel Buttons
 Read $[CORE_DIR]/MODULES/ControlPanelB/controlPanel.sys
+
+## Fvwm Kise
+# Read $[USER_DIR]/ControlPanelB/controlPanel.sys
 
 ## Pager
 

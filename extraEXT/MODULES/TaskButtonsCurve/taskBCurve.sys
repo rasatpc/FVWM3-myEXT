@@ -7,6 +7,10 @@ SetEnv HOME_DIR $[HOME]/.fvwm
 
 ## Colorset check coreEXT/2-3Styles/MyColorsets/my-Colorsets.sys
 
+## Fvwm Kise
+# SetEnv CORE_DIR $[HOME]/.fvwm/core
+# SetEnv USER_DIR $[HOME]/.fvwm/user
+
 DestroyMenu MenuStart
 AddToMenu MenuStart
 Test (x xfce4-appfinder) + "Apps " Exec exec xfce4-appfinder
@@ -28,6 +32,9 @@ KillModule FvwmButtons TaskButtonsFlux
 KillModule FvwmButtons WifiSnd
 
 SetEnv tpc-image $[EXTRA_DIR]/MODULES/TaskButtonsCurve/icons
+
+## Fvwm Kise
+# SetEnv tpc-image $[USER_DIR]/TaskButtonsCurve/icons
 
 Module FvwmButtons TaskButtonsCurve
 

@@ -1,21 +1,38 @@
 ## Modules/Extra: wVPager.sys
 #
-# WORK DESK - VERTICAL PAGER
+# WORK VERTICAL PAGER
 #
 
+## Fvwm myExt
+SetEnv HOME_DIR $[HOME]/.fvwm
 SetEnv CORE_DIR $[HOME]/.fvwm/coreEXT/
 SetEnv EXTRA_DIR $[HOME]/.fvwm/extraEXT/
-SetEnv HOME_DIR $[HOME]/.fvwm
+SetEnv USER_DIR $[HOME]/.fvwm/userEXT
+
+## Fvwm Kise
+# SetEnv CORE_DIR $[HOME]/.fvwm/core
+# SetEnv USER_DIR $[HOME]/.fvwm/user
+# InfoStoreAdd PAGER "Read $[USER_DIR]/WorkVpager/wVPager.sys"
 
 ## Colorsets
-# ColorSet 24 RootTransparent Buffer, Tint #4A516A 50, fg white, bg black
-Colorset 18 fg #ffffff, bg #306ea2, hi #ffffff, sh #ffffff, Plain,
+# ColorSet 24 Transparent
+Colorset 18 fg #ffffff, bg #306ea2, hi #ffffff, sh #ffffff, Plain
 Colorset 17 fg #ffffff, bg #028383, hi, sh, Plain, NoShape
 
+## Fvwm Kise
+# ColorSet 15 RootTransparent Buffer, Tint #4a516a 60, fg white, bg black
+
+## Fvwm myExt
 KillModule FvwmButtons RightPager
 KillModule FvwmPager V2x4Pager
 KillModule FvwmPager V1x5Pager
 KillModule FvwmPager ControlPagerB
+
+## Fvwm Kise
+# KillModule FvwmPager FvwmPagerBar
+# KillModule FvwmPager FvwmDesker
+# KillModule FvwmButtons BarButtons
+# KillModule FvwmButtons RightPager
 
 ## Vertical Pager (4 desk with 8 pages)
 
@@ -44,19 +61,19 @@ DestroyModuleConfig VdeskPager: *
 
 Style VdeskPager NoTitle, !Handles, Borders, BorderWidth 1, BorderColorset 6, Sticky, WindowListSkip, FixedSize, !Iconifiable 
 
+## Fvwm myExt
 ## Change preloaded settings
 KillModule FvwmButtons ControlMP
 *ControlMP: Geometry 330x34-170+23
 Module FvwmButtons ControlMP
 
-## Titlebar Right Click (check mMenu.conf Send To)
-DestroyMenu MenuSendTo
-
-## Change pre-settings of controlPanelB and WinList
 KillModule FvwmButtons ControlPanelB
-Read $[CORE_DIR]/MODULES/ControlPanelB/controlPanel.sys
 *ControlPanelB: Geometry 360x39-160+3
+Module FvwmButtons ControlPanelB
 
 KillModule FvwmButtons WinListB
-Read $[CORE_DIR]/MODULES/WinListB/winLB.sys
 *WinListB: Geometry 92x30-160+54
+Module FvwmButtons WinListB
+
+## Titlebar Right Click (check mMenu.conf Send To)
+DestroyMenu MenuSendTo

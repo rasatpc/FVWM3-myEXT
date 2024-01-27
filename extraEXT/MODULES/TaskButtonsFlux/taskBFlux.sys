@@ -4,6 +4,10 @@
 SetEnv CORE_DIR $[HOME]/.fvwm/coreEXT
 SetEnv EXTRA_DIR $[HOME]/.fvwm/extraEXT
 
+## Fvwm Kise
+# SetEnv CORE_DIR $[HOME]/.fvwm/core
+# SetEnv USER_DIR $[HOME]/.fvwm/user
+
 ## Remove RightPanel+Calendar and Curve.
 KillModule FvwmButtons *RightPanel
 KillModule FvwmButtons TaskButtonsCurve

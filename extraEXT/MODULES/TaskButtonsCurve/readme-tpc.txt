@@ -12,3 +12,11 @@ NOTE: Edit line in simpleB.sys (move to right side).
 *SimpleButton: Geometry 500x50-250+0
 
 ## Any addon or modification in .fvwm/UserEXT.sys
+
+## Fvwm Kise
+
+Copy .fvwm/extraEXT/MODULES/TaskButtonsCurve to .fvwm/user. Add this line in .fvwm/userExt.sys in MODULES section.
+Read $[USER_DIR]/TaskButtonsCurve/taskBCurve.sys
+
+IMPORTANT:
+Edit/untag where there is an Fvwm Kise label.

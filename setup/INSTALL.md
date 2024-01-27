@@ -1,4 +1,4 @@
-19 January 2024
+27 January 2024
 # HOW TO INSTALL myEXT and FVWM3 (or Fvwm2)
 
 myEXT:
@@ -126,7 +126,7 @@ FvwmButton configs to adjust as per screen resolution:
 Volume Icon (add icon in system tray):
 * sudo apt install volumeicon-alsa
 * sudo pacman -Syu volumeicon
-* sudo dnf install volumeicon
+* sudo dnf install volumeicon9
 
 Search app:
 * sudo apt install rofi

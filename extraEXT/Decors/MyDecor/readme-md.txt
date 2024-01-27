@@ -15,3 +15,10 @@ Read $[EXTRA_DIR]/Functions/Thumbnails/thumbnail.sys #103
 Read $[EXTRA_DIR]/Styles/MyBorderStyle/myBorderStyle.sys #201
 
 ## Any addon or modification in .fvwm/UserEXT.sys
+
+## Fvwm Kise
+
+Copy .fvwm/extraEXT/Decors/FancyDecor to .fvwm/user.
+
+IMPORTANT:
+Edit/untag where there is an Fvwm Kise label.

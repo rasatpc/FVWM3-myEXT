@@ -5,3 +5,6 @@ WTile
 
 ## DeTile button
 Read $[CORE_DIR]/MODULES/ControlPanelB/deTile.sys
+
+## Fvwm Kise
+# Read $[USER_DIR]/ControlPanelB/deTile.sys

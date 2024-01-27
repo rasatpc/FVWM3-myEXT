@@ -15,3 +15,12 @@ Test (x xdpyinfo) Exec $[CORE_DIR]/1Functions/MyInitMgr/scripts/ButtonScreenPosi
 sed -i "/1020x36/c\*TaskButtonsFlux: Geometry 1020x36-$3-18" "$path/extraEXT/MODULES/TaskButtonsFlux/taskBFlux.sys"
 
 ## Any addon or modification in .fvwm/UserEXT.sys
+
+## Fvwm Kise
+
+Copy .fvwm/extraEXT/MODULES/TaskButtonsFlux to .fvwm/user. Add this line in .fvwm/userExt.sys in MODULES section.
+Read $[USER_DIR]/TaskButtonsFlux/action/fluxSouth.conf
+
+IMPORTANT:
+Edit/untag where there is an Fvwm Kise label.
+

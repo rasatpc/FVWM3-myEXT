@@ -37,7 +37,7 @@ Read $[CORE_DIR]/MODULES/FvwmIconMan/iconMan.sys
 Read $[CORE_DIR]/MODULES/ControlPanelB/controlPanel.sys
 Read $[CORE_DIR]/MODULES/SimpleButton/simpleB.sys
 Read $[CORE_DIR]/MODULES/WinListB/winLB.sys
-Read $[CORE_DIR]/MODULES/HDeskExt/hdeskExt.sys
+Read $[CORE_DIR]/MODULES/DeskSwitch/deskSwitch.sys
 Read $[CORE_DIR]/MODULES/PageIndicator/deskPgNo.sys
 
 #KillModule FvwmButtons RightPanel
@@ -76,6 +76,7 @@ DefaultFont "xft:Noto Sans:size=10"
 Style FvwmPager NoTitle
 Style RightPanel NoTitle
 Style InfoPanel NoTitle
+Style DeskSwitch NoTitle
 
 ## Titlebar menu inactive until a pager is activated.
 DestroyMenu MenuSendTo

@@ -6,3 +6,11 @@ To install or edit .fvwm/UserExt.sys
 
 # Add the below line above "Load hide functions".
 Read $[EXTRA_DIR]/MODULES/DashToDock/dHide/dashHide.sys
+
+## Fvwm Kise
+
+Add this line in .fvwm/userExt.sys in MODULES section.
+Read $[USER_DIR]/DashToDock/dHide/dashHide.sys
+
+IMPORTANT:
+Edit/untag where there is an Fvwm Kise label.

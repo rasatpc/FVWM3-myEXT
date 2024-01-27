@@ -11,3 +11,12 @@ Read $[EXTRA_DIR]/Styles/MyBorderStyle/myBorderStyle.sys #201
 Read $[EXTRA_DIR]/Decors/DiaryDecor/diaDecor.sys #502
 
 ## Any addon or modification in .fvwm/UserEXT.sys
+
+## Fvwm Kise
+
+Copy .fvwm/extraEXT/Decors/DiaryDecor to .fvwm/user. Add this lines in .fvwm/userExt.sys in DECOR section.
+Read $[USER_DIR]/MyBorderStyle/myBorderStyle.sys
+Read $[USER_DIR]/DiaryDecor/diaDecor.sys
+
+IMPORTANT:
+Edit/untag where there is an Fvwm Kise label.

@@ -1,9 +1,12 @@
 ## Modules: wifiSound.sys
 ## By rasat
 
+## Fvwm myExt
 SetEnv EXTRA_DIR $[HOME]/.fvwm/extraEXT
 
-## Colorset check coreEXT/2-3Styles/MyColorsets/my-Colorsets.sys
+## Fvwm Kise
+# SetEnv CORE_DIR $[HOME]/.fvwm/core
+# SetEnv USER_DIR $[HOME]/.fvwm/user
 
 Module FvwmButtons WifiSnd
 

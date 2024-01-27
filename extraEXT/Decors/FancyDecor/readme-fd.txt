@@ -27,3 +27,10 @@ AddToMenu   TDecors "FANCY DECORS" Title
 + "Nouveau%$[mtmb]/Thumb_nouveau.png%" Read $[EXTRA_DIR]/Decors/FancyDecor/Decors/nouveau.decor
 + "Red and Gold%$[mtmb]/Thumb_redgold.png%" Read $[EXTRA_DIR]/Decors/FancyDecor/Decors/redgold.decor
 + "Starry%$[mtmb]/Thumb_starry.png%" Read $[EXTRA_DIR]/Decors/FancyDecor/Decors/starry.decor
+
+## Fvwm Kise
+
+Copy .fvwm/extraEXT/Decors/FancyDecor to .fvwm/user.
+
+IMPORTANT:
+Edit/untag where there is an Fvwm Kise label.

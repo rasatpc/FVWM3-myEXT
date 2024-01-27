@@ -3,6 +3,20 @@
 # Manpage: http://manpages.ubuntu.com/manpages/xenial/man1/FvwmButtons.1.html
 #
 
+## Fvwm myExt
+SetEnv CORE_DIR $[HOME]/.fvwm/coreEXT/
+SetEnv HOME_DIR $[HOME]/.fvwm
+
+## Fvwm Kise
+# SetEnv CORE_DIR $[HOME]/.fvwm/core
+# SetEnv USER_DIR $[HOME]/.fvwm/user
+
+## Set small icons
+SetEnv smallIcons $[CORE_DIR]/MODULES/ControlPanelB/icons
+
+## Fvwm Kise
+# SetEnv smallIcons $[USER_DIR]/ControlPanelB/icons
+
 KillModule FvwmButtons ControlPanelB
 
 ## Vertical/horizontal tiling
@@ -23,12 +37,6 @@ AddToMenu MenuStart
 Test (x featherpad) + "Bindings " Exec exec featherpad $[HOME_DIR]/setup/key-mouse-bindings.txt
 Test (x mousepad) + "Bindings " Exec exec mousepad $[HOME_DIR]/setup/Key-Mouse-Bindings.txt
 + "How To " Exec exec display -size 960x540 $[HOME]/.fvwm/setup/images/fvwm3-myext-2.2-help.png
-
-SetEnv CORE_DIR $[HOME]/.fvwm/coreEXT/
-SetEnv HOME_DIR $[HOME]/.fvwm
-
-## Set small icons
-SetEnv smallIcons $[CORE_DIR]/MODULES/ControlPanelB/icons
 
 Module FvwmButtons ControlPanelB
 

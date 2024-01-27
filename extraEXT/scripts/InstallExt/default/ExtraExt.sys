@@ -53,6 +53,7 @@ Read $[EXTRA_DIR]/MODULES/V1x5Pager/vPager5.sys #610
 Style SimpleButton NoTitle
 Style WinListB NoTitle
 Style ControlPanelB NoTitle
-Style HDesk NoTitle
+Style NoDeskI NoTitle
+Style DeskSwitch NoTitle
 
 Exec exec fvwm-root $[HOME_DIR]/.BGdefault

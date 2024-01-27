@@ -27,7 +27,6 @@ Style InfoPanel NoTitle
 Style SimpleButton NoTitle
 Style WinListB NoTitle
 Style ControlPanelB NoTitle
-Style HDesk NoTitle
 Style NoDeskI NoTitle
 Style MyRightPanel NoTitle
 Style ExtensionSwitch NoTitle
@@ -36,3 +35,4 @@ Style TaskButtonsFlux NoTitle
 Style *TimeDay* NoTitle
 Style DashToDock NoTitle
 Style hideBar NoTitle
+Style DeskSwitch NoTitle

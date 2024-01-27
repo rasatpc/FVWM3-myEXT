@@ -1,12 +1,23 @@
 ## Modules: vPager5.sys
 ## By rasat
 
+## Fvwm myExt
 SetEnv CORE_DIR $[HOME]/.fvwm/coreEXT
 SetEnv EXTRA_DIR $[HOME]/.fvwm/extraEXT
+
+## Fvwm Kise
+# SetEnv CORE_DIR $[HOME]/.fvwm/core
+# SetEnv USER_DIR $[HOME]/.fvwm/user
 
 KillModule FvwmButtons *RightPanel
 KillModule FvwmPager V2x4Pager
 KillModule FvwmPager ControlPagerB
+
+## Fvwm Kise
+# KillModule FvwmPager FvwmPagerBar
+# KillModule FvwmPager FvwmDesker
+# KillModule FvwmButtons BarButtons
+# KillModule FvwmButtons RightPager
 
 ########
 # Vertical Pager (5 pages)

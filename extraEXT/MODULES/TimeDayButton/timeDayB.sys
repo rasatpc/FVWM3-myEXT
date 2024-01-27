@@ -2,8 +2,13 @@
 ## Date, Time, and Calendar
 ## By rasat
 
+## Fvwm myExt
 SetEnv EXTRA_DIR $[HOME]/.fvwm/extraEXT/
 SetEnv HOME_DIR $[HOME]/.fvwm
+
+## Fvwm Kise
+# SetEnv CORE_DIR $[HOME]/.fvwm/core
+# SetEnv USER_DIR $[HOME]/.fvwm/user
 
 ## Time/Day panel color
 *FvwmScript: DefaultColorset 10

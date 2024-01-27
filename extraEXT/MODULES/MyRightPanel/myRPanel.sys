@@ -2,16 +2,22 @@
 ## By rasat
 # This is a modified Fvwm-RightPanel.sys
 
+## Fvwm myExt
 SetEnv CORE_DIR $[HOME]/.fvwm/coreEXT/
 SetEnv EXTRA_DIR $[HOME]/.fvwm/extraEXT/
+
+SetEnv logo-icon $[EXTRA_DIR]/MODULES/MyRightPanel/icons
+
+## Fvwm Kise
+# SetEnv CORE_DIR $[HOME]/.fvwm/core
+# SetEnv USER_DIR $[HOME]/.fvwm/user
+# SetEnv logo-icon $[USER_DIR]/MyRightPanel/icons
 
 KillModule FvwmButtons TaskButtonsCurve
 KillModule FvwmButtons TaskButtonsFlux
 KillModule FvwmButtons RightPanel
 KillModule FvwmPager V2x4Pager
 KillModule FvwmPager V1x5Pager
-
-SetEnv logo-icon $[EXTRA_DIR]/MODULES/MyRightPanel/icons
 
 Module FvwmButtons MyRightPanel
 

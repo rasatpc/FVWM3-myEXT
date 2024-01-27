@@ -1,6 +1,14 @@
 ## Modules: winLB.sys
 ## By rasat 16 Jan 2021
 
+## Fvwm myExt
+SetEnv CORE_DIR $[HOME]/.fvwm/coreEXT
+SetEnv HOME_DIR $[HOME]/.fvwm
+
+## Fvwm Kise
+# SetEnv CORE_DIR $[HOME]/.fvwm/core
+# SetEnv USER_DIR $[HOME]/.fvwm/user
+
 ## Reset Window List
 KillModule FvwmButtons WinListB
 
@@ -9,9 +17,6 @@ AddToFunc SloppyExpFocus
 + I Style * SloppyFocus
 + I Schedule 2000 FvwmExpose
 + I Schedule 2100 Style * ClickToFocus
-
-SetEnv CORE_DIR $[HOME]/.fvwm/coreEXT
-SetEnv HOME_DIR $[HOME]/.fvwm
 
 Module FvwmButtons WinListB
 

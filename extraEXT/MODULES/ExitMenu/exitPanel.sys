@@ -6,8 +6,14 @@ SetEnv EXTRA_DIR $[HOME]/.fvwm/extraEXT/
 SetEnv HOME_DIR $[HOME]/.fvwm
 
 ## Colorsets check MyColorsets/myColorsets.sys
-
 SetEnv exit-icon $[EXTRA_DIR]/MODULES/ExitMenu
+
+## Fvwm Kise
+# SetEnv CORE_DIR $[HOME]/.fvwm/core
+# SetEnv USER_DIR $[HOME]/.fvwm/user
+# SetEnv exit-icon $[USER_DIR]/ExitMenu
+
+## Panel
 Module FvwmButtons ExitPanel
 
 DestroyModuleConfig ExitPanel: *

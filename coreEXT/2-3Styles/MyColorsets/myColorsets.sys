@@ -4,14 +4,18 @@
 # parts of fvwm such as window decor, menus, modules, etc.
 # Check 2-3Styles/FVWM-Colorsets
 
-## Pager ok
+## Pager
 Colorset 34 fg #ffffff, bg #3a697e, hi, sh, Plain, NoShape
 Colorset 33 bg #d9d9d9, NoShape
 
-## Transparent ok
+## Transparent
 Colorset 24 Transparent
 
-## No borderline ok
+## Fvwm Pager
+Colorset 18 fg #ffffff, bg #306ea2, hi #ffffff, sh #ffffff, Plain
+Colorset 17 fg #ffffff, bg #028383, hi, sh, Plain, NoShape
+
+## No borderline
 Colorset 19 fg #ffffff, bg #2b4e5e, hi #2b4e5e, sh #2b4e5e
 
 ## Colorset for myMenu.conf
@@ -20,7 +24,7 @@ Colorset 26 fg #ffffff, bg #2b4e5e, hi #2b4e5e, sh #2b4e5e, Plain, NoShape
 ## Inactive windows (bg) and text (fg) ok
 Colorset 31 fg #000000, bg #c5c5c5, hi, sh, Plain, NoShape
 
-## Active windows borders ok
+## Active windows borders
 Colorset 32 fg black, bg #9c9c9c, hi #24424f, sh #111f26, Plain, NoShape
 
 #########
@@ -33,29 +37,31 @@ Colorset 32 fg black, bg #9c9c9c, hi #24424f, sh #111f26, Plain, NoShape
 # Horizontal = H
 # Vertical = V
 
-### GREY ok
+### GREY
 Colorset 23 VGradient 50 #646464 #b6b6b6
 
-### BLUE ok
+### BLUE
 Colorset 41 HGradient 200 #d1d4d7 #17576a
 Colorset 44 VGradient 200 #17576a #d1d4d7
 Colorset 45 VGradient 200 #d1d4d7 #17576a
 Colorset 46 fg #ffffff, bg #306ea2, hi #ffffff, sh #ffffff, Plain, NoShape
 
-### WOOD ok
+### WOOD
 Colorset 58 bg #deb274
 Colorset 48 HGradient 10 #cd935d #e1bc8b
 Colorset 49 VGradient 50 #e4c293 #bc7f47
 Colorset 50 VGradient 50 #bc7f47 #e4c293
+Colorset 55 VGradient 100 #deb274 #ebce9b
+Colorset 56 HGradient 100 #ebce9b #deb274
 
-## BLUE and BROWN ok
+## BLUE and BROWN
 Colorset 53 fg #ffffff, bg #3a697e, hi #ffffff, sh #ffffff, Plain, NoShape
 
 ##########
 ## End
 ##########
 
-### Other Colorsets ok
+### Other Colorsets
 Colorset 57 VGradient 50 #c0ccd1 #42616f
 Colorset 59 VGradient 50  #c0ccd1 #7d99a5
 Colorset 60 VGradient 50 #f5f6f7 #b6b6b6
