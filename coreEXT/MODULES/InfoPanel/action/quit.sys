@@ -6,7 +6,7 @@ Exec $[CORE_DIR]/MODULES/InfoPanel/script/copySampleToUser.sh
 KillModule FvwmButtons InfoPanel
 KillModule FvwmButtons ExitButtons
 
-SetBG cloth-grey-tiled.png
+SetBG desktop-tiled.png
 
 Test (x featherpad) Exec exec featherpad $[HOME_DIR]/UserExt.sys
 Test (x mousepad) Exec exec mousepad $[HOME_DIR]/UserExt.sys
