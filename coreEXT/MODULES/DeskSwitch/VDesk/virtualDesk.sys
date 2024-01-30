@@ -4,7 +4,7 @@
 ## https://fvwmforums.org/t/getting-things-done-oriented-fvwm-config/1135
 ## https://jslf.app/projects/fvwm/FVWM-demo.gif
 
-## Fvwm Kise
+## Fvwm myExt
 SetEnv CORE_DIR $[HOME]/.fvwm/coreEXT/
 SetEnv EXTRA_DIR $[HOME]/.fvwm/extraEXT/
 SetEnv HOME_DIR $[HOME]/.fvwm

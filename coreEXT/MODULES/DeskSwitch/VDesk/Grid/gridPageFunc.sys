@@ -1,7 +1,12 @@
 ## MODULES/DeskSwitch/VDesk/Grid: gridPageFunc.sys
 
+## Fvwm myEXT
 SetEnv CORE_DIR $[HOME]/.fvwm/coreEXT/
 SetEnv HOME_DIR $[HOME]/.fvwm
+
+## Fvwm Kise
+# SetEnv CORE_DIR $[HOME]/.fvwm/core
+# SetEnv USER_DIR $[HOME]/.fvwm/user
 
 ## Load grid lines
 
