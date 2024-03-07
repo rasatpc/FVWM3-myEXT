@@ -27,10 +27,8 @@ DestroyModuleConfig RestartShutdown: *
 *RestartShutdown: (4x1,Container(Rows 1,Frame 1))
 *RestartShutdown: (Title Cancel, Action(Mouse 1) KillModule FvwmButtons RestartShutdown)
 *RestartShutdown: (Title Logout, Action(Mouse 1) Quit)
-*RestartShutdown: (Title Restart, Action(Mouse 1) Exec systemctl reboot) #1Systemd Linux distro
-*RestartShutdown: (Title OK, Action(Mouse 1) Exec systemctl poweroff) #2Systemd Linux distro
-#*RestartShutdown: (Title Restart, Action(Mouse 1) Exec sudo /sbin/reboot) #3Non-systemd
-#*RestartShutdown: (Title OK, Action(Mouse 1) Exec sudo /sbin/poweroff) #4Non-systemd
+*RestartShutdown: (Title Restart, Action(Mouse 1) Exec sudo reboot)
+*RestartShutdown: (Title OK, Action(Mouse 1) Exec sudo halt)
 
 # Style Setting
 Style RestartShutdown !Borders, !Title, WindowListSkip, StaysOnTop, Sticky

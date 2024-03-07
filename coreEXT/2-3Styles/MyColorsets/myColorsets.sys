@@ -21,7 +21,7 @@ Colorset 19 fg #ffffff, bg #2b4e5e, hi #2b4e5e, sh #2b4e5e
 ## Colorset for myMenu.conf
 Colorset 26 fg #ffffff, bg #2b4e5e, hi #2b4e5e, sh #2b4e5e, Plain, NoShape
 
-## Inactive windows (bg) and text (fg) ok
+## Inactive windows (bg) and text (fg)
 Colorset 31 fg #000000, bg #c5c5c5, hi, sh, Plain, NoShape
 
 ## Active windows borders
@@ -56,10 +56,6 @@ Colorset 56 HGradient 100 #ebce9b #deb274
 
 ## BLUE and BROWN
 Colorset 53 fg #ffffff, bg #3a697e, hi #ffffff, sh #ffffff, Plain, NoShape
-
-##########
-## End
-##########
 
 ### Other Colorsets
 Colorset 57 VGradient 50 #c0ccd1 #42616f

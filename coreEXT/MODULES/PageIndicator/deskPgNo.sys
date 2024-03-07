@@ -1,29 +1,34 @@
 ## Functions/Extra: deskPgNo.sys
 
-SetEnv HOME_DIR $[HOME]/.fvwm
-SetEnv CORE_DIR $[HOME]/.fvwm/core
+Module FvwmEvent FE
 
-DestroyFunc DPgNo
+DestroyModuleConfig FE:*
+*FE: new_page PGno
 
-AddToFunc DPgNo
-+ I Current InfoStoreAdd CURRENTWINDOW $[w.id]
-+ I AddToMenu DeskNoMenu "   Desk: $[desk.n] | Page: $[page.nx] - $[page.ny]   "  Title
-+ I + DynamicPopDownAction DestroyMenu DeskNoMenu
-+ I WindowId $[infostore.CURRENTWINDOW]
-+ I Popup DeskNoMenu Colorset 6
-+ I Schedule 500 Style NoDeskI NeverFocus
+DestroyFunc PGno
+AddToFunc PGno
++ I DestroyModuleConfig Pgfunc: *
++ I *Pgfunc: Geometry 170x32+88+10
++ I *Pgfunc: Fore #ffffff
++ I *Pgfunc: Pixmap none
++ I *Pgfunc: Frame 0
++ I *Pgfunc: (Title ' Desk: $[desk.n] | Page: $[page.nx] $[page.ny]', Action (Mouse 1) Nop)
++ I *Pgfunc:  Colorset 19
++ I *Pgfunc:  Font "xft:Sans:size=12:antialias=True"
++ I Module FvwmButtons Pgfunc
+
+Style Pgfunc !Title, !Borders, WindowListSkip, StaysOnBottom
 
 ## Desk Number Panel
 
 Module FvwmButtons NoDeskI
 DestroyModuleConfig NoDeskI: *
-*NoDeskI: Geometry 250x32+0+3
+*NoDeskI: Geometry 80x32+8+10
 *NoDeskI: Fore #ffffff
 *NoDeskI: Rows 1
 *NoDeskI: Pixmap none
 *NoDeskI: Frame 0
 *NoDeskI: (80x1, Title "DESK NO:", Colorset 62, \
 	Font "xft:Sans:Bold:size=10:antialias=True", Back #2c4e5e)
-*NoDeskI: (170x1, Title "click", Action DPgNo, Colorset 26)
 
 Style NoDeskI !Title, !Borders, WindowListSkip, StaysOnBottom, Sticky

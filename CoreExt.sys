@@ -15,7 +15,6 @@ SetEnv HOME_DIR $[HOME]/.fvwm
 # Read $[CORE_DIR]/1Functions/FVWM-Default/fvwmStartFunction.sys #(loaded by default Fvwm3)
 # Read $[CORE_DIR]/1Functions/MyInitMgr/myInitMgr.sys #(check local.config or config)
 # Read $[CORE_DIR]/1Functions/WinPosition/winPos.sys
-Read $[CORE_DIR]/1Functions/InitCheck/initC.sys
 
 ## Load 2-3.Styles
 # Read $[CORE_DIR]/2-3Styles/FVWM-Page/fvwmPage.sys #(loaded by default Fvwm3)
@@ -31,6 +30,7 @@ Read $[CORE_DIR]/5Bindings/MoveResizeBdg/MoRzBinding.sys
 Read $[CORE_DIR]/5Bindings/ExposeList/fvwmExposeList.sys
 
 ## Load 6.Decorations
+Read $[CORE_DIR]/6Decors/FVWM-Decor/fvwmDecor.sys
 
 ## Load 7.Modules
 Read $[CORE_DIR]/MODULES/FvwmIconMan/iconMan.sys

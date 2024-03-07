@@ -60,8 +60,27 @@ DestroyModuleConfig ControlPanelB: *
 *ControlPanelB: (Title Help, Back #f27120,  ActionOnPress, Action(Mouse 1) Menu MenuStart Rectangle +$left+38 0 12m)
 *ControlPanelB: (Title Max, Back #52932d, Action Maximize 97 90 ) #width and hight
 *ControlPanelB: (Title Close, Back #dc2929, Action Destroy)
-*ControlPanelB: (1x1, Icon $[smallIcons]/quit-w.png, Action \
-    `Read $[CORE_DIR]/MODULES/RestartShutdown/restartSDown.sys` )
+*ControlPanelB: (1x1, Icon $[smallIcons]/quit-w.png, Back #028383, \
+	Panel (down, steps 6, delay 0, indicator 40) "ExitBar" 'Module FvwmButtons ExitBar', \
+    Frame 1)
 
 # Style Setting
 Style ControlPanelB !Borders, !Title, WindowListSkip, StaysOnTop, Sticky
+
+## Exit Button
+
+DestroyModuleConfig ExitBar: *
+*ExitBar: Fore White
+*ExitBar: Back #028383
+*ExitBar: Geometry 50x160+0+0
+*ExitBar: Rows 4
+*ExitBar: Frame 1
+## Logout, Suspend, Restart, and Shutdown
+*ExitBar: (1x1, Icon $[smallIcons]/logout.png, Action(Mouse 1) "Quit")
+*ExitBar: (1x1, Icon $[smallIcons]/suspend.png, Action(Mouse 1) "Exec sudo pm-suspend")
+*ExitBar: (1x1, Icon $[smallIcons]/restart.png, Action(Mouse 1) "Exec sudo reboot")
+*ExitBar: (1x1, Icon $[smallIcons]/quit.png, Action(Mouse 1) "Exec sudo halt")
+
+Style ExitBar NoTitle, NoHandles, Sticky, WindowListSkip, \
+	BorderWidth 0, CirculateSkip, StaysOnTop, NeverFocus
+

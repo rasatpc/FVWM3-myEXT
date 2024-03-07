@@ -4,7 +4,16 @@
 SetEnv CORE_DIR $[HOME]/.fvwm/coreEXT/
 SetEnv HOME_DIR $[HOME]/.fvwm
 
+## Load default
+Read $[CORE_DIR]/2-3Styles/FVWM-Colorsets/fvwmColorsets.sys
+Read $[CORE_DIR]/MODULES/FVWM-Module.def
+
 SetEnv logo-image $[CORE_DIR]/MODULES/InfoPanel/images
+
+Colorset 26 fg #ffffff, bg #2b4e5e, hi #2b4e5e, sh #2b4e5e, Plain, NoShape
+
+## Default decor
+Read $[CORE_DIR]/6Decors/FVWM-Decor/fvwmDecor.sys
 
 Module FvwmButtons InfoPanel
 

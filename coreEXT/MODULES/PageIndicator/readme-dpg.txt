@@ -1,6 +1,6 @@
 # rename-dpg.txt
 
-A horizontal Desk and page indicator shows the desk number and indicates which page is currently being displayed. Requires a mouse click to display the numbers.
+A horizontal Desk and page indicator shows the desk number and indicates which page is currently being displayed.
 
 To install or edit .fvwm/CoreEXT.sys
 

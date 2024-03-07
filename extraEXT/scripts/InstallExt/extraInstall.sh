@@ -28,3 +28,4 @@ yad --width=300 --height=30 --title="Alert" --text-align=center \
   
 # Restart
 killall -SIGUSR1 fvwm3
+killall -SIGUSR1 fvwm

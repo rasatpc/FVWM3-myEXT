@@ -1,125 +1,63 @@
-## config (copied from /coreEXT/1Functions/verCheck/start.config)
-#
-# This is a temporary config file checking the Fvwm version.
-
-# Fvwm2 (2.6.x) will replace it with /.fvwm/coreEXT/1Functions/verCheck/files-org/config.
-# Fvwm3 with /.fvwm/coreEXT/1Functions/verCheck/files-org/local.config.
+## config
+## Don't add or edit this file but .fvwm/userExt.sys
 
 SetEnv CORE_DIR $[HOME]/.fvwm/coreEXT
 SetEnv EXTRA_DIR $[HOME]/.fvwm/extraEXT
 SetEnv USER_DIR $[HOME]/.fvwm/userEXT
 SetEnv HOME_DIR $[HOME]/.fvwm
 
+## Load functions, style and stalonetray (wifi, screen brightness & battery, and sound volume).
 Read $[CORE_DIR]/1Functions/FVWM-Default/fvwmStartFunction.sys
-Read $[CORE_DIR]/1Functions/verCheck/verCh.sys
-
-## Load function, style and stalonetray (wifi, screen brightness & battery, and sound volume).
 Read $[CORE_DIR]/1Functions/MyInitMgr/myInitMgr.sys
 Read $[CORE_DIR]/2-3Styles/FVWM-Page/fvwmPage.sys
-Read $[CORE_DIR]/2-3Styles/MyColorsets/myColorsets.sys
 
 ## Start InfoPanel
 Read $[CORE_DIR]/MODULES/InfoPanel/infoPanel.sys
 
-#Colorsets
-#
-Colorset 0  fg #ffffff, bg #2b4e5e, hi, sh, Plain, NoShape
-Colorset 1  fg #000000, bg #88b2b1, hi, sh, Plain, NoShape
-Colorset 2  fg #ffffff, bg #2b4e5e, hi, sh, Plain, NoShape
-Colorset 3  fg black, bg #415554, hi, sh, Plain, NoShape
-Colorset 4  fg black, bg #14252c, hi #24424f, sh #111f26, Plain, NoShape
-Colorset 5  fg #000000, bg #cbdcca, hi, sh, Plain, NoShape
-Colorset 6  fg #ffffff, bg #88b2b1, hi, sh, Plain, NoShape
-Colorset 7  fg #999999, bg #cbdcca, hi, sh, Plain, NoShape
-Colorset 8  fg #ffffff, bg #2b4e5e, hi, sh, Plain, NoShape
-Colorset 10 fg #ffffff, bg #2b4e5e, hi #aaaaaa, sh #999999, Plain, NoShape
-Colorset 11 fg #ffffff, bg #1a6e99, hi #ffffff, sh #ffffff, Plain, NoShape
-Colorset 12 fg #2d2d2d, bg #ffffff, hi, sh, Plain, NoShape
-Colorset 13 fg #ffffff, bg #006c6c, hi, sh, Plain, NoShape
-Colorset 14 fg #a8988f, bg #2b4e5e, hi #aaaaaa, sh #999999, Plain, NoShape
+#####
+## Remember focused window in current page.
+#####
 
-DestroyModuleConfig FvwmScript:*
-*FvwmScript: DefaultColorset 10
+SetEnv FocusPage 0
 
-# Window Decor
-#
-Read $[CORE_DIR]/6Decors/FVWM-Decor/fvwmDecor.sys
+DestroyFunc SavePageFocus
+AddToFunc SavePageFocus
++ I All (CurrentPage) State $[FocusPage] False
++ I Current State $[FocusPage] True
 
-# FvwmButtons - RightPanel
+#####
+## Restore previous focused window in current page.
+#####
 
-# Load RightPanel
-Module FvwmButtons RightPanel
+DestroyFunc RestorePageFocus
+AddToFunc RestorePageFocus
++ I Current (CurrentPage) Break 1
++ I Next (CurrentPage, State $[FocusPage]) Focus
++ I None (CurrentPage, Focused) Prev (CurrentPage) Focus
 
-DestroyModuleConfig RightPanel:*
-*RightPanel: Geometry 120x$[monitor.$[monitor.primary].height]-0+0@p
-*RightPanel: Colorset 10
-*RightPanel: Rows $[monitor.$[monitor.primary].height]
-*RightPanel: Columns 120
-*RightPanel: Frame 0
-*RightPanel: Font "xft:Sans:Bold:size=10:antialias=True"
-*RightPanel: (120x45, Icon "fvwm-logo-small.png", Frame 0)
-*RightPanel: (120x5, Frame 0)
-*RightPanel: (10x20, Frame 0)
-*RightPanel: (25x20, Id desk0, Title "0", Action (Mouse 1) GotoDesk 0 0, Colorset 11, ActiveColorset 12, Frame 0)
-*RightPanel: (25x20, Id desk1, Title "1", Action (Mouse 1) GotoDesk 0 1, ActiveColorset 12, Frame 0)
-*RightPanel: (25x20, Id desk2, Title "2", Action (Mouse 1) GotoDesk 0 2, ActiveColorset 12, Frame 0)
-*RightPanel: (25x20, Id desk3, Title "3", Action (Mouse 1) GotoDesk 0 3, ActiveColorset 12, Frame 0)
-*RightPanel: (10x20, Frame 0)
-*RightPanel: (5x80, Frame 0)
-*RightPanel: (110x80, Swallow FvwmPager 'Module FvwmPager *', Frame 0)
-*RightPanel: (5x80, Frame 0)
-*RightPanel: (120x5, Frame 0)
-Test (x stalonetray) *RightPanel: (120x20, Swallow(NoClose,UseOld) \
-    stalonetray 'Exec exec stalonetray --config ~/.fvwm/setup/stalonetrayrc', Frame 0)
-Test (x stalonetray) PipeRead 'echo "*RightPanel: (120x$(($[monitor.$[monitor.primary].height]-225)), \
-    Top, Swallow FvwmIconMan \'Module FvwmIconMan\', Frame 0)"'
-Test (!x stalonetray) PipeRead 'echo "*RightPanel: (120x$(($[monitor.$[monitor.primary].height]-205)),\
-    Top, Swallow FvwmIconMan \'Module FvwmIconMan\', Frame 0)"'
-*RightPanel: (120x45, Swallow DateTime 'Module FvwmScript FvwmScript-DateTime',\
-    Frame 0)
-*RightPanel: (120x5, Frame 0)
+DestroyModuleConfig FvwmEvent-FDpg:*
+*FvwmEvent-FDpg: Cmd
+*FvwmEvent-FDpg: new_page RestorePageFocus
+*FvwmEvent-FDpg: new_desk RestorePageFocus
+*FvwmEvent-FDpg: focus_change SavePageFocus
 
-Style RightPanel !Title, !Borders, !Handles, Sticky, \
-                 WindowListSkip, NeverFocus
+Module FvwmEvent FvwmEvent-FDpg
 
-# FvwmPager
+## FvwmButtons not to be focused.
 
-DestroyModuleConfig FvwmPager:*
-*FvwmPager: Geometry 110x80
-*FvwmPager: Colorset * 10
-*FvwmPager: HilightColorset * 13
-*FvwmPager: BalloonColorset * 10
-*FvwmPager: WindowColorsets 10 11
-*FvwmPager: Font None
-*FvwmPager: Balloons All
-*FvwmPager: BalloonFont "xft:Sans:Bold:size=8:antialias=True"
-*FvwmPager: BallonYOffset +2
-*FvwmPager: Window3dBorders
-*FvwmPager: UseSkipList # hides modules
-*FvwmPager: MiniIcons
+DestroyFunc NoFoc
+AddToFunc NoFoc
++ I Style *DLaunch* NeverFocus
++ I Style RightPager NeverFocus
++ I Style ControlMP NeverFocus
++ I Style ExitBar NeverFocus
++ I Style RightTbar NeverFocus
++ I Style HideBar NeverFocus
++ I Style NoDeskI NeverFocus
++ I Style Pgfunc NeverFocus
++ I Style WiconB NeverFocus
 
-# FvwmIconMan
-
-DestroyModuleConfig FvwmIconMan:*
-*FvwmIconMan: UseWinList true
-*FvwmIconMan: ButtonGeometry 120x20
-*FvwmIconMan: ManagerGeometry 1x1
-*FvwmIconMan: Colorset 10
-*FvwmIconMan: FocusColorset 11
-*FvwmIconMan: IconColorset 14
-*FvwmIconMan: FocusAndSelectColorset 12
-*FvwmIconMan: SelectColorset 12
-*FvwmIconMan: IconAndSelectColorset 12
-*FvwmIconMan: DrawIcons always
-*FvwmIconMan: ReliefThickness 0
-*FvwmIconMan: Format "%t"
-*FvwmIconMan: Font "xft:Sans:Bold:size=8:antialias=True"
-*FvwmIconMan: Action Mouse 0 A ret
-*FvwmIconMan: Action Mouse 1 A sendcommand IconManClick
-*FvwmIconMan: Action Mouse 3 A sendcommand "Menu MenuIconOps"
-*FvwmIconMan: Resolution global
-*FvwmIconMan: Tips needed
-*FvwmIconMan: Sort id
+Schedule 4000 NoFoc
 
 #######################
 ## USER

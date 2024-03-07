@@ -49,3 +49,4 @@ rm *.tmp
   
 # Restart
 killall -SIGUSR1 fvwm3
+killall -SIGUSR1 fvwm

@@ -15,6 +15,7 @@ KillModule FvwmPager miniPager
 KillModule FvwmPager V1x5Pager
 KillModule FvwmPager V2x4Pager
 KillModule FvwmPager VdeskPager
+KillModule FvwmEvent
 
 ## Change wallpaper.
 # SetBG grey480x480.png

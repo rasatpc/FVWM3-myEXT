@@ -1,0 +1,124 @@
+# Fvwm version: 1.0.9 (release 3 December 2023)
+# Default Modules
+#
+
+############
+# 7: Modules
+#############
+
+# FvwmIdent
+#
+# FvwmIdent is a module that can be used to get the various info about
+# a window. One use is getting the class/resource/name of a window.
+DestroyModuleConfig FvwmIdent:*
+*FvwmIdent: Colorset 10
+*FvwmIdent: Font "xft:Sans:size=10:antialias=True"
+
+# FvwmScript
+#
+# FvwmScript is a module that allows one to write custom desktop
+# widgets and various other tools. This config uses two FvwmScripts.
+#   - DateTime - uses the output of "date" to display the date/time
+#     on the RightPanel.
+#   - Quit - This is a popup that asks for quit confirmation before
+#     quitting fvwm.
+DestroyModuleConfig FvwmScript:*
+*FvwmScript: DefaultColorset 10
+
+# FvwmButtons - RightPanel
+#
+# FvwmButtons is a powerful module that can be used to build custom
+# panels and docks. This config uses FvwmButtons to build the RightPanel.
+# The panel contains buttons to switch desks, FvwmPager, a system tray,
+# FvwmIconMan (list of running windows), and a clock.
+#
+# Note - To use the system tray you must have "stalonetray" installed.
+DestroyModuleConfig RightPanel:*
+*RightPanel: Geometry 120x$[monitor.$[monitor.primary].height]-0+0@p
+*RightPanel: Colorset 10
+*RightPanel: Rows $[monitor.$[monitor.primary].height]
+*RightPanel: Columns 120
+*RightPanel: Frame 0
+*RightPanel: Font "xft:Sans:Bold:size=10:antialias=True"
+*RightPanel: (120x45, Icon "fvwm-logo-small.png", Frame 0)
+*RightPanel: (120x5, Frame 0)
+*RightPanel: (10x20, Frame 0)
+*RightPanel: (25x20, Id desk0, Title "0", Action (Mouse 1) GotoDesk 0 0, Colorset 11, ActiveColorset 12, Frame 0)
+*RightPanel: (25x20, Id desk1, Title "1", Action (Mouse 1) GotoDesk 0 1, ActiveColorset 12, Frame 0)
+*RightPanel: (25x20, Id desk2, Title "2", Action (Mouse 1) GotoDesk 0 2, ActiveColorset 12, Frame 0)
+*RightPanel: (25x20, Id desk3, Title "3", Action (Mouse 1) GotoDesk 0 3, ActiveColorset 12, Frame 0)
+*RightPanel: (10x20, Frame 0)
+*RightPanel: (5x80, Frame 0)
+*RightPanel: (110x80, Swallow FvwmPager 'Module FvwmPager *', Frame 0)
+*RightPanel: (5x80, Frame 0)
+*RightPanel: (120x5, Frame 0)
+Test (x stalonetray) *RightPanel: (120x20, Swallow(NoClose,UseOld) \
+    stalonetray 'Exec exec stalonetray --config \
+    "$[FVWM_DATADIR]/default-config/stalonetrayrc"', Frame 0)
+Test (x stalonetray) PipeRead 'echo "*RightPanel: (120x$(($[monitor.$[monitor.primary].height]-225)), \
+    Top, Swallow FvwmIconMan \'Module FvwmIconMan\', Frame 0)"'
+Test (!x stalonetray) PipeRead 'echo "*RightPanel: (120x$(($[monitor.$[monitor.primary].height]-205)),\
+    Top, Swallow FvwmIconMan \'Module FvwmIconMan\', Frame 0)"'
+*RightPanel: (120x45, Swallow DateTime 'Module FvwmScript FvwmScript-DateTime',\
+    Frame 0)
+*RightPanel: (120x5, Frame 0)
+
+# FvwmPager
+#
+# This module displays the location of the windows on the various Pages
+# and Desks. This is setup to show only the Pages on the current Desk.
+DestroyModuleConfig FvwmPager:*
+*FvwmPager: Geometry 110x80
+*FvwmPager: Colorset * 10
+*FvwmPager: HilightColorset * 13
+*FvwmPager: BalloonColorset * 10
+*FvwmPager: WindowColorsets 10 11
+*FvwmPager: Font None
+*FvwmPager: Balloons All
+*FvwmPager: BalloonFont "xft:Sans:Bold:size=8:antialias=True"
+*FvwmPager: BallonYOffset +2
+*FvwmPager: Window3dBorders
+*FvwmPager: UseSkipList # hides modules
+*FvwmPager: MiniIcons
+
+# FvwmIconMan
+#
+# FvwmIconMan is a powerful tool to list and manage windows. This
+# is used as the window list in the panel or taskbar.
+DestroyModuleConfig FvwmIconMan:*
+*FvwmIconMan: UseWinList true
+*FvwmIconMan: ButtonGeometry 120x20
+*FvwmIconMan: ManagerGeometry 1x1
+*FvwmIconMan: Colorset 10
+*FvwmIconMan: FocusColorset 11
+*FvwmIconMan: IconColorset 14
+*FvwmIconMan: FocusAndSelectColorset 12
+*FvwmIconMan: SelectColorset 12
+*FvwmIconMan: IconAndSelectColorset 12
+*FvwmIconMan: DrawIcons always
+*FvwmIconMan: ReliefThickness 0
+*FvwmIconMan: Format "%t"
+*FvwmIconMan: Font "xft:Sans:Bold:size=8:antialias=True"
+*FvwmIconMan: Action Mouse 0 A ret
+*FvwmIconMan: Action Mouse 1 A sendcommand IconManClick
+*FvwmIconMan: Action Mouse 3 A sendcommand "Menu MenuIconOps"
+*FvwmIconMan: Resolution global
+*FvwmIconMan: Tips needed
+*FvwmIconMan: Sort id
+
+# FvwmEvent
+#
+# FvwmEvent is a module that can run an action or function
+# on specific events. This instance changes which desk number
+# is highlighted when the desk is changed.
+DestroyModuleConfig EventNewDesk:*
+*EventNewDesk: PassID
+*EventNewDesk: new_desk ChangeDesk
+
+# Local configuration file. For use with the default-config.
+#
+# If $FVWMUSER_DIR/local.config ($HOME/.fvwm/local.config by default)
+# exists, then read it. This allows changes to default-config settings
+# without needing a full copy of the default-config. This will also allow
+# default-config changes to get used after upgrades (if applicable).
+Test (f $[FVWM_USERDIR]/local.config) Read $[FVWM_USERDIR]/local.config

@@ -1,8 +1,8 @@
-1 February 2024
+7 March 2024
 # HOW TO INSTALL myEXT and FVWM3 (or Fvwm2)
 
-myEXT:
-One-time install and then upgrade with the Extension Installer.
+myExt:
+One-time install and then upgrade with Extension Installer.
 
 Download:
 * https://github.com/rasatpc/FVWM3-myEXT/archive/refs/heads/main.zip
@@ -75,7 +75,7 @@ Install FVWM3 from Git Hub
 
 Read dev-docs/INSTALL.md
 
-# For login manager
+# For login manager (if not available)
 * `cp .fvwm/setup/xsessions/fvwm3.desktop /usr/share/xsessions/`
 
 OR create fvwm3.desktop with below content.
@@ -104,7 +104,7 @@ SessionManaged=true
 
 -------
 
-# myEXT DEPENDENCIES
+# myExt DEPENDENCIES
 
 Required by Extention Installer:
 * sudo apt install yad gawk sed wget
@@ -121,7 +121,7 @@ FvwmButton configs to adjust as per screen resolution:
 * sudo pacman -Syu xorg-xdpyinfo
 * sudo dnf install xdpyinfo
 
-# myEXT OPTIONAL
+# myExt OPTIONAL
 
 Volume Icon (add icon in system tray):
 * sudo apt install volumeicon-alsa
