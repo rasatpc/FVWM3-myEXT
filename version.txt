@@ -1,2 +1,2 @@
-7 March 2024
-FVWM myExtensions ver. 4.0.0
+9 March 2024
+FVWM myExtensions ver. 4.0.1
