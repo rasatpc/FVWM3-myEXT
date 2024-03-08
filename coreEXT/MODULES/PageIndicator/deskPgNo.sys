@@ -31,4 +31,4 @@ DestroyModuleConfig NoDeskI: *
 *NoDeskI: (80x1, Title "DESK NO:", Colorset 62, \
 	Font "xft:Sans:Bold:size=10:antialias=True", Back #2c4e5e)
 
-Style NoDeskI !Title, !Borders, WindowListSkip, StaysOnBottom, Sticky
+Style NoDeskI !Title, !Borders, WindowListSkip, StaysOnTop, Sticky
