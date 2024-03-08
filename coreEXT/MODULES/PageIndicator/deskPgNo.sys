@@ -8,7 +8,7 @@ DestroyModuleConfig FE:*
 DestroyFunc PGno
 AddToFunc PGno
 + I DestroyModuleConfig Pgfunc: *
-+ I *Pgfunc: Geometry 170x32+88+10
++ I *Pgfunc: Geometry 170x32+88+6
 + I *Pgfunc: Fore #ffffff
 + I *Pgfunc: Pixmap none
 + I *Pgfunc: Frame 0
@@ -23,7 +23,7 @@ Style Pgfunc !Title, !Borders, WindowListSkip, StaysOnTop
 
 Module FvwmButtons NoDeskI
 DestroyModuleConfig NoDeskI: *
-*NoDeskI: Geometry 80x32+8+10
+*NoDeskI: Geometry 80x32+8+6
 *NoDeskI: Fore #ffffff
 *NoDeskI: Rows 1
 *NoDeskI: Pixmap none
