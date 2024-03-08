@@ -17,7 +17,7 @@ AddToFunc PGno
 + I *Pgfunc:  Font "xft:Sans:size=12:antialias=True"
 + I Module FvwmButtons Pgfunc
 
-Style Pgfunc !Title, !Borders, WindowListSkip, StaysOnBottom
+Style Pgfunc !Title, !Borders, WindowListSkip, StaysOnTop
 
 ## Desk Number Panel
 
