@@ -98,7 +98,7 @@ Read $[CORE_DIR]/1Functions/WinPosition/winPos.sys
 ## No Title
 Style Grid* NoTitle
 Style Exit* NoTitle
-Style Pgfunc NoTitle
+Style PgNo NoTitle
 
 #######
 ## Add more or make changes here below.

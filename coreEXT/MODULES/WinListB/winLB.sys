@@ -30,8 +30,7 @@ DestroyModuleConfig WinListB: *
 *WinListB: Font "xft:Sans:size=10:antialias=True"
 *WinListB: Padding 2 2
   
-## *WinListB: (1x1, Title CurW, Back #2b4e5e, Fore #ffffff, Action(Mouse 1) WindowList (CurrentPage) Root c c )
-*WinListB: (1x1, Title CurW, Back #2b4e5e, Fore #ffffff, Action(Mouse 1) SloppyExpFocus ) ## requires coreEXT/5Bindings/ExposeList
+*WinListB: (1x1, Title CurW, Back #2b4e5e, Fore #ffffff, Action(Mouse 1) WindowList (CurrentPage) Root c c )
 
 *WinListB: (1x1, Title AllW, Back #faa46e, Fore #000000, Action(Mouse 1) WindowList Root c c)
 

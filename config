@@ -25,9 +25,7 @@ AddToFunc SavePageFocus
 + I All (CurrentPage) State $[FocusPage] False
 + I Current State $[FocusPage] True
 
-#####
 ## Restore previous focused window in current page.
-#####
 
 DestroyFunc RestorePageFocus
 AddToFunc RestorePageFocus
@@ -54,9 +52,21 @@ AddToFunc NoFoc
 + I Style RightTbar NeverFocus
 + I Style HideBar NeverFocus
 + I Style NoDeskI NeverFocus
-+ I Style Pgfunc NeverFocus
++ I Style PgNo NeverFocus
 + I Style WiconB NeverFocus
-
++ I Style V1x5Pager NeverFocus
++ I Style V2x4Pager NeverFocus
++ I Style VdeskPager NeverFocus
++ I Style ControlPanelB NeverFocus
++ I Style DashToDock NeverFocus
++ I Style TaskButtonsFlux NeverFocus
++ I Style miniPager NeverFocus
++ I Style DeskSwitch NeverFocus
++ I Style WinListB NeverFocus
++ I Style TaskButtonsCurve NeverFocus
++ I Style MiniControlB NeverFocus
++ I Style LockButtons NeverFocus
+ 
 Schedule 4000 NoFoc
 
 #######################
