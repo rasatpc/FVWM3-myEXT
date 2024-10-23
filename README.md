@@ -14,6 +14,7 @@ One-time install and then updated with Extension Installer.
 
 Download:
 * https://github.com/rasatpc/FVWM3-myEXT/archive/refs/heads/main.zip
+* Download Release 4.1.1
 
 Extract and copy subfolders to ~/.fvwm
 
