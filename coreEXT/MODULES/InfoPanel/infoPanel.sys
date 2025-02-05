@@ -34,10 +34,7 @@ DestroyModuleConfig InfoPanel: *
 *InfoPanel: (4x1,Container(Rows 3,Frame 1))
 *InfoPanel: (Title CORE, Action(Mouse 1) `Read $[CORE_DIR]/MODULES/InfoPanel/action/infoCore.conf`)
 *InfoPanel: (Title EXTRA, Action(Mouse 1) `Read $[CORE_DIR]/MODULES/InfoPanel/action/infoExtra.conf`)
-*InfoPanel: (Title "Fvwm (default)", Action(Mouse 1) `Read $[CORE_DIR]/MODULES/InfoPanel/action/default.conf`)
 *InfoPanel: (Title Help, Action(Mouse 1) `Read $[CORE_DIR]/MODULES/InfoPanel/action/help.sys`)
-
-*InfoPanel: (2x1,Container(Rows 0,Frame 0))
 *InfoPanel: (Title Exit, Action(Mouse 1) `Read $[CORE_DIR]/MODULES/InfoPanel/action/exit.sys`)
 
 # Style Setting

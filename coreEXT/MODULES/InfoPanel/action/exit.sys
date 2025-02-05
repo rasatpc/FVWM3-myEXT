@@ -2,7 +2,7 @@
 
 Module FvwmButtons ExitButtons
 DestroyModuleConfig ExitButtons: *
-*ExitButtons: Geometry 380x100+150-350
+*ExitButtons: Geometry 380x120+150-350
 *ExitButtons: PressColorset 5
 *ExitButtons: Fore black
 *ExitButtons: Back #88b2b1
@@ -12,12 +12,13 @@ DestroyModuleConfig ExitButtons: *
 *ExitButtons: Font "xft:Sans:size=10:Bold:antialias=True"
 *ExitButtons: Padding 2 2
 
-*ExitButtons: (4x1,Container(Rows 3,Frame 0))
-*ExitButtons: (Title "On Quit, userExt.sys is created where you can")
+*ExitButtons: (4x1,Container(Rows 4,Frame 0))
+*ExitButtons: (Title "On OK, userExt.sys is created where you can")
 *ExitButtons: (Title "edit Core and Extra, and add your own.")
+*ExitButtons: (Title "Right-click and Restart to finish the install.")
 
 *ExitButtons: (1x1,Container(Rows 0,Frame 1))
-*ExitButtons: (Title Quit, Action(Mouse 1) `Read $[CORE_DIR]/MODULES/InfoPanel/action/quit.sys`)
+*ExitButtons: (Title OK, Action(Mouse 1) `Read $[CORE_DIR]/MODULES/InfoPanel/action/quit.sys`)
 
 # Style Setting
 Style ExitButtons !Borders, !Title, WindowListSkip, StaysOnTop, Sticky
