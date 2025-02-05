@@ -41,6 +41,17 @@ DestroyModuleConfig FvwmEvent-FDpg:*
 
 Module FvwmEvent FvwmEvent-FDpg
 
+## Save current Desk on restart
+
+AddToFunc ExitFunction
++ I Test (ToRestart) InfoStoreAdd DeskNo "0 $[desk.n]"
++ I GoToDesk 0 0
+
+# Show previous Desk on restart
+AddToFunc StartFunction
++ I Test (Restart) Schedule 500 GoToDesk $[infostore.DeskNo]
++ I Test (Restart) InfoStoreRemove DeskNo
+
 ## FvwmButtons not to be focused.
 
 DestroyFunc NoFoc

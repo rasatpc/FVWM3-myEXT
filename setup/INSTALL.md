@@ -1,4 +1,4 @@
-23 October 2024
+5 February 2025
 # HOW TO INSTALL myEXT and FVWM3 (or Fvwm2)
 
 myExt:

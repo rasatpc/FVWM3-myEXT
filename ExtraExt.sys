@@ -57,3 +57,14 @@ Style NoDeskI NoTitle
 Style DeskSwitch NoTitle
 
 Exec exec fvwm-root $[HOME_DIR]/.BGdefault
+
+## Save focus window id on restart
+
+AddToFunc ExitFunction
++ I Test (ToRestart) Current InfoStoreAdd WFocusId $[w.id]
+
+# Show previous Window Id on restart
+AddToFunc StartFunction
++ I Test (Restart) Schedule 1500 WindowId $[infostore.WFocusId] Focus
++ I Test (Restart) InfoStoreRemove WFocusId
+
