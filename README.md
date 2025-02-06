@@ -13,7 +13,7 @@ It is a user-oriented model for you to use, modify and create your own extension
 One-time install and then updated with Extension Installer.
 
 Download:
-* Release 4.1.1
+* Release 4.1.7
 * https://github.com/rasatpc/FVWM3-myEXT/archive/refs/heads/main.zip
 
 Extract and copy subfolders to ~/.fvwm
