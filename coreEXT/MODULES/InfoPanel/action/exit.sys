@@ -13,9 +13,9 @@ DestroyModuleConfig ExitButtons: *
 *ExitButtons: Padding 2 2
 
 *ExitButtons: (4x1,Container(Rows 4,Frame 0))
-*ExitButtons: (Title "On OK, userExt.sys is created where you can")
-*ExitButtons: (Title "edit Core and Extra, and add your own.")
-*ExitButtons: (Title "Right-click and Restart to finish the install.")
+*ExitButtons: (Title "On OK, userExt.sys file is created, allowing")
+*ExitButtons: (Title "you to edit Core and Extra, and add your own.")
+*ExitButtons: (Title "Click OK to complete the install.")
 
 *ExitButtons: (1x1,Container(Rows 0,Frame 1))
 *ExitButtons: (Title OK, Action(Mouse 1) `Read $[CORE_DIR]/MODULES/InfoPanel/action/quit.sys`)

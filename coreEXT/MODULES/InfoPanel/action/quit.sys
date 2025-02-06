@@ -1,10 +1,10 @@
 ## Modules: action/quit.sys
 
-Schedule 500 SetBG desktop-tiled.png
-
 ## If UserExt.sys doesn't exist, copy UserExtSAMPLE.sys.
 Exec $[CORE_DIR]/MODULES/InfoPanel/script/copySampleToUser.sh
 
 KillModule FvwmButtons InfoPanel
 KillModule FvwmButtons ExitButtons
 
+Schedule 400 Read $[HOME_DIR]/UserExt.sys
+Schedule 500 SetBG desktop-tiled.png
