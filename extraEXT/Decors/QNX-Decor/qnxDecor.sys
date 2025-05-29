@@ -15,6 +15,7 @@ DestroyFunc DeRTile
 AddToFunc DeRTile
 + I All (CurrentPage, !Iconic, CirculateHit, !Sticky) Maximize Off
 + I WindowId $0 WarpToWindow 50 50
++ I Schedule 300 Current Raise
 + I KillModule FvwmButtons DeTileBtn
 
 # SetEnv Icons $[EXTRA_DIR]/Decors/QNX-Decor/qnx # 20px
